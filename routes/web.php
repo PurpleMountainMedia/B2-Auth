@@ -20,4 +20,7 @@ Route::middleware('auth')->get('logout', function () {
 });
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('/organisation', 'DashboardController@index')->name('organisation');
+Route::get('/schools', 'DashboardController@index')->name('schools');
+Route::get('/licences', 'DashboardController@index')->name('licences');

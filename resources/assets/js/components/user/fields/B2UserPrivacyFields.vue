@@ -1,0 +1,29 @@
+<template lang="html">
+    <div class="">
+        <el-row :gutter="10">
+            <p><strong>Privacy</strong></p>
+            <hr>
+
+            <!-- Privacy  -->
+            <el-row :gutter="10">
+                <el-col :span="9" :offset="6">
+                    <el-button type="danger" size="mini" plain id="user_form_field_request_user_data">Request User Data</el-button>
+                </el-col>
+            </el-row>
+        </el-row>
+    </div>
+</template>
+
+<script>
+export default {
+    props: {
+        form: {
+            type: Object,
+            required: true,
+        }
+    }
+}
+</script>
+
+<style lang="css">
+</style>
