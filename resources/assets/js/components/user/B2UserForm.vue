@@ -23,21 +23,16 @@
 <script>
 import api from '../../utils/api'
 import validation from '../../utils/validation'
-import B2UserBasicFields from './fields/B2UserBasicFields'
-import B2UserSecurityFields from './fields/B2UserSecurityFields'
-import B2UserPreferencesFields from './fields/B2UserPreferencesFields'
-import B2UserPrivacyFields from './fields/B2UserPrivacyFields'
-import B2Errors from '../B2Errors'
 
 export default {
     name: 'B2UserForm',
 
     components: {
-        B2UserBasicFields,
-        B2UserSecurityFields,
-        B2UserPreferencesFields,
-        B2UserPrivacyFields,
-        B2Errors
+        B2UserBasicFields: () => import(/* webpackChunkName: "b2-user-basic" */'./fields/B2UserBasicFields'),
+        B2UserSecurityFields: () => import(/* webpackChunkName: "b2-user-security" */'./fields/B2UserSecurityFields'),
+        B2UserPreferencesFields: () => import(/* webpackChunkName: "b2-user-preferces" */'./fields/B2UserPreferencesFields'),
+        B2UserPrivacyFields: () => import(/* webpackChunkName: "b2-user-privacy" */'./fields/B2UserPrivacyFields'),
+        B2Errors: () => import(/* webpackChunkName: "b2-errors" */'../B2Errors'),
     },
 
     props: {

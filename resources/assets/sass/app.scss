@@ -11,3 +11,10 @@
 // FontAwesome
 @import './fontawesome/scss/fontawesome';
 @import './fontawesome/scss/fa-regular';
+
+
+// Dialog
+.el-dialog__header {
+    background: $body-bg;
+    padding-bottom: 17px!important;
+}

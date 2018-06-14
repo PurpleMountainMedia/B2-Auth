@@ -49,6 +49,19 @@ class User extends Authenticatable
     ];
 
     /**
+     * The organisations that the user is part of
+     *
+     * @return Collection of organisations
+     */
+     public function organisations()
+     {
+        return $this->belongsToMany('App\Organisation')
+                    ->as('organisation')
+                    ->withPivot('default')
+                    ->withTimestamps();
+     }
+
+    /**
      * Get the validation rules
      *
      * @return Array

@@ -16,6 +16,8 @@ class CreateOrganisationUserTable extends Migration
         Schema::create('organisation_user', function (Blueprint $table) {
             $table->unsignedInteger('organisation_id');
             $table->unsignedInteger('user_id');
+            $table->boolean('default');
+            $table->timestamps();
 
             $table->foreign('organisation_id')
                   ->references('id')

@@ -53,7 +53,8 @@
             <el-col :span="9">
                 <el-form-item label="Phone Number"
                               prop="phone"
-                              :error="errors.phone">
+                              :error="errors.phone"
+                              :rules="{ required: true, message: 'Phone number is required.' }">
                     <el-input v-model="form.phone"
                               size="small"
                               placeholder="Phone Number"
@@ -80,7 +81,7 @@ export default {
                 return {}
             }
         }
-    }
+    },
 }
 </script>
 

@@ -21,6 +21,6 @@ Route::middleware('auth')->get('logout', function () {
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-Route::get('/organisation', 'DashboardController@index')->name('organisation');
+Route::get('/organisations', 'OrganisationsController@index')->name('organisations');
 Route::get('/schools', 'DashboardController@index')->name('schools');
 Route::get('/licences', 'DashboardController@index')->name('licences');

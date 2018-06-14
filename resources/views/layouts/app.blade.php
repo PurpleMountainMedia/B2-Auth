@@ -10,15 +10,18 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    @php $user = Auth::User(); @endphp
     <script>
         window.b2_systems = {
             site_url: '{{ env('APP_URL') }}',
             api_prefix: '{{ env('API_PREFIX') }}'
         }
+        window.b2_user = {
+            id: '{{$user->id}}',
+            name: '{{$user->name}}',
+            email: '{{$user->email}}',
+        }
     </script>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -39,7 +42,7 @@
                                 <a class="nav-link active" href="{{ route('dashboard') }}"><i class="far fa-tachometer-alt"></i> Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('organisation') }}"><i class="far fa-sitemap"></i> Organisation</a>
+                                <a class="nav-link" href="{{ route('organisations') }}"><i class="far fa-sitemap"></i> Organisations</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('schools') }}"><i class="far fa-school"></i> Schools</a>
@@ -57,5 +60,10 @@
         </div>
 
     </div>
+
+    <!-- Scripts -->
+    <script src="{{ mix('js/manifest.js') }}"></script>
+    <script src="{{ mix('js/vendor.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>
