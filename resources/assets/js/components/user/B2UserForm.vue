@@ -2,7 +2,7 @@
 
 <div v-loading="loading">
 
-<el-form ref="userForm" :model="userForm" label-position="top" label-width="100px" status-icon>
+<el-form ref="userForm" :model="userForm" label-position="top" label-width="100px" status-icon id="user_form_dashboard">
     <b2-user-basic-fields :form="userForm" />
     <b2-user-security-fields :form="userForm" />
     <b2-user-preferences-fields :form="userForm" />
@@ -88,7 +88,7 @@ export default {
                       this.userForm = data.data;
                       this.$message({
                         message: validation.getSuccessMessage(),
-                        type: 'success'
+                        type: 'success',
                       });
                   })
                   .catch((error) => {

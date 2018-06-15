@@ -282,7 +282,8 @@ var render = function() {
             model: _vm.userForm,
             "label-position": "top",
             "label-width": "100px",
-            "status-icon": ""
+            "status-icon": "",
+            id: "user_form_dashboard"
           }
         },
         [

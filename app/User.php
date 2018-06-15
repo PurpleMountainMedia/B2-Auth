@@ -74,7 +74,7 @@ class User extends Authenticatable
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => ['required', 'email', Rule::unique('users')->ignore($this->id)],
-            'phone' => 'numeric',
+            'phone' => 'string',
             'password' => 'confirmed'
         ];
     }
