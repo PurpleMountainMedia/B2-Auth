@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Passport\HasApiTokens;
@@ -51,7 +52,7 @@ class User extends Authenticatable
     /**
      * The organisations that the user is part of
      *
-     * @return Collection of organisations
+     * @return BelongsToMany
      */
      public function organisations()
      {
@@ -64,7 +65,7 @@ class User extends Authenticatable
     /**
      * Get the validation rules
      *
-     * @return Array
+     * @return array
      */
     public function getValidationRules()
     {
@@ -80,7 +81,7 @@ class User extends Authenticatable
     /**
      * Get the validation messages
      *
-     * @return Array
+     * @return array
      */
     public function getValidationMessages()
     {
@@ -91,7 +92,7 @@ class User extends Authenticatable
      * Get First Name Attribute
      *
      * @param $value
-     * @return String
+     * @return string
      */
      public function getFirstNameAttribute($value)
      {

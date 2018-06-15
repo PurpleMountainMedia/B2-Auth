@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Organisation extends Model
 {
@@ -19,7 +20,7 @@ class Organisation extends Model
     /**
      * The users within the organisation
      *
-     * @return Collection of users
+     * @return BelongsToMany
      */
      public function users()
      {

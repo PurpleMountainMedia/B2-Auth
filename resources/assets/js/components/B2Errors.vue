@@ -27,7 +27,7 @@ export default {
         /**
          * Whether or not to show the errors.
          *
-         * @return Bool
+         * @return boolean
          */
         showErrors()
         {
