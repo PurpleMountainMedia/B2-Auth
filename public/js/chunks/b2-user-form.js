@@ -1,2 +1,887 @@
-webpackJsonp([0],{"9ip5":function(e,r,t){var s=t("ouyG");"string"==typeof s&&(s=[[e.i,s,""]]),s.locals&&(e.exports=s.locals);t("rjj0")("76c79f2f",s,!0,{})},UMHT:function(e,r,t){"use strict";var s="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},n=b2_systems.site_url+"/"+b2_systems.api_prefix+"/",o="We could not access the server at this time. Please try again. If the issue persists, please contact support.";r.a={get:function(e){return e.params||(e.params={}),e.url||(e.url=n+e.path),e.params.limit=e.params.limit?e.params.limit:15,e.params.ascending=e.params.ascending?e.params.ascending:0,e.params.orderBy=e.params.orderBy?e.params.orderBy:"id",console.log("API Get: "+e.url),new Promise(function(r,t){axios.get(e.url,{params:e.params}).then(function(e){r(e.data)}.bind(this)).catch(function(e){t(this.errorAdapter(e))}.bind(this))}.bind(this))},delete:function(e){return e.url||(e.url=n+e.path),console.log("API Delete: "+e.url),new Promise(function(r,t){axios.delete(e.url,e.params?{params:e.params}:"").then(function(e){r(e.data)}.bind(this)).catch(function(e){t(this.errorAdapter(e))}.bind(this))}.bind(this))},persist:function(e,r){return r.params||(r.params={}),r.url||(r.url=n+r.path),console.log("API "+e+": "+r.url),new Promise(function(t,s){axios[e](r.url,r.object,r.params).then(function(e){t(e.data)}.bind(this)).catch(function(e){s(this.errorAdapter(e))}.bind(this))}.bind(this))},errorAdapter:function(e){var r=(e=((e=e||{}).response?e.response:{}).status?e.response:e).data?e.data:e.message;return console.error("API Error:"),console.log(e),console.error("API Error Data"),console.log(r),e?"object"===(void 0===r?"undefined":s(r))&&422===e.status?r:403===e.status?{message:"We could not complete the request, because you are not authorised to do so.",code:e.status}:{message:o,errors:{server:["Please use this error code in any suppot queries. Error Code: "+e.status]},code:e.status}:{message:o,errors:{server:e.message},code:e.status}}}},"VU/8":function(e,r){e.exports=function(e,r,t,s,n,o){var a,i=e=e||{},u=typeof e.default;"object"!==u&&"function"!==u||(a=e,i=e.default);var l,c="function"==typeof i?i.options:i;if(r&&(c.render=r.render,c.staticRenderFns=r.staticRenderFns,c._compiled=!0),t&&(c.functional=!0),n&&(c._scopeId=n),o?(l=function(e){(e=e||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(e=__VUE_SSR_CONTEXT__),s&&s.call(this,e),e&&e._registeredComponents&&e._registeredComponents.add(o)},c._ssrRegister=l):s&&(l=s),l){var d=c.functional,f=d?c.render:c.beforeCreate;d?(c._injectStyles=l,c.render=function(e,r){return l.call(r),f(e,r)}):c.beforeCreate=f?[].concat(f,l):[l]}return{esModule:a,exports:i,options:c}}},"YzJ+":function(e,r){e.exports={render:function(){var e=this,r=e.$createElement,t=e._self._c||r;return t("div",{directives:[{name:"loading",rawName:"v-loading",value:e.loading,expression:"loading"}]},[t("el-form",{ref:"userForm",attrs:{model:e.userForm,"label-position":"top","label-width":"100px","status-icon":""}},[t("b2-user-basic-fields",{attrs:{form:e.userForm}}),e._v(" "),t("b2-user-security-fields",{attrs:{form:e.userForm}}),e._v(" "),t("b2-user-preferences-fields",{attrs:{form:e.userForm}}),e._v(" "),t("b2-user-privacy-fields",{attrs:{form:e.userForm}}),e._v(" "),t("b2-errors",{attrs:{errors:e.formErrors}}),e._v(" "),t("el-row",{staticStyle:{"margin-top":"40px"},attrs:{gutter:10}},[t("el-button",{attrs:{type:"primary",plain:"",size:"small",id:"user_form_reset",loading:e.loading},on:{click:e.reset}},[e._v("Reset")]),e._v(" "),t("el-button",{attrs:{type:"success",size:"small",id:"user_form_submit",loading:e.loading},on:{click:e.submitForm}},[e._v("Save")])],1)],1)],1)},staticRenderFns:[]}},dHsu:function(e,r,t){"use strict";r.a={getValidationMessages:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},r=[];for(var t in e)e[t]&&r.push([e[t][0]?e[t][0].message:""]);return r},getErrorMessage:function(){return"Oops, there was a problem saving the data."},getValidationErrorMessage:function(){return"Please fill in the required fields above."},getSuccessMessage:function(){return"Data saved successfully."}}},ouyG:function(e,r,t){(e.exports=t("FZ+f")(!1)).push([e.i,"",""])},rjj0:function(e,r,t){var s="undefined"!=typeof document;if("undefined"!=typeof DEBUG&&DEBUG&&!s)throw new Error("vue-style-loader cannot be used in a non-browser environment. Use { target: 'node' } in your Webpack config to indicate a server-rendering environment.");var n=t("tTVk"),o={},a=s&&(document.head||document.getElementsByTagName("head")[0]),i=null,u=0,l=!1,c=function(){},d=null,f="data-vue-ssr-id",p="undefined"!=typeof navigator&&/msie [6-9]\b/.test(navigator.userAgent.toLowerCase());function m(e){for(var r=0;r<e.length;r++){var t=e[r],s=o[t.id];if(s){s.refs++;for(var n=0;n<s.parts.length;n++)s.parts[n](t.parts[n]);for(;n<t.parts.length;n++)s.parts.push(g(t.parts[n]));s.parts.length>t.parts.length&&(s.parts.length=t.parts.length)}else{var a=[];for(n=0;n<t.parts.length;n++)a.push(g(t.parts[n]));o[t.id]={id:t.id,refs:1,parts:a}}}}function h(){var e=document.createElement("style");return e.type="text/css",a.appendChild(e),e}function g(e){var r,t,s=document.querySelector("style["+f+'~="'+e.id+'"]');if(s){if(l)return c;s.parentNode.removeChild(s)}if(p){var n=u++;s=i||(i=h()),r=y.bind(null,s,n,!1),t=y.bind(null,s,n,!0)}else s=h(),r=function(e,r){var t=r.css,s=r.media,n=r.sourceMap;s&&e.setAttribute("media",s);d.ssrId&&e.setAttribute(f,r.id);n&&(t+="\n/*# sourceURL="+n.sources[0]+" */",t+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(n))))+" */");if(e.styleSheet)e.styleSheet.cssText=t;else{for(;e.firstChild;)e.removeChild(e.firstChild);e.appendChild(document.createTextNode(t))}}.bind(null,s),t=function(){s.parentNode.removeChild(s)};return r(e),function(s){if(s){if(s.css===e.css&&s.media===e.media&&s.sourceMap===e.sourceMap)return;r(e=s)}else t()}}e.exports=function(e,r,t,s){l=t,d=s||{};var a=n(e,r);return m(a),function(r){for(var t=[],s=0;s<a.length;s++){var i=a[s];(u=o[i.id]).refs--,t.push(u)}r?m(a=n(e,r)):a=[];for(s=0;s<t.length;s++){var u;if(0===(u=t[s]).refs){for(var l=0;l<u.parts.length;l++)u.parts[l]();delete o[u.id]}}}};var v,b=(v=[],function(e,r){return v[e]=r,v.filter(Boolean).join("\n")});function y(e,r,t,s){var n=t?"":s.css;if(e.styleSheet)e.styleSheet.cssText=b(r,n);else{var o=document.createTextNode(n),a=e.childNodes;a[r]&&e.removeChild(a[r]),a.length?e.insertBefore(o,a[r]):e.appendChild(o)}}},tTVk:function(e,r){e.exports=function(e,r){for(var t=[],s={},n=0;n<r.length;n++){var o=r[n],a=o[0],i={id:e+":"+n,css:o[1],media:o[2],sourceMap:o[3]};s[a]?s[a].parts.push(i):t.push(s[a]={id:a,parts:[i]})}return t}},tm1f:function(e,r,t){var s=t("VU/8")(t("vpVM"),t("YzJ+"),!1,function(e){t("9ip5")},null,null);e.exports=s.exports},vpVM:function(e,r,t){"use strict";Object.defineProperty(r,"__esModule",{value:!0});var s=t("UMHT"),n=t("dHsu");r.default={name:"B2UserForm",components:{B2UserBasicFields:function(){return t.e(9).then(t.bind(null,"JIZr"))},B2UserSecurityFields:function(){return t.e(6).then(t.bind(null,"KzP2"))},B2UserPreferencesFields:function(){return t.e(8).then(t.bind(null,"7xjt"))},B2UserPrivacyFields:function(){return t.e(7).then(t.bind(null,"CN66"))},B2Errors:function(){return t.e(4).then(t.bind(null,"nv3l"))}},props:{user:{type:Object,required:!0}},data:function(){return{loading:!1,userForm:{},formErrors:{}}},mounted:function(){this.userForm=Object.assign({},this.user)},methods:{reset:function(){this.userForm=Object.assign({},this.user)},submitForm:function(){var e=this;this.loading=!0,this.formErrors={},this.$refs.userForm.validate(function(r,t){if(!r)return e.loading=!1,e.formErrors={message:n.a.getValidationErrorMessage(),errors:n.a.getValidationMessages(t)},!1;s.a.persist("put",{path:"users/"+e.user.id,object:e.userForm}).then(function(r){e.loading=!1,e.userForm=r.data,e.$message({message:n.a.getSuccessMessage(),type:"success"})}).catch(function(r){e.formErrors=r,e.loading=!1,e.$message.error(n.a.getErrorMessage())})})}}}}});
+webpackJsonp([0],{
+
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/user/B2UserForm.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_api__ = __webpack_require__("./resources/assets/js/utils/api.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_validation__ = __webpack_require__("./resources/assets/js/utils/validation.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'B2UserForm',
+
+    components: {
+        B2UserBasicFields: function B2UserBasicFields() {
+            return __webpack_require__.e/* import() */(9).then(__webpack_require__.bind(null, "./resources/assets/js/components/user/fields/B2UserBasicFields.vue"));
+        },
+        B2UserSecurityFields: function B2UserSecurityFields() {
+            return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, "./resources/assets/js/components/user/fields/B2UserSecurityFields.vue"));
+        },
+        B2UserPreferencesFields: function B2UserPreferencesFields() {
+            return __webpack_require__.e/* import() */(8).then(__webpack_require__.bind(null, "./resources/assets/js/components/user/fields/B2UserPreferencesFields.vue"));
+        },
+        B2UserPrivacyFields: function B2UserPrivacyFields() {
+            return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, "./resources/assets/js/components/user/fields/B2UserPrivacyFields.vue"));
+        },
+        B2Errors: function B2Errors() {
+            return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, "./resources/assets/js/components/B2Errors.vue"));
+        }
+    },
+
+    props: {
+        user: {
+            type: Object,
+            required: true
+        }
+    },
+
+    data: function data() {
+        return {
+            loading: false,
+            userForm: {},
+            formErrors: {}
+        };
+    },
+    mounted: function mounted() {
+        this.userForm = Object.assign({}, this.user);
+    },
+
+
+    methods: {
+
+        /**
+         * Reset the form to its original state
+         *
+         * @return Void
+         */
+        reset: function reset() {
+            this.userForm = Object.assign({}, this.user);
+        },
+
+
+        /**
+         * Submit the form to the server
+         *
+         * @return Void
+         */
+        submitForm: function submitForm() {
+            var _this = this;
+
+            this.loading = true;
+            this.formErrors = {};
+
+            this.$refs.userForm.validate(function (valid, errors) {
+
+                if (valid) {
+                    __WEBPACK_IMPORTED_MODULE_0__utils_api__["a" /* default */].persist('put', {
+                        path: 'users/' + _this.user.id,
+                        object: _this.userForm
+                    }).then(function (data) {
+                        _this.loading = false;
+                        _this.userForm = data.data;
+                        _this.$message({
+                            message: __WEBPACK_IMPORTED_MODULE_1__utils_validation__["a" /* default */].getSuccessMessage(),
+                            type: 'success'
+                        });
+                    }).catch(function (error) {
+                        _this.formErrors = error;
+                        _this.loading = false;
+                        _this.$message.error(__WEBPACK_IMPORTED_MODULE_1__utils_validation__["a" /* default */].getErrorMessage());
+                    });
+                } else {
+                    _this.loading = false;
+                    _this.formErrors = {
+                        message: __WEBPACK_IMPORTED_MODULE_1__utils_validation__["a" /* default */].getValidationErrorMessage(),
+                        errors: __WEBPACK_IMPORTED_MODULE_1__utils_validation__["a" /* default */].getValidationMessages(errors)
+                    };
+                    return false;
+                }
+            });
+        }
+    }
+});
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-52455dfc\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./resources/assets/js/components/user/B2UserForm.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/css-base.js")(true);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2UserForm.vue","sourceRoot":""}]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/component-normalizer.js":
+/***/ (function(module, exports) {
+
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file.
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+module.exports = function normalizeComponent (
+  rawScriptExports,
+  compiledTemplate,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier /* server only */
+) {
+  var esModule
+  var scriptExports = rawScriptExports = rawScriptExports || {}
+
+  // ES6 modules interop
+  var type = typeof rawScriptExports.default
+  if (type === 'object' || type === 'function') {
+    esModule = rawScriptExports
+    scriptExports = rawScriptExports.default
+  }
+
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (compiledTemplate) {
+    options.render = compiledTemplate.render
+    options.staticRenderFns = compiledTemplate.staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = injectStyles
+  }
+
+  if (hook) {
+    var functional = options.functional
+    var existing = functional
+      ? options.render
+      : options.beforeCreate
+
+    if (!functional) {
+      // inject component registration as beforeCreate hook
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    } else {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return existing(h, context)
+      }
+    }
+  }
+
+  return {
+    esModule: esModule,
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-52455dfc\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/user/B2UserForm.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      directives: [
+        {
+          name: "loading",
+          rawName: "v-loading",
+          value: _vm.loading,
+          expression: "loading"
+        }
+      ]
+    },
+    [
+      _c(
+        "el-form",
+        {
+          ref: "userForm",
+          attrs: {
+            model: _vm.userForm,
+            "label-position": "top",
+            "label-width": "100px",
+            "status-icon": ""
+          }
+        },
+        [
+          _c("b2-user-basic-fields", { attrs: { form: _vm.userForm } }),
+          _vm._v(" "),
+          _c("b2-user-security-fields", { attrs: { form: _vm.userForm } }),
+          _vm._v(" "),
+          _c("b2-user-preferences-fields", { attrs: { form: _vm.userForm } }),
+          _vm._v(" "),
+          _c("b2-user-privacy-fields", { attrs: { form: _vm.userForm } }),
+          _vm._v(" "),
+          _c("b2-errors", { attrs: { errors: _vm.formErrors } }),
+          _vm._v(" "),
+          _c(
+            "el-row",
+            { staticStyle: { "margin-top": "40px" }, attrs: { gutter: 10 } },
+            [
+              _c(
+                "el-button",
+                {
+                  attrs: {
+                    plain: "",
+                    type: "primary",
+                    plain: "",
+                    size: "small",
+                    id: "user_form_reset",
+                    loading: _vm.loading
+                  },
+                  on: { click: _vm.reset }
+                },
+                [_vm._v("Reset")]
+              ),
+              _vm._v(" "),
+              _c(
+                "el-button",
+                {
+                  attrs: {
+                    plain: "",
+                    type: "success",
+                    size: "small",
+                    id: "user_form_submit",
+                    loading: _vm.loading
+                  },
+                  on: { click: _vm.submitForm }
+                },
+                [_vm._v("Save "), _c("i", { staticClass: "fal fa-save" })]
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-52455dfc", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-52455dfc\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./resources/assets/js/components/user/B2UserForm.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("./node_modules/css-loader/index.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-52455dfc\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./resources/assets/js/components/user/B2UserForm.vue");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__("./node_modules/vue-style-loader/lib/addStylesClient.js")("19d3093a", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js?sourceMap!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-52455dfc\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./B2UserForm.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js?sourceMap!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-52455dfc\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./B2UserForm.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/lib/addStylesClient.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+  Modified by Evan You @yyx990803
+*/
+
+var hasDocument = typeof document !== 'undefined'
+
+if (typeof DEBUG !== 'undefined' && DEBUG) {
+  if (!hasDocument) {
+    throw new Error(
+    'vue-style-loader cannot be used in a non-browser environment. ' +
+    "Use { target: 'node' } in your Webpack config to indicate a server-rendering environment."
+  ) }
+}
+
+var listToStyles = __webpack_require__("./node_modules/vue-style-loader/lib/listToStyles.js")
+
+/*
+type StyleObject = {
+  id: number;
+  parts: Array<StyleObjectPart>
+}
+
+type StyleObjectPart = {
+  css: string;
+  media: string;
+  sourceMap: ?string
+}
+*/
+
+var stylesInDom = {/*
+  [id: number]: {
+    id: number,
+    refs: number,
+    parts: Array<(obj?: StyleObjectPart) => void>
+  }
+*/}
+
+var head = hasDocument && (document.head || document.getElementsByTagName('head')[0])
+var singletonElement = null
+var singletonCounter = 0
+var isProduction = false
+var noop = function () {}
+var options = null
+var ssrIdKey = 'data-vue-ssr-id'
+
+// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+// tags it will allow on a page
+var isOldIE = typeof navigator !== 'undefined' && /msie [6-9]\b/.test(navigator.userAgent.toLowerCase())
+
+module.exports = function (parentId, list, _isProduction, _options) {
+  isProduction = _isProduction
+
+  options = _options || {}
+
+  var styles = listToStyles(parentId, list)
+  addStylesToDom(styles)
+
+  return function update (newList) {
+    var mayRemove = []
+    for (var i = 0; i < styles.length; i++) {
+      var item = styles[i]
+      var domStyle = stylesInDom[item.id]
+      domStyle.refs--
+      mayRemove.push(domStyle)
+    }
+    if (newList) {
+      styles = listToStyles(parentId, newList)
+      addStylesToDom(styles)
+    } else {
+      styles = []
+    }
+    for (var i = 0; i < mayRemove.length; i++) {
+      var domStyle = mayRemove[i]
+      if (domStyle.refs === 0) {
+        for (var j = 0; j < domStyle.parts.length; j++) {
+          domStyle.parts[j]()
+        }
+        delete stylesInDom[domStyle.id]
+      }
+    }
+  }
+}
+
+function addStylesToDom (styles /* Array<StyleObject> */) {
+  for (var i = 0; i < styles.length; i++) {
+    var item = styles[i]
+    var domStyle = stylesInDom[item.id]
+    if (domStyle) {
+      domStyle.refs++
+      for (var j = 0; j < domStyle.parts.length; j++) {
+        domStyle.parts[j](item.parts[j])
+      }
+      for (; j < item.parts.length; j++) {
+        domStyle.parts.push(addStyle(item.parts[j]))
+      }
+      if (domStyle.parts.length > item.parts.length) {
+        domStyle.parts.length = item.parts.length
+      }
+    } else {
+      var parts = []
+      for (var j = 0; j < item.parts.length; j++) {
+        parts.push(addStyle(item.parts[j]))
+      }
+      stylesInDom[item.id] = { id: item.id, refs: 1, parts: parts }
+    }
+  }
+}
+
+function createStyleElement () {
+  var styleElement = document.createElement('style')
+  styleElement.type = 'text/css'
+  head.appendChild(styleElement)
+  return styleElement
+}
+
+function addStyle (obj /* StyleObjectPart */) {
+  var update, remove
+  var styleElement = document.querySelector('style[' + ssrIdKey + '~="' + obj.id + '"]')
+
+  if (styleElement) {
+    if (isProduction) {
+      // has SSR styles and in production mode.
+      // simply do nothing.
+      return noop
+    } else {
+      // has SSR styles but in dev mode.
+      // for some reason Chrome can't handle source map in server-rendered
+      // style tags - source maps in <style> only works if the style tag is
+      // created and inserted dynamically. So we remove the server rendered
+      // styles and inject new ones.
+      styleElement.parentNode.removeChild(styleElement)
+    }
+  }
+
+  if (isOldIE) {
+    // use singleton mode for IE9.
+    var styleIndex = singletonCounter++
+    styleElement = singletonElement || (singletonElement = createStyleElement())
+    update = applyToSingletonTag.bind(null, styleElement, styleIndex, false)
+    remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true)
+  } else {
+    // use multi-style-tag mode in all other cases
+    styleElement = createStyleElement()
+    update = applyToTag.bind(null, styleElement)
+    remove = function () {
+      styleElement.parentNode.removeChild(styleElement)
+    }
+  }
+
+  update(obj)
+
+  return function updateStyle (newObj /* StyleObjectPart */) {
+    if (newObj) {
+      if (newObj.css === obj.css &&
+          newObj.media === obj.media &&
+          newObj.sourceMap === obj.sourceMap) {
+        return
+      }
+      update(obj = newObj)
+    } else {
+      remove()
+    }
+  }
+}
+
+var replaceText = (function () {
+  var textStore = []
+
+  return function (index, replacement) {
+    textStore[index] = replacement
+    return textStore.filter(Boolean).join('\n')
+  }
+})()
+
+function applyToSingletonTag (styleElement, index, remove, obj) {
+  var css = remove ? '' : obj.css
+
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = replaceText(index, css)
+  } else {
+    var cssNode = document.createTextNode(css)
+    var childNodes = styleElement.childNodes
+    if (childNodes[index]) styleElement.removeChild(childNodes[index])
+    if (childNodes.length) {
+      styleElement.insertBefore(cssNode, childNodes[index])
+    } else {
+      styleElement.appendChild(cssNode)
+    }
+  }
+}
+
+function applyToTag (styleElement, obj) {
+  var css = obj.css
+  var media = obj.media
+  var sourceMap = obj.sourceMap
+
+  if (media) {
+    styleElement.setAttribute('media', media)
+  }
+  if (options.ssrId) {
+    styleElement.setAttribute(ssrIdKey, obj.id)
+  }
+
+  if (sourceMap) {
+    // https://developer.chrome.com/devtools/docs/javascript-debugging
+    // this makes source maps inside style tags work properly in Chrome
+    css += '\n/*# sourceURL=' + sourceMap.sources[0] + ' */'
+    // http://stackoverflow.com/a/26603875
+    css += '\n/*# sourceMappingURL=data:application/json;base64,' + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + ' */'
+  }
+
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = css
+  } else {
+    while (styleElement.firstChild) {
+      styleElement.removeChild(styleElement.firstChild)
+    }
+    styleElement.appendChild(document.createTextNode(css))
+  }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-style-loader/lib/listToStyles.js":
+/***/ (function(module, exports) {
+
+/**
+ * Translates the list format produced by css-loader into something
+ * easier to manipulate.
+ */
+module.exports = function listToStyles (parentId, list) {
+  var styles = []
+  var newStyles = {}
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i]
+    var id = item[0]
+    var css = item[1]
+    var media = item[2]
+    var sourceMap = item[3]
+    var part = {
+      id: parentId + ':' + i,
+      css: css,
+      media: media,
+      sourceMap: sourceMap
+    }
+    if (!newStyles[id]) {
+      styles.push(newStyles[id] = { id: id, parts: [part] })
+    } else {
+      newStyles[id].parts.push(part)
+    }
+  }
+  return styles
+}
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/user/B2UserForm.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__("./node_modules/vue-style-loader/index.js!./node_modules/css-loader/index.js?sourceMap!./node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-52455dfc\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./resources/assets/js/components/user/B2UserForm.vue")
+}
+var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
+/* script */
+var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/user/B2UserForm.vue")
+/* template */
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-52455dfc\",\"hasScoped\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/user/B2UserForm.vue")
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/user/B2UserForm.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-52455dfc", Component.options)
+  } else {
+    hotAPI.reload("data-v-52455dfc", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/utils/api.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var BASE_URL = b2_systems.site_url + '/' + b2_systems.api_prefix + '/';
+var SERVER_ERROR_MESSAGE = "We could not access the server at this time. Please try again. If the issue persists, please contact support.";
+var SERVER_UNAUTH_MESSAGE = "We could not complete the request, because you are not authorised to do so.";
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+    get: function get(data) {
+        if (!data.params) {
+            data.params = {};
+        }
+
+        if (!data.url) {
+            data.url = BASE_URL + data.path;
+        }
+
+        data.params.limit = data.params.limit ? data.params.limit : 15;
+        data.params.ascending = data.params.ascending ? data.params.ascending : 0;
+        data.params.orderBy = data.params.orderBy ? data.params.orderBy : 'id';
+
+        console.log('API Get: ' + data.url);
+
+        return new Promise(function (resolve, reject) {
+            axios.get(data.url, { params: data.params }).then(function (response) {
+                resolve(response.data);
+            }.bind(this)).catch(function (error) {
+                reject(this.errorAdapter(error));
+            }.bind(this));
+        }.bind(this));
+    },
+
+
+    /**
+     * Delete data on the server.
+     *
+     * @param Object data
+     *
+     * @return Promise | resolve() or reject()
+     */
+    delete: function _delete(data) {
+        if (!data.url) {
+            data.url = BASE_URL + data.path;
+        }
+
+        console.log('API Delete: ' + data.url);
+
+        return new Promise(function (resolve, reject) {
+            axios.delete(data.url, data.params ? { params: data.params } : '').then(function (response) {
+                resolve(response.data);
+            }.bind(this)).catch(function (error) {
+                reject(this.errorAdapter(error));
+            }.bind(this));
+        }.bind(this));
+    },
+
+
+    /**
+     * Persist data to the server using the method supplied.
+     *
+     * @param String method
+     * @param Object data
+     *
+     * @return Promise | resolve() or reject()
+     */
+    persist: function persist(method, data) {
+        if (!data.params) {
+            data.params = {};
+        }
+
+        if (!data.url) {
+            data.url = BASE_URL + data.path;
+        }
+
+        console.log('API ' + method + ': ' + data.url);
+
+        return new Promise(function (resolve, reject) {
+            axios[method](data.url, data.object, data.params).then(function (response) {
+                resolve(response.data);
+            }.bind(this)).catch(function (error) {
+                reject(this.errorAdapter(error));
+            }.bind(this));
+        }.bind(this));
+    },
+
+
+    /**
+     * Turn the response from the server into something we can work with.
+     *
+     * @param Object error
+     *
+     * @return Object
+     */
+    errorAdapter: function errorAdapter(error) {
+        error = error ? error : {};
+        var response = error.response ? error.response : {};
+        error = response.status ? error.response : error;
+        var data = error.data ? error.data : error.message;
+
+        console.error('API Error:');
+        console.log(error);
+        console.error('API Error Data');
+        console.log(data);
+
+        return error ? (typeof data === 'undefined' ? 'undefined' : _typeof(data)) === 'object' && error.status === 422 ? data : error.status === 403 ? {
+            message: SERVER_UNAUTH_MESSAGE,
+            code: error.status
+        } : {
+            message: SERVER_ERROR_MESSAGE,
+            errors: {
+                'server': ['Please use this error code in any suppot queries. Error Code: ' + error.status]
+            },
+            code: error.status
+        } : {
+            message: SERVER_ERROR_MESSAGE,
+            errors: {
+                'server': error.message
+            },
+            code: error.status
+        };
+    }
+});
+
+/***/ }),
+
+/***/ "./resources/assets/js/utils/validation.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var ERROR_MESSAGE = 'Oops, there was a problem saving the data.';
+var VALIDATION_ERROR_MESSAGE = 'Please fill in the required fields above.';
+var SUCCESS_MESSAGE = 'Data saved successfully.';
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+
+    /**
+     * Get and format the validation messages from the form.
+     *
+     * @param errors
+     * @return Array
+     */
+    getValidationMessages: function getValidationMessages() {
+        var errors = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+        var validationMessages = [];
+        for (var error in errors) {
+            if (errors[error]) {
+                validationMessages.push([errors[error][0] ? errors[error][0].message : '']);
+            }
+        }
+        return validationMessages;
+    },
+
+
+    /**
+     * Return the error message if issues saving the data.
+     *
+     * @return String
+     */
+    getErrorMessage: function getErrorMessage() {
+        return ERROR_MESSAGE;
+    },
+
+
+    /**
+     * Return the validation error message if validation fails.
+     *
+     * @return String
+     */
+    getValidationErrorMessage: function getValidationErrorMessage() {
+        return VALIDATION_ERROR_MESSAGE;
+    },
+
+
+    /**
+     * Return the success message if data saved successfully.
+     *
+     * @return String
+     */
+    getSuccessMessage: function getSuccessMessage() {
+        return SUCCESS_MESSAGE;
+    }
+});
+
+/***/ })
+
+});
 //# sourceMappingURL=b2-user-form.js.map

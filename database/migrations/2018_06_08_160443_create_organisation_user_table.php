@@ -14,18 +14,10 @@ class CreateOrganisationUserTable extends Migration
     public function up()
     {
         Schema::create('organisation_user', function (Blueprint $table) {
-            $table->unsignedInteger('organisation_id');
-            $table->unsignedInteger('user_id');
+            $table->string('organisation_id');
+            $table->string('user_id');
             $table->boolean('default');
             $table->timestamps();
-
-            $table->foreign('organisation_id')
-                  ->references('id')
-                  ->on('organisations');
-
-            $table->foreign('user_id')
-                  ->references('id')
-                  ->on('users');
         });
     }
 

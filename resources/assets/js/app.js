@@ -20,10 +20,12 @@ Vue.use(ElementUI);
 const bugsnag = require('bugsnag-js')
 const bugsnagClient = bugsnag('e58fe44cf63cd222d17bbf3468a19c06')
 const bugsnagVue = require('bugsnag-vue')
-bugsnagClient.user = {
-    id: b2_user.id,
-    name: b2_user.name,
-    email: b2_user.email
+if (typeof b2_user !== 'undefined') {
+    bugsnagClient.user = {
+        id: b2_user.id,
+        name: b2_user.name,
+        email: b2_user.email
+    }
 }
 bugsnagClient.use(bugsnagVue(Vue))
 

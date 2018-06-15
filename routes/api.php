@@ -14,5 +14,6 @@ use Illuminate\Http\Request;
 */
 
 Route::namespace('Api')->group(function () {
-    Route::middleware('auth:api')->resource('users', 'ApiUsersController');
+    Route::apiResource('users', 'ApiUsersController');
+    Route::apiResource('organisations', 'ApiOrganisationsController');
 });

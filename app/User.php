@@ -6,10 +6,13 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Validation\Rule;
+use App\Traits\HasUUID;
 
 class User extends Authenticatable
 {
-    use Notifiable, HasApiTokens;
+    use Notifiable, HasApiTokens, HasUUID;
+
+    public $incrementing = false;
 
     /**
      * The attributes that are mass assignable.
@@ -53,13 +56,12 @@ class User extends Authenticatable
      *
      * @return Collection of organisations
      */
-     public function organisations()
-     {
+    public function organisations()
+    {
         return $this->belongsToMany('App\Organisation')
-                    ->as('organisation')
                     ->withPivot('default')
                     ->withTimestamps();
-     }
+    }
 
     /**
      * Get the validation rules
@@ -93,19 +95,19 @@ class User extends Authenticatable
      * @param $value
      * @return String
      */
-     public function getFirstNameAttribute($value)
-     {
+    public function getFirstNameAttribute($value)
+    {
          return $value ? $value : str_before($this->name, ' ');
-     }
+    }
 
-     /**
-      * Get Last Name Attribute
-      *
-      * @param $value
-      * @return String
-      */
-      public function getLastNameAttribute($value)
-      {
-          return $value ? $value : str_after($this->name, ' ');
-      }
+    /**
+     * Get Last Name Attribute
+     *
+     * @param $value
+     * @return String
+     */
+    public function getLastNameAttribute($value)
+    {
+        return $value ? $value : str_after($this->name, ' ');
+    }
 }

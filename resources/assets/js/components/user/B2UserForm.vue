@@ -11,8 +11,8 @@
 
 
     <el-row :gutter="10" style="margin-top: 40px;">
-        <el-button type="primary" plain size="small" id="user_form_reset" :loading="loading" @click="reset">Reset</el-button>
-        <el-button type="success" size="small" id="user_form_submit" :loading="loading" @click="submitForm">Save</el-button>
+        <el-button plain type="primary" plain size="small" id="user_form_reset" :loading="loading" @click="reset">Reset</el-button>
+        <el-button plain type="success" size="small" id="user_form_submit" :loading="loading" @click="submitForm">Save <i class="fal fa-save"></i></el-button>
     </el-row>
 </el-form>
 
