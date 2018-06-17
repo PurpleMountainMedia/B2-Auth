@@ -108,6 +108,8 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+    'api_prefix' => env('API_PREFIX', 'api'),
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

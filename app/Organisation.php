@@ -2,11 +2,28 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Auth;
+use App\Traits\HasUUID;
 
 class Organisation extends Model
 {
+    public static $types = [
+        'School', 'Multi Academy Trust', 'Council', 'Other'
+    ];
+
+    /**
+     *  Setup model event hooks
+     */
+    public static function boot()
+    {
+        parent::boot();
+        self::creating(function ($model) {
+            if (!$model->created_by) {
+                $model->created_by = optional(Auth::User())->id;
+            }
+        });
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -22,11 +39,33 @@ class Organisation extends Model
      *
      * @return BelongsToMany
      */
-     public function users()
-     {
+    public function users()
+    {
         return $this->belongsToMany('App\User')
-                    ->as('user')
                     ->withPivot('default')
                     ->withTimestamps();
-     }
+    }
+
+    /**
+     * Get the validation rules
+     *
+     * @return array
+     */
+    public function getValidationRules()
+    {
+        return [
+            'name' => 'required',
+            'type' => 'required',
+        ];
+    }
+
+    /**
+     * Get the validation messages
+     *
+     * @return array
+     */
+    public function getValidationMessages()
+    {
+        return [];
+    }
 }

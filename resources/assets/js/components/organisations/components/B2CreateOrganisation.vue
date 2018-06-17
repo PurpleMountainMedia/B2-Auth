@@ -4,9 +4,8 @@
                    plain
                    autofocus
                    size="small"
-                   icon="el-icon-circle-plus"
                    @click="showModal = true"
-                   v-show="showBtn">Create Organisation
+                   v-show="showBtn">Create Organisation <i class="far fa-plus-circle"></i>
         </el-button>
 
         <el-dialog title="Create Organisation"
@@ -112,6 +111,7 @@ export default {
                   .then((data) => {
                       this.loading = false;
                       this.onCreate(data.data);
+                      this.clearModal();
                       this.$message({
                         message: validation.getSuccessMessage(),
                         type: 'success'

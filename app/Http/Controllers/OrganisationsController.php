@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class OrganisationsController extends Controller
 {
@@ -23,6 +24,7 @@ class OrganisationsController extends Controller
      */
     public function index()
     {
-        return view('organisations');
+        $user = Auth::User();
+        return view('organisations', compact('user'));
     }
 }

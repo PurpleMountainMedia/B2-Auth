@@ -7,10 +7,15 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Validation\Rule;
+use App\Traits\HasUUID;
+use App\Traits\ResponsableTrait;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use Notifiable, HasApiTokens;
+    use Notifiable, HasApiTokens, HasUUID, ResponsableTrait, HasRoles;
+
+    public $incrementing = false;
 
     /**
      * The attributes that are mass assignable.
@@ -18,7 +23,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'phone', 'product_updates_marketing', 'product_notifications_marketing'
+        'id', 'name', 'email', 'password', 'phone', 'product_updates_marketing', 'product_notifications_marketing'
     ];
 
     /**
@@ -54,13 +59,12 @@ class User extends Authenticatable
      *
      * @return BelongsToMany
      */
-     public function organisations()
-     {
+    public function organisations()
+    {
         return $this->belongsToMany('App\Organisation')
-                    ->as('organisation')
                     ->withPivot('default')
                     ->withTimestamps();
-     }
+    }
 
     /**
      * Get the validation rules
@@ -73,7 +77,7 @@ class User extends Authenticatable
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => ['required', 'email', Rule::unique('users')->ignore($this->id)],
-            'phone' => 'numeric',
+            'phone' => 'string',
             'password' => 'confirmed'
         ];
     }
@@ -94,19 +98,19 @@ class User extends Authenticatable
      * @param $value
      * @return string
      */
-     public function getFirstNameAttribute($value)
-     {
+    public function getFirstNameAttribute($value)
+    {
          return $value ? $value : str_before($this->name, ' ');
-     }
+    }
 
-     /**
-      * Get Last Name Attribute
-      *
-      * @param $value
-      * @return String
-      */
-      public function getLastNameAttribute($value)
-      {
-          return $value ? $value : str_after($this->name, ' ');
-      }
+    /**
+     * Get Last Name Attribute
+     *
+     * @param $value
+     * @return String
+     */
+    public function getLastNameAttribute($value)
+    {
+        return $value ? $value : str_after($this->name, ' ');
+    }
 }

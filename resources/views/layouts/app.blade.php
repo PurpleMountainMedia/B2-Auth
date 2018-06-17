@@ -13,8 +13,8 @@
     @php $user = Auth::User(); @endphp
     <script>
         window.b2_systems = {
-            site_url: '{{ env('APP_URL') }}',
-            api_prefix: '{{ env('API_PREFIX') }}'
+            site_url: '{{ config('app.url') }}',
+            api_prefix: '{{ config('app.api_prefix') }}'
         }
         window.b2_user = {
             id: '{{$user->id}}',
@@ -33,7 +33,7 @@
 <body>
     <div id="app">
 
-        <div class="row py-5">
+        <div class="container py-5">
             <div class="col-md-8 m-auto">
                 <div class="row">
                     <div class="col-md-3 border-right">

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,11 @@ use Illuminate\Http\Request;
 */
 
 Route::namespace('Api')->group(function () {
-    Route::middleware('auth:api')->resource('users', 'ApiUsersController');
+    // Ping
+    Route::get('ping', function () {
+        return ['time' => Carbon::now()->toDateTimeString()];
+    });
+    
+    Route::apiResource('users', 'ApiUsersController');
+    Route::apiResource('organisations', 'ApiOrganisationsController');
 });

@@ -2,7 +2,7 @@
 
 <div v-loading="loading">
 
-<el-form ref="userForm" :model="userForm" label-position="top" label-width="100px" status-icon>
+<el-form ref="userForm" :model="userForm" label-position="top" label-width="100px" status-icon id="user_form_dashboard">
     <b2-user-basic-fields :form="userForm" />
     <b2-user-security-fields :form="userForm" />
     <b2-user-preferences-fields :form="userForm" />
@@ -11,8 +11,8 @@
 
 
     <el-row :gutter="10" style="margin-top: 40px;">
-        <el-button type="primary" plain size="small" id="user_form_reset" :loading="loading" @click="reset">Reset</el-button>
-        <el-button type="success" size="small" id="user_form_submit" :loading="loading" @click="submitForm">Save</el-button>
+        <el-button plain type="primary" plain size="small" id="user_form_reset" :loading="loading" @click="reset">Reset</el-button>
+        <el-button plain type="success" size="small" id="user_form_submit" :loading="loading" @click="submitForm">Save <i class="fal fa-save"></i></el-button>
     </el-row>
 </el-form>
 
@@ -88,7 +88,7 @@ export default {
                       this.userForm = data.data;
                       this.$message({
                         message: validation.getSuccessMessage(),
-                        type: 'success'
+                        type: 'success',
                       });
                   })
                   .catch((error) => {

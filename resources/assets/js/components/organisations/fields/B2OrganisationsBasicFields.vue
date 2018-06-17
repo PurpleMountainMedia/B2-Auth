@@ -40,6 +40,17 @@
             </el-col>
         </el-row>
 
+        <!-- Default -->
+        <el-row :gutter="10">
+            <el-col :span="9" :offset="6">
+                <el-form-item label="Default"
+                              prop="default"
+                              :error="errors.is_default">
+                    <el-checkbox v-model="form.is_default" size="small">Default Organisation</el-checkbox>
+                </el-form-item>
+            </el-col>
+        </el-row>
+
     </div>
 </template>
 
