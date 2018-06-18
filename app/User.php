@@ -113,4 +113,45 @@ class User extends Authenticatable
     {
         return $value ? $value : str_after($this->name, ' ');
     }
+
+    /**
+     * Check if the specific resource is the users organisation.
+     *
+     * @param string $model_name The name of the resource type.
+     * @param Model $model The model the user is trying to access.
+     * @return boolean
+     */
+    public function hasAccessTo($model = '')
+    {
+        if (!empty($model) && !empty(get_class($model))) {
+            $model_name = get_class($model);
+            $organisations_ids = $this->organisationIds();
+
+            if ($model_name === 'App\School' ||
+                $model_name === 'App\Report' ||
+                $model_name === 'App\User'
+            ) {
+                $model_org_id = $model->organisation->id;
+            } elseif ($model_name === 'App\Organisation') {
+                $model_org_id = $model->id;
+            }
+            return in_array($model_org_id, $organisation_ids);
+        }
+        return false;
+    }
+
+    /**
+     * Get the ids of all the organisations this user is apart of.
+     *
+     * @return array
+     */
+    public function organisationIds()
+    {
+        $organisations = $this->organisations()->select('id')->get()->toArray();
+        $organisation_ids = [];
+        foreach ($organisations as $key => $organisation) {
+            $organisation_ids[] = $organisation['id'];
+        }
+        return $organisation_ids;
+    }
 }

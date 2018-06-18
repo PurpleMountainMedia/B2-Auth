@@ -21,6 +21,7 @@ class ComposerStaticInit4d361e19ac7602c1a8980d31d0c21c99
         'decc78cc4436b1292c6c0d151b19445c' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         '377b22b161c09ed6e5152de788ca020a' => __DIR__ . '/..' . '/spatie/laravel-permission/src/helpers.php',
+        'b4e3f29b106af37a2bb239f73cdf68c7' => __DIR__ . '/../..' . '/app/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -433,6 +434,9 @@ class ComposerStaticInit4d361e19ac7602c1a8980d31d0c21c99
         'App\\Listeners\\RevokeOldTokens' => __DIR__ . '/../..' . '/app/Listeners/RevokeOldTokens.php',
         'App\\Model' => __DIR__ . '/../..' . '/app/Model.php',
         'App\\Organisation' => __DIR__ . '/../..' . '/app/Organisation.php',
+        'App\\Policies\\OrganisationPolicy' => __DIR__ . '/../..' . '/app/Policies/OrganisationPolicy.php',
+        'App\\Policies\\SchoolPolicy' => __DIR__ . '/../..' . '/app/Policies/SchoolPolicy.php',
+        'App\\Policies\\UserPolicy' => __DIR__ . '/../..' . '/app/Policies/UserPolicy.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
