@@ -11,23 +11,31 @@ require('./bootstrap')
 // Vue
 window.Vue = require('vue')
 
+
+// User Permissions
+import Acl from 'vue-browser-acl'
+const user = b2_user;
+var includes = require('lodash.includes');
+
 // Element
 import ElementUI from 'element-ui'
 import '../sass/element-variables.scss'
 Vue.use(ElementUI);
 
 // Bugsnag
-const bugsnag = require('bugsnag-js')
-const bugsnagClient = bugsnag('e58fe44cf63cd222d17bbf3468a19c06')
-const bugsnagVue = require('bugsnag-vue')
-if (typeof b2_user !== 'undefined') {
-    bugsnagClient.user = {
-        id: b2_user.id,
-        name: b2_user.name,
-        email: b2_user.email
+if (process.env.NODE_ENV !== 'development') {
+    const bugsnag = require('bugsnag-js')
+    const bugsnagClient = bugsnag('e58fe44cf63cd222d17bbf3468a19c06')
+    const bugsnagVue = require('bugsnag-vue')
+    if (typeof b2_user !== 'undefined') {
+        bugsnagClient.user = {
+            id: b2_user.id,
+            name: b2_user.name,
+            email: b2_user.email
+        }
     }
+    bugsnagClient.use(bugsnagVue(Vue))
 }
-bugsnagClient.use(bugsnagVue(Vue))
 
 // Mixin
 Vue.mixin({
@@ -36,6 +44,24 @@ Vue.mixin({
             console.log(`${this.$options.name}.vue mounted!`);
         }
     },
+    methods: {
+        userCan (permission_lookup) {
+            var has_role = false;
+            if (typeof b2_user !== 'undefined') {
+                var permissions = b2_user.permissions ? b2_user.permissions : [];
+                permissions.forEach((permission) => {
+                    if (permission.name === permission_lookup) {
+                        has_role = true;
+                    }
+                });
+            }
+            return has_role;
+        },
+
+        userCannot (permission_lookup) {
+            return !this.userCan(permission_lookup);
+        },
+    }
 });
 
 // Init
@@ -43,7 +69,7 @@ const app = new Vue({
     name: 'B2Systems',
     el: '#app',
     mounted () {
-      bugsnagClient.notify(new Error('Test error'))
+
     },
     components: {
         B2UserForm: () => import(/* webpackChunkName: "b2-user-form" */'./components/user/B2UserForm.vue'),

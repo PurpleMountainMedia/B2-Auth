@@ -1,8 +1,14 @@
 <template lang="html">
     <div v-loading="loading">
+
+        <el-tooltip content="You don't have permission to create organisations" placement="top" effect="light" v-if="userCannot('create organisations')">
+            <i class="el-icon-info"></i>
+        </el-tooltip>
+
         <el-button type="primary"
                    plain
                    autofocus
+                   :disabled="userCannot('create organisations')"
                    size="small"
                    @click="showModal = true"
                    v-show="showBtn">Create Organisation <i class="far fa-plus-circle"></i>
