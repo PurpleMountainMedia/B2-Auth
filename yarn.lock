@@ -1185,6 +1185,10 @@ brorand@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/brorand/-/brorand-1.1.0.tgz#12c25efe40a45e3c323eb8675a0a0ce57b22371f"
 
+browser-acl@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/browser-acl/-/browser-acl-0.7.0.tgz#7dafc19179409c50730e3404ff0517cbd096672b"
+
 browser-sync-ui@v1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/browser-sync-ui/-/browser-sync-ui-1.0.1.tgz#9740527b26d1d7ace259acc0c79e5b5e37d0fdf2"
@@ -7826,6 +7830,12 @@ vm-browserify@0.0.4:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-0.0.4.tgz#5d7ea45bbef9e4a6ff65f95438e0a87c357d5a73"
   dependencies:
     indexof "0.0.1"
+
+vue-browser-acl@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/vue-browser-acl/-/vue-browser-acl-0.8.0.tgz#0aa95fc1d55b1cd79bb72eb74c3dd69235b99683"
+  dependencies:
+    browser-acl "^0.7.0"
 
 vue-hot-reload-api@^2.2.0:
   version "2.3.0"
