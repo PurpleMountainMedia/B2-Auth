@@ -42,9 +42,6 @@ Vue.mixin({
 const app = new Vue({
     name: 'B2Systems',
     el: '#app',
-    mounted () {
-      bugsnagClient.notify(new Error('Test error'))
-    },
     components: {
         B2UserForm: () => import(/* webpackChunkName: "b2-user-form" */'./components/user/B2UserForm.vue'),
         B2OrganisationsForm: () => import(/* webpackChunkName: "b2-organisations-form" */'./components/organisations/B2OrganisationsForm.vue')

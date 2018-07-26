@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
 use Illuminate\Support\Facades\Hash;
+use Auth;
 
 class ApiUsersController extends Controller
 {
@@ -81,5 +82,17 @@ class ApiUsersController extends Controller
     public function destroy(User $user)
     {
         //
+    }
+
+    /**
+     * Return the current authenticated user.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function user()
+    {
+        $user = Auth::user();
+
+        return new UserResource($user);
     }
 }

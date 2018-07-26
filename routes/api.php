@@ -19,7 +19,8 @@ Route::namespace('Api')->group(function () {
     Route::get('ping', function () {
         return ['time' => Carbon::now()->toDateTimeString()];
     });
-    
+
+    Route::get('user', 'ApiUsersController@user');
     Route::apiResource('users', 'ApiUsersController');
     Route::apiResource('organisations', 'ApiOrganisationsController');
 });
