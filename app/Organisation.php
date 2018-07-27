@@ -47,6 +47,16 @@ class Organisation extends Model
     }
 
     /**
+     * The schools within this organisation
+     *
+     * @return HasMany
+     */
+    public function schools()
+    {
+        return $this->hasMany('App\School');
+    }
+
+    /**
      * Get the validation rules
      *
      * @return array

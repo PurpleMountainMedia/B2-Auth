@@ -10,6 +10,7 @@ use Illuminate\Validation\Rule;
 use App\Traits\HasUUID;
 use App\Traits\ResponsableTrait;
 use Spatie\Permission\Traits\HasRoles;
+use App\Notifications\ResetPasswordNotification;
 
 class User extends Authenticatable
 {
@@ -125,7 +126,6 @@ class User extends Authenticatable
     {
         if (!empty($model) && !empty(get_class($model))) {
             $model_name = get_class($model);
-            $organisations_ids = $this->organisationIds();
 
             if ($model_name === 'App\School' ||
                 $model_name === 'App\Report' ||
@@ -135,7 +135,7 @@ class User extends Authenticatable
             } elseif ($model_name === 'App\Organisation') {
                 $model_org_id = $model->id;
             }
-            return in_array($model_org_id, $organisation_ids);
+            return in_array($model_org_id, $this->organisationIds());
         }
         return false;
     }
@@ -153,5 +153,16 @@ class User extends Authenticatable
             $organisation_ids[] = $organisation['id'];
         }
         return $organisation_ids;
+    }
+
+    /**
+     * Send the password reset notification.
+     *
+     * @param  string  $token
+     * @return void
+     */
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPasswordNotification($token));
     }
 }

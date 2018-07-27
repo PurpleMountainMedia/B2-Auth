@@ -462,6 +462,7 @@ class ComposerStaticInit4d361e19ac7602c1a8980d31d0c21c99
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\School' => __DIR__ . '/../..' . '/app/School.php',
         'App\\Traits\\HasUUID' => __DIR__ . '/../..' . '/app/Traits/HasUUID.php',
         'App\\Traits\\RecordsActivityTrait' => __DIR__ . '/../..' . '/app/Traits/RecordsActivityTrait.php',
         'App\\Traits\\RelatableTrait' => __DIR__ . '/../..' . '/app/Traits/RelatableTrait.php',

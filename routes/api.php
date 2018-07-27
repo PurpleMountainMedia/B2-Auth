@@ -17,10 +17,11 @@ use Carbon\Carbon;
 Route::namespace('Api')->group(function () {
     // Ping
     Route::get('ping', function () {
-        return ['time' => Carbon::now()->toDateTimeString()];
+        return ['pong' => Carbon::now()->toDateTimeString()];
     });
 
     Route::get('user', 'ApiUsersController@user');
     Route::apiResource('users', 'ApiUsersController');
     Route::apiResource('organisations', 'ApiOrganisationsController');
+    Route::apiResource('schools', 'ApiSchoolsController');
 });

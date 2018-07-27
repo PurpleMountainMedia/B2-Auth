@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Organisation;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\Organisation as OrganisationResource;
 use Auth;
 
 class ApiOrganisationsController extends Controller
@@ -18,11 +19,16 @@ class ApiOrganisationsController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $this->authorize('list', Organisation::class);
+
+        return OrganisationResource::collection(
+            Organisation::with($request->with ?: []
+        )->responseAdapter());
     }
 
     /**
@@ -33,6 +39,8 @@ class ApiOrganisationsController extends Controller
      */
     public function store(Request $request, Organisation $organisation)
     {
+        $this->authorize('create', Organisation::class);
+
         $this->validate($request, $organisation->getValidationRules(), $organisation->getValidationMessages());
         $organisation = $organisation->create([
             'name' => $request->name,
@@ -48,12 +56,17 @@ class ApiOrganisationsController extends Controller
     /**
      * Display the specified resource.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Organisation  $organisation
      * @return \Illuminate\Http\Response
      */
-    public function show(Organisation $organisation)
+    public function show(Request $request, Organisation $organisation)
     {
-        //
+        $this->authorize('view', $organisation);
+
+        $organisation->load($request->with ?: []);
+
+        return new OrganisationResource($organisation);
     }
 
     /**
@@ -65,7 +78,17 @@ class ApiOrganisationsController extends Controller
      */
     public function update(Request $request, Organisation $organisation)
     {
-        //
+        $this->authorize('update', $organisation);
+
+        $this->validate($request, $organisation->getValidationRules(), $organisation->getValidationMessages());
+
+        $organisation->update([
+            'name' => updateOrKeep($request, $organisation, 'name'),
+            'type' => updateOrKeep($request, $organisation, 'type'),
+        ]);
+
+        $organisation->load($request->with ?: []);
+        return new OrganisationResource($organisation);
     }
 
     /**
@@ -76,6 +99,9 @@ class ApiOrganisationsController extends Controller
      */
     public function destroy(Organisation $organisation)
     {
-        //
+        $this->authorize('delete', $organisation);
+
+        $organisation->delete();
+        return deletionSuccessful();
     }
 }

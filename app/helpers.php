@@ -83,3 +83,25 @@ function requestIncludes($key)
 
     return in_array($key, $include);
 }
+
+/**
+ * Determine whether to update the attribute from request or keep the same.
+ *
+ * @param Request $request
+ * @param Mixed $model
+ * @param string $attribute
+ * @param string $request_attribute
+ * @return string
+ */
+function updateOrKeep($request, $model, $attribute, $request_attribute = null)
+{
+    $merged_attribute = $request_attribute ?: $attribute;
+    return $request->has($merged_attribute) ? $request->$merged_attribute : $model->$attribute;
+}
+
+function deletionSuccessful()
+{
+    return [
+        'ok' => true
+    ];
+}

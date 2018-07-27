@@ -35,6 +35,7 @@ return array(
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
+    'App\\School' => $baseDir . '/app/School.php',
     'App\\Traits\\HasUUID' => $baseDir . '/app/Traits/HasUUID.php',
     'App\\Traits\\RecordsActivityTrait' => $baseDir . '/app/Traits/RecordsActivityTrait.php',
     'App\\Traits\\RelatableTrait' => $baseDir . '/app/Traits/RelatableTrait.php',

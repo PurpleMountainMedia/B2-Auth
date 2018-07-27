@@ -10,7 +10,7 @@ use App\Traits\RelatableTrait;
 
 class Model extends BaseModel
 {
-    use ResponsableTrait, HasUUID, RecordsActivityTrait, RelatableTrait;
-     
+    use ResponsableTrait, HasUUID, RecordsActivityTrait;
+
     public $incrementing = false;
 }
