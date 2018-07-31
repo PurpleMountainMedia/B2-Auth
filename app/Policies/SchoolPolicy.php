@@ -12,7 +12,9 @@ class SchoolPolicy
 
     public function before($user, $ability)
     {
-        return $user->hasRole('super admin');
+        if ($user->hasRole('super admin')) {
+            return true;
+        };
     }
 
     /**

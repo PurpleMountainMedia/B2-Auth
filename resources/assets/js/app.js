@@ -13,9 +13,7 @@ window.Vue = require('vue')
 
 
 // User Permissions
-import Acl from 'vue-browser-acl'
 const user = b2_user;
-var includes = require('lodash.includes');
 
 // Element
 import ElementUI from 'element-ui'
@@ -73,6 +71,6 @@ const app = new Vue({
     },
     components: {
         B2UserForm: () => import(/* webpackChunkName: "b2-user-form" */'./components/user/B2UserForm.vue'),
-        B2OrganisationsForm: () => import(/* webpackChunkName: "b2-organisations-form" */'./components/organisations/B2OrganisationsForm.vue')
+        B2OrganisationsForm: () => import(/* webpackChunkName: "b2-organisations-form" */'./components/organisations/B2OrganisationsForm.vue'),
     },
 });

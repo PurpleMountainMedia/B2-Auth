@@ -104,4 +104,21 @@ class ApiOrganisationsController extends Controller
         $organisation->delete();
         return deletionSuccessful();
     }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Organisation  $organisation
+     * @return \Illuminate\Http\Response
+     */
+    public function users(Organisation $organisation)
+    {
+        return ['users' => [
+            'id' => 1,
+            'first_name' => 'Chris',
+            'last_name' => 'Braybrooke',
+            'email' => 'chris@purplemountmedia.com',
+            'phone' => '07758923380',
+        ]];
+    }
 }

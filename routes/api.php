@@ -22,6 +22,9 @@ Route::namespace('Api')->group(function () {
 
     Route::get('user', 'ApiUsersController@user');
     Route::apiResource('users', 'ApiUsersController');
+
     Route::apiResource('organisations', 'ApiOrganisationsController');
+    Route::get('organisations/{organisation}/users', 'ApiOrganisationsController@users')->name('organisations.users');
+    
     Route::apiResource('schools', 'ApiSchoolsController');
 });

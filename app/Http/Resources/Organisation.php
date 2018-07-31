@@ -20,6 +20,7 @@ class Organisation extends JsonResource
             'type' => $this->when(requestIncludes('organisations.extra'), $this->type),
 
             'schools' => new SchoolCollection($this->whenLoaded('schools')),
+            'users' => new UserCollection($this->whenLoaded('users')),
 
             'created_at' => $this->when(requestIncludes('organisations.timestamps'), $this->created_at),
             'updated_at' => $this->when(requestIncludes('organisations.timestamps'), $this->updated_at),
