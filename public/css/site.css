@@ -15719,5 +15719,9 @@ a.product_link {
   text-decoration: none !important;
 }
 
+.short_input input {
+  max-width: 300px !important;
+}
+
 
 /*# sourceMappingURL=site.css.map*/

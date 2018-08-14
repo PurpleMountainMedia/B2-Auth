@@ -42,6 +42,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'B2LoginForm',
@@ -57,62 +59,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       required: true,
       type: String
     },
-    homeRoute: {
-      required: true,
-      type: String
-    },
     forgottenPasswordRoute: {
       required: true,
       type: String
-    },
-    csrfToken: {
-      required: true,
-      type: String
-    },
-    oldInput: {
-      required: false,
-      type: [Object, Array],
-      default: function _default() {
-        return [];
-      }
-    },
-    formErrors: {
-      required: false,
-      type: [Object, Array],
-      default: function _default() {
-        return [];
-      }
-    },
-    logo: {
-      required: false,
-      type: [String],
-      default: function _default() {
-        return '';
-      }
     }
-  },
-
-  data: function data() {
-    return {
-      form: {},
-      errors: {},
-      loading: false
-    };
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    Object.keys(this.oldInput).map(function (key) {
-      _this.$set(_this.form, key, _this.oldInput[key]);
-    });
-
-    this.$nextTick(function () {
-      _this.errors = _this.formErrors;
-    });
-  },
-
-
-  methods: {}
+  }
 });
 
 /***/ }),
@@ -125,7 +76,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2LoginForm.vue","sourceRoot":""}]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2LoginForm.vue","sourceRoot":""}]);
 
 // exports
 
@@ -254,11 +205,7 @@ var render = function() {
     { staticClass: "mt-4" },
     [
       _c("auth-form", {
-        attrs: {
-          "form-action-route": _vm.loginRoute,
-          "home-route": _vm.homeRoute,
-          logo: _vm.logo
-        },
+        attrs: { "form-action-route": _vm.loginRoute },
         scopedSlots: _vm._u([
           {
             key: "default",
@@ -273,7 +220,7 @@ var render = function() {
                       attrs: {
                         label: _vm.__("Email"),
                         prop: "email",
-                        error: _vm.errors.email ? _vm.errors.email[0] : "",
+                        error: slotProps.errors("email"),
                         rules: {
                           required: true,
                           message: _vm.__("Email is required.")
@@ -282,6 +229,7 @@ var render = function() {
                     },
                     [
                       _c("el-input", {
+                        staticClass: "short_input",
                         attrs: {
                           placeholder: "josh@educationinventory.com",
                           name: "email",
@@ -305,7 +253,7 @@ var render = function() {
                       attrs: {
                         label: _vm.__("Password"),
                         prop: "password",
-                        error: _vm.errors.password,
+                        error: slotProps.errors("password"),
                         rules: {
                           required: true,
                           message: _vm.__("Password is required.")
@@ -314,6 +262,7 @@ var render = function() {
                     },
                     [
                       _c("el-input", {
+                        staticClass: "short_input",
                         attrs: {
                           placeholder: "*****",
                           name: "password",
@@ -332,21 +281,23 @@ var render = function() {
                     1
                   ),
                   _vm._v(" "),
-                  _c("a", { attrs: { href: _vm.forgottenPasswordRoute } }, [
-                    _vm._v(_vm._s(_vm.__("I've forgotten my password.")))
-                  ]),
-                  _vm._v(" "),
-                  _c("input", {
-                    attrs: { type: "hidden", name: "_token" },
-                    domProps: { value: _vm.csrfToken }
-                  }),
+                  _c(
+                    "a",
+                    { attrs: { href: _vm.forgottenPasswordRoute } },
+                    [
+                      _c("el-button", { attrs: { type: "text" } }, [
+                        _vm._v(_vm._s(_vm.__("I've forgotten my password.")))
+                      ])
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c(
                     "el-button",
                     {
                       staticClass: "mt-3",
                       attrs: {
-                        loading: _vm.loading,
+                        loading: slotProps.loading,
                         "native-type": "submit",
                         type: "primary"
                       }

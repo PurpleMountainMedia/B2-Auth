@@ -11,11 +11,10 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     @php $user = Auth::User(); @endphp
+
+    @b2Config
+
     <script>
-        window.b2_systems = {
-            site_url: '{{ config('app.url') }}',
-            api_prefix: '{{ config('app.api_prefix') }}'
-        }
         window.b2_user = {
             id: '{{$user->id}}',
             name: '{{$user->name}}',

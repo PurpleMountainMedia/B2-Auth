@@ -16,6 +16,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'AuthForm',
@@ -24,14 +26,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     formActionRoute: {
       required: true,
       type: String
-    },
-
-    logo: {
-      required: false,
-      type: [String],
-      default: function _default() {
-        return '';
-      }
     }
   },
 
@@ -45,15 +39,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   mounted: function mounted() {
     var _this = this;
 
-    Object.keys(this.oldInput).map(function (key) {
-      _this.$set(_this.form, key, _this.oldInput[key]);
+    Object.keys(this.b2FormData.old).map(function (key) {
+      _this.$set(_this.form, key, _this.b2FormData.old[key]);
     });
 
     this.$nextTick(function () {
-      _this.errors = _this.formErrors;
+      _this.errors = _this.b2FormData.errors;
     });
   },
 
+
+  computed: {
+    csrfToken: function csrfToken() {
+      return this.b2FormData.csrfToken;
+    }
+  },
 
   methods: {
     onSubmit: function onSubmit($event) {
@@ -67,6 +67,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
           _this2.loading = false;
         }
       });
+    },
+    getError: function getError(field) {
+      return this.errors[field] ? this.errors[field][0] : '';
     }
   }
 });
@@ -81,7 +84,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"AuthForm.vue","sourceRoot":""}]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"AuthForm.vue","sourceRoot":""}]);
 
 // exports
 
@@ -123,13 +126,24 @@ var render = function() {
               _vm.b2Config.logo
                 ? _c("img", {
                     staticClass: "site_logo",
-                    attrs: { src: _vm.b2Config.logo }
+                    attrs: { src: _vm.b2Config.logo, alt: _vm.b2Config.name }
                   })
                 : _vm._e()
             ])
           ]),
           _vm._v(" "),
-          _vm._t("default", null, { form: _vm.form })
+          _vm._t("default", null, {
+            form: _vm.form,
+            loading: _vm.loading,
+            errors: function(field) {
+              return _vm.getError(field)
+            }
+          }),
+          _vm._v(" "),
+          _c("input", {
+            attrs: { type: "hidden", name: "_token" },
+            domProps: { value: _vm.csrfToken }
+          })
         ],
         2
       )

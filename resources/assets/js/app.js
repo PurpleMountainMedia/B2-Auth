@@ -36,7 +36,11 @@ Vue.mixin({
     },
     computed: {
       b2Config () {
-        return window.b2_systems
+        return window.b2Systems
+      },
+
+      b2FormData () {
+        return window.b2FormData
       }
     },
     methods: {

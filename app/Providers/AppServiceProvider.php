@@ -20,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
         Blade::directive('b2Config', function () {
             $config = json_encode(getB2Config());
 
-            return "<?php echo '<script>window.b2_systems = $config</script>'; ?>";
+            return "<?php echo '<script>window.b2Systems = $config</script>'; ?>";
         });
     }
 
