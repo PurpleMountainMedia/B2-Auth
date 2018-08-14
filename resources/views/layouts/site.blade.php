@@ -22,18 +22,22 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ mix('css/site.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
-        <div class="container">
-            @yield('content')    
-        </div>
+        @component('_partials.site-header')
+        @endcomponent
+
+        @yield('below_nav')
+
+        @yield('content')
     </div>
 
     <!-- Scripts -->
     <script src="{{ mix('js/manifest.js') }}"></script>
     <script src="{{ mix('js/vendor.js') }}"></script>
     <script src="{{ mix('js/app.js') }}"></script>
+    @stack('scripts')
 </body>
 </html>

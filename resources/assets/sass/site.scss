@@ -1,0 +1,64 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+ @import url("https://use.typekit.net/yfc1qbs.css");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+body, html {
+    font-family: "myriad-pro",sans-serif;
+}
+
+// Logo
+.site_logo {
+    max-height: 40px;
+}
+
+// Hero Icons
+.heroicon-outline {fill: #303034;}
+.heroicon-shadow {fill: #303034; opacity:0.4;}
+.heroicon-component-fill {fill: #FFFFFF;}
+
+.heroicon-inventory {
+    .heroicon-component-accent {fill: $eams;}
+}
+.heroicon-finance {
+    .heroicon-component-accent {fill: $finance;}
+}
+.heroicon-people {
+    .heroicon-component-accent {fill: $people;}
+}
+
+// Header
+.navbar {
+    z-index: 100;
+}
+.below_nav_container {
+    position: absolute;
+    top: 0px;
+    padding-top: $navbar_top_height!important;
+    min-height: $header_height;
+}
+.below_nav_container_buffer {
+    height: ($header_height - $navbar_top_height) - 40px;
+}
+div#particles-js {
+    position: absolute;
+    top: 0px;
+    height: $header_height;
+    z-index: 0;
+    width: 100%;
+}
+
+// Products
+.coming_soon {
+    position: absolute;
+    right: 50px;
+}
+a.product_link {
+    text-decoration: none!important;
+}
