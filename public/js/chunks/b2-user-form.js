@@ -38,19 +38,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     components: {
         B2UserBasicFields: function B2UserBasicFields() {
-            return __webpack_require__.e/* import() */(9).then(__webpack_require__.bind(null, "./resources/assets/js/components/user/fields/B2UserBasicFields.vue"));
+            return __webpack_require__.e/* import() */(11).then(__webpack_require__.bind(null, "./resources/assets/js/components/user/fields/B2UserBasicFields.vue"));
         },
         B2UserSecurityFields: function B2UserSecurityFields() {
-            return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, "./resources/assets/js/components/user/fields/B2UserSecurityFields.vue"));
+            return __webpack_require__.e/* import() */(8).then(__webpack_require__.bind(null, "./resources/assets/js/components/user/fields/B2UserSecurityFields.vue"));
         },
         B2UserPreferencesFields: function B2UserPreferencesFields() {
-            return __webpack_require__.e/* import() */(8).then(__webpack_require__.bind(null, "./resources/assets/js/components/user/fields/B2UserPreferencesFields.vue"));
+            return __webpack_require__.e/* import() */(10).then(__webpack_require__.bind(null, "./resources/assets/js/components/user/fields/B2UserPreferencesFields.vue"));
         },
         B2UserPrivacyFields: function B2UserPrivacyFields() {
-            return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, "./resources/assets/js/components/user/fields/B2UserPrivacyFields.vue"));
+            return __webpack_require__.e/* import() */(9).then(__webpack_require__.bind(null, "./resources/assets/js/components/user/fields/B2UserPrivacyFields.vue"));
         },
         B2Errors: function B2Errors() {
-            return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, "./resources/assets/js/components/B2Errors.vue"));
+            return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, "./resources/assets/js/components/B2Errors.vue"));
         }
     },
 

@@ -1,4 +1,23 @@
-@extends('layouts.site')
+@extends('layouts.auth')
+
+@section('content')
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <b2-password-reset-form></b2-password-reset-form>
+    </div>
+  </div>
+</div>
+@endsection
+
+
+
+
+
+
+
+
+{{-- @extends('layouts.site')
 
 @section('content')
 <div class="container">
@@ -44,4 +63,4 @@
         </div>
     </div>
 </div>
-@endsection
+@endsection --}}

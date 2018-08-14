@@ -5,24 +5,24 @@ import 'babel-polyfill'
 window.Vue = require('vue')
 
 // User Permissions
-const user = b2_user;
+var user = typeof b2_user !== 'undefined' ? b2_user : {};
 
 // Element
-import ElementUI from 'element-ui'
+import Element from 'element-ui'
 import '../sass/element-variables.scss'
-Vue.use(ElementUI);
+import locale from 'element-ui/lib/locale/lang/en'
+Vue.use(Element, {locale, size: 'small'})
+import en from './lang/en.json'
 
 // Bugsnag
 if (process.env.NODE_ENV !== 'development') {
     const bugsnag = require('bugsnag-js')
     const bugsnagClient = bugsnag('e58fe44cf63cd222d17bbf3468a19c06')
     const bugsnagVue = require('bugsnag-vue')
-    if (typeof b2_user !== 'undefined') {
-        bugsnagClient.user = {
-            id: b2_user.id,
-            name: b2_user.name,
-            email: b2_user.email
-        }
+    bugsnagClient.user = {
+        id: user.id,
+        name: user.name,
+        email: user.email
     }
     bugsnagClient.use(bugsnagVue(Vue))
 }
@@ -34,18 +34,25 @@ Vue.mixin({
             console.log(`${this.$options.name}.vue mounted!`);
         }
     },
+    computed: {
+      b2Config () {
+        return window.b2_systems
+      }
+    },
     methods: {
         userCan (permission_lookup) {
             var has_role = false;
-            if (typeof b2_user !== 'undefined') {
-                var permissions = b2_user.permissions ? b2_user.permissions : [];
-                permissions.forEach((permission) => {
-                    if (permission.name === permission_lookup) {
-                        has_role = true;
-                    }
-                });
-            }
+            var permissions = user.permissions ? user.permissions : [];
+            permissions.forEach((permission) => {
+                if (permission.name === permission_lookup) {
+                    has_role = true;
+                }
+            });
             return has_role;
+        },
+
+        __(key) {
+            return en[key] ? en[key] : key;
         },
 
         userCannot (permission_lookup) {
@@ -64,5 +71,7 @@ const app = new Vue({
     components: {
         B2UserForm: () => import(/* webpackChunkName: "b2-user-form" */'./components/user/B2UserForm.vue'),
         B2OrganisationsForm: () => import(/* webpackChunkName: "b2-organisations-form" */'./components/organisations/B2OrganisationsForm.vue'),
+        B2LoginForm: () => import(/* webpackChunkName: "b2-login-form" */'./components/auth/B2LoginForm.vue'),
+        B2PasswordResetForm: () => import(/* webpackChunkName: "b2-password-reset-form" */'./components/auth/B2PasswordResetForm.vue'),
     },
 });

@@ -8,6 +8,11 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// FontAwesome
+@import './fontawesome/scss/fontawesome';
+@import './fontawesome/scss/fa-regular';
+@import './fontawesome/scss/fa-light';
+
 
 body, html {
     font-family: "myriad-pro",sans-serif;

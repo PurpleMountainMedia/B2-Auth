@@ -105,3 +105,13 @@ function deletionSuccessful()
         'ok' => true
     ];
 }
+
+function getB2Config()
+{
+    return [
+      'name' => config('app.name'),
+      'site_url' => config('app.url'),
+      'api_prefix' => config('app.api_prefix'),
+      'logo' => url('storage/b2_logo1.png')
+    ];
+}

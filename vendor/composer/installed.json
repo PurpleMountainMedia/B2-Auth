@@ -1,39 +1,5 @@
 [
     {
-        "name": "b2systems/b2-sdk",
-        "version": "9999999-dev",
-        "version_normalized": "9999999-dev",
-        "dist": {
-            "type": "path",
-            "url": "./packages/b2-sdk",
-            "reference": "535e0c233e9af5e38ab8cc76860edf9fa12943a3",
-            "shasum": null
-        },
-        "require": {
-            "guzzlehttp/guzzle": "^6.3"
-        },
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "B2Systems\\B2\\": "src/"
-            }
-        },
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Christian Braybrooke",
-                "email": "chris@purplemountmedia.com"
-            }
-        ],
-        "description": "PHP SDK for B2 Systems",
-        "transport-options": {
-            "symlink": true
-        }
-    },
-    {
         "name": "barryvdh/laravel-debugbar",
         "version": "v3.1.5",
         "version_normalized": "3.1.5.0",
@@ -1489,66 +1455,6 @@
             "Tinker",
             "laravel",
             "psysh"
-        ]
-    },
-    {
-        "name": "lcobucci/jwt",
-        "version": "3.2.2",
-        "version_normalized": "3.2.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/lcobucci/jwt.git",
-            "reference": "0b5930be73582369e10c4d4bb7a12bac927a203c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/lcobucci/jwt/zipball/0b5930be73582369e10c4d4bb7a12bac927a203c",
-            "reference": "0b5930be73582369e10c4d4bb7a12bac927a203c",
-            "shasum": ""
-        },
-        "require": {
-            "ext-openssl": "*",
-            "php": ">=5.5"
-        },
-        "require-dev": {
-            "mdanter/ecc": "~0.3.1",
-            "mikey179/vfsstream": "~1.5",
-            "phpmd/phpmd": "~2.2",
-            "phpunit/php-invoker": "~1.1",
-            "phpunit/phpunit": "~4.5",
-            "squizlabs/php_codesniffer": "~2.3"
-        },
-        "suggest": {
-            "mdanter/ecc": "Required to use Elliptic Curves based algorithms."
-        },
-        "time": "2017-09-01T08:23:26+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.1-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Lcobucci\\JWT\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Luís Otávio Cobucci Oblonczyk",
-                "email": "lcobucci@gmail.com",
-                "role": "developer"
-            }
-        ],
-        "description": "A simple library to work with JSON Web Token and JSON Web Signature",
-        "keywords": [
-            "JWS",
-            "jwt"
         ]
     },
     {
@@ -5133,58 +5039,6 @@
         "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles"
     },
     {
-        "name": "vlucas/phpdotenv",
-        "version": "v2.5.0",
-        "version_normalized": "2.5.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/vlucas/phpdotenv.git",
-            "reference": "6ae3e2e6494bb5e58c2decadafc3de7f1453f70a"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/6ae3e2e6494bb5e58c2decadafc3de7f1453f70a",
-            "reference": "6ae3e2e6494bb5e58c2decadafc3de7f1453f70a",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.9"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "^4.8.35 || ^5.0"
-        },
-        "time": "2018-07-01T10:25:50+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.5-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Dotenv\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Vance Lucas",
-                "email": "vance@vancelucas.com",
-                "homepage": "http://www.vancelucas.com"
-            }
-        ],
-        "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
-        "keywords": [
-            "dotenv",
-            "env",
-            "environment"
-        ]
-    },
-    {
         "name": "webmozart/assert",
         "version": "1.3.0",
         "version_normalized": "1.3.0.0",
@@ -5355,6 +5209,156 @@
             "http",
             "psr",
             "psr-7"
+        ]
+    },
+    {
+        "name": "b2systems/b2-sdk",
+        "version": "0.0.1",
+        "version_normalized": "0.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/B2Systems/B2-SDK.git",
+            "reference": "a1b567236cc9421d41c61ae200cbae6edf1ab594"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/B2Systems/B2-SDK/zipball/a1b567236cc9421d41c61ae200cbae6edf1ab594",
+            "reference": "a1b567236cc9421d41c61ae200cbae6edf1ab594",
+            "shasum": ""
+        },
+        "require": {
+            "guzzlehttp/guzzle": "^6.3"
+        },
+        "time": "2018-07-28T13:22:14+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "B2Systems\\B2\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Christian Braybrooke",
+                "email": "chris@purplemountmedia.com"
+            }
+        ],
+        "description": "PHP SDK for B2 Systems"
+    },
+    {
+        "name": "vlucas/phpdotenv",
+        "version": "v2.5.1",
+        "version_normalized": "2.5.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/vlucas/phpdotenv.git",
+            "reference": "8abb4f9aa89ddea9d52112c65bbe8d0125e2fa8e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/8abb4f9aa89ddea9d52112c65bbe8d0125e2fa8e",
+            "reference": "8abb4f9aa89ddea9d52112c65bbe8d0125e2fa8e",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.9"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.8.35 || ^5.0"
+        },
+        "time": "2018-07-29T20:33:41+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.5-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Dotenv\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Vance Lucas",
+                "email": "vance@vancelucas.com",
+                "homepage": "http://www.vancelucas.com"
+            }
+        ],
+        "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+        "keywords": [
+            "dotenv",
+            "env",
+            "environment"
+        ]
+    },
+    {
+        "name": "lcobucci/jwt",
+        "version": "3.2.3",
+        "version_normalized": "3.2.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/lcobucci/jwt.git",
+            "reference": "01da822b3c2982ca9f2a1234f802a3ec001527ec"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/lcobucci/jwt/zipball/01da822b3c2982ca9f2a1234f802a3ec001527ec",
+            "reference": "01da822b3c2982ca9f2a1234f802a3ec001527ec",
+            "shasum": ""
+        },
+        "require": {
+            "ext-openssl": "*",
+            "php": ">=5.5"
+        },
+        "require-dev": {
+            "mdanter/ecc": "~0.3.1",
+            "mikey179/vfsstream": "~1.5",
+            "phpmd/phpmd": "~2.2",
+            "phpunit/php-invoker": "~1.1",
+            "phpunit/phpunit": "~4.5",
+            "squizlabs/php_codesniffer": "~2.3"
+        },
+        "suggest": {
+            "mdanter/ecc": "Required to use Elliptic Curves based algorithms."
+        },
+        "time": "2018-07-29T14:38:43+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.1-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Lcobucci\\JWT\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Luís Otávio Cobucci Oblonczyk",
+                "email": "lcobucci@gmail.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "A simple library to work with JSON Web Token and JSON Web Signature",
+        "keywords": [
+            "JWS",
+            "jwt"
         ]
     }
 ]

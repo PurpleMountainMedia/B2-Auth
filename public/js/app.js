@@ -1,4 +1,4 @@
-webpackJsonp([2],{
+webpackJsonp([4],{
 
 /***/ "./node_modules/babel-polyfill/lib/index.js":
 /***/ (function(module, exports, __webpack_require__) {
@@ -9391,6 +9391,125 @@ module.exports = function escape(url) {
 
 /***/ }),
 
+/***/ "./node_modules/element-ui/lib/locale/lang/en.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.default = {
+  el: {
+    colorpicker: {
+      confirm: 'OK',
+      clear: 'Clear'
+    },
+    datepicker: {
+      now: 'Now',
+      today: 'Today',
+      cancel: 'Cancel',
+      clear: 'Clear',
+      confirm: 'OK',
+      selectDate: 'Select date',
+      selectTime: 'Select time',
+      startDate: 'Start Date',
+      startTime: 'Start Time',
+      endDate: 'End Date',
+      endTime: 'End Time',
+      prevYear: 'Previous Year',
+      nextYear: 'Next Year',
+      prevMonth: 'Previous Month',
+      nextMonth: 'Next Month',
+      year: '',
+      month1: 'January',
+      month2: 'February',
+      month3: 'March',
+      month4: 'April',
+      month5: 'May',
+      month6: 'June',
+      month7: 'July',
+      month8: 'August',
+      month9: 'September',
+      month10: 'October',
+      month11: 'November',
+      month12: 'December',
+      // week: 'week',
+      weeks: {
+        sun: 'Sun',
+        mon: 'Mon',
+        tue: 'Tue',
+        wed: 'Wed',
+        thu: 'Thu',
+        fri: 'Fri',
+        sat: 'Sat'
+      },
+      months: {
+        jan: 'Jan',
+        feb: 'Feb',
+        mar: 'Mar',
+        apr: 'Apr',
+        may: 'May',
+        jun: 'Jun',
+        jul: 'Jul',
+        aug: 'Aug',
+        sep: 'Sep',
+        oct: 'Oct',
+        nov: 'Nov',
+        dec: 'Dec'
+      }
+    },
+    select: {
+      loading: 'Loading',
+      noMatch: 'No matching data',
+      noData: 'No data',
+      placeholder: 'Select'
+    },
+    cascader: {
+      noMatch: 'No matching data',
+      loading: 'Loading',
+      placeholder: 'Select'
+    },
+    pagination: {
+      goto: 'Go to',
+      pagesize: '/page',
+      total: 'Total {total}',
+      pageClassifier: ''
+    },
+    messagebox: {
+      title: 'Message',
+      confirm: 'OK',
+      cancel: 'Cancel',
+      error: 'Illegal input'
+    },
+    upload: {
+      deleteTip: 'press delete to remove',
+      delete: 'Delete',
+      preview: 'Preview',
+      continue: 'Continue'
+    },
+    table: {
+      emptyText: 'No Data',
+      confirmFilter: 'Confirm',
+      resetFilter: 'Reset',
+      clearFilter: 'All',
+      sumText: 'Sum'
+    },
+    tree: {
+      emptyText: 'No Data'
+    },
+    transfer: {
+      noMatch: 'No matching data',
+      noData: 'No data',
+      titles: ['List 1', 'List 2'], // to be translated
+      filterPlaceholder: 'Enter keyword', // to be translated
+      noCheckedFormat: '{total} items', // to be translated
+      hasCheckedFormat: '{checked}/{total} checked' // to be translated
+    }
+  }
+};
+
+/***/ }),
+
 /***/ "./node_modules/element-ui/lib/theme-chalk/fonts/element-icons.ttf":
 /***/ (function(module, exports) {
 
@@ -9872,31 +9991,35 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_element_ui___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_element_ui__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sass_element_variables_scss__ = __webpack_require__("./resources/assets/sass/element-variables.scss");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sass_element_variables_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__sass_element_variables_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_element_ui_lib_locale_lang_en__ = __webpack_require__("./node_modules/element-ui/lib/locale/lang/en.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_element_ui_lib_locale_lang_en___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_element_ui_lib_locale_lang_en__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__lang_en_json__ = __webpack_require__("./resources/assets/js/lang/en.json");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__lang_en_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__lang_en_json__);
 __webpack_require__("./resources/assets/js/bootstrap.js");
 
 
 window.Vue = __webpack_require__("./node_modules/vue/dist/vue.common.js");
 
 // User Permissions
-var user = b2_user;
+var user = typeof b2_user !== 'undefined' ? b2_user : {};
 
 // Element
 
 
-Vue.use(__WEBPACK_IMPORTED_MODULE_1_element_ui___default.a);
+
+Vue.use(__WEBPACK_IMPORTED_MODULE_1_element_ui___default.a, { locale: __WEBPACK_IMPORTED_MODULE_3_element_ui_lib_locale_lang_en___default.a, size: 'small' });
+
 
 // Bugsnag
 if (false) {
     var bugsnag = require('bugsnag-js');
     var bugsnagClient = bugsnag('e58fe44cf63cd222d17bbf3468a19c06');
     var bugsnagVue = require('bugsnag-vue');
-    if (typeof b2_user !== 'undefined') {
-        bugsnagClient.user = {
-            id: b2_user.id,
-            name: b2_user.name,
-            email: b2_user.email
-        };
-    }
+    bugsnagClient.user = {
+        id: user.id,
+        name: user.name,
+        email: user.email
+    };
     bugsnagClient.use(bugsnagVue(Vue));
 }
 
@@ -9908,18 +10031,24 @@ Vue.mixin({
         }
     },
 
+    computed: {
+        b2Config: function b2Config() {
+            return window.b2_systems;
+        }
+    },
     methods: {
         userCan: function userCan(permission_lookup) {
             var has_role = false;
-            if (typeof b2_user !== 'undefined') {
-                var permissions = b2_user.permissions ? b2_user.permissions : [];
-                permissions.forEach(function (permission) {
-                    if (permission.name === permission_lookup) {
-                        has_role = true;
-                    }
-                });
-            }
+            var permissions = user.permissions ? user.permissions : [];
+            permissions.forEach(function (permission) {
+                if (permission.name === permission_lookup) {
+                    has_role = true;
+                }
+            });
             return has_role;
+        },
+        __: function __(key) {
+            return __WEBPACK_IMPORTED_MODULE_4__lang_en_json___default.a[key] ? __WEBPACK_IMPORTED_MODULE_4__lang_en_json___default.a[key] : key;
         },
         userCannot: function userCannot(permission_lookup) {
             return !this.userCan(permission_lookup);
@@ -9939,6 +10068,12 @@ var app = new Vue({
         },
         B2OrganisationsForm: function B2OrganisationsForm() {
             return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, "./resources/assets/js/components/organisations/B2OrganisationsForm.vue"));
+        },
+        B2LoginForm: function B2LoginForm() {
+            return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/B2LoginForm.vue"));
+        },
+        B2PasswordResetForm: function B2PasswordResetForm() {
+            return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/B2PasswordResetForm.vue"));
         }
     }
 });
@@ -9987,6 +10122,13 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/assets/js/lang/en.json":
+/***/ (function(module, exports) {
+
+module.exports = {"Email":"Email","Password":"Password","Email is required.":"Email is required.","Password is required.":"Password is required.","Return to main website.":"Return to main website."}
 
 /***/ }),
 

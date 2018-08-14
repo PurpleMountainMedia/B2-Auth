@@ -34,7 +34,7 @@
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		11: 0
+/******/ 		14: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -91,7 +91,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "js/chunks/" + ({"0":"b2-user-form","1":"b2-organisations-form","4":"b2-errors","5":"b2-create-organisation","6":"b2-user-security","7":"b2-user-privacy","8":"b2-user-preferces","9":"b2-user-basic","10":"b2-organisations-basic"}[chunkId]||chunkId) + ".js";
+/******/ 		script.src = __webpack_require__.p + "js/chunks/" + ({"0":"b2-user-form","1":"b2-organisations-form","2":"b2-password-reset-form","3":"b2-login-form","6":"b2-errors","7":"b2-create-organisation","8":"b2-user-security","9":"b2-user-privacy","10":"b2-user-preferces","11":"b2-user-basic","12":"b2-organisations-basic","13":"auth-form"}[chunkId]||chunkId) + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {

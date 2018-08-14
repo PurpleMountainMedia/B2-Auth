@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Session;
 use App\User;
 use Laravel\Passport\Passport;
+use Illuminate\Support\Facades\Blade;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -16,7 +17,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Blade::directive('b2Config', function () {
+            $config = json_encode(getB2Config());
+
+            return "<?php echo '<script>window.b2_systems = $config</script>'; ?>";
+        });
     }
 
     /**

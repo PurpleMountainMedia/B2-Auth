@@ -34,7 +34,7 @@ var chunk = __webpack_require__("./node_modules/lodash.chunk/index.js");
 
     components: {
         B2CreateOrganisation: function B2CreateOrganisation() {
-            return __webpack_require__.e/* import() */(5).then(__webpack_require__.bind(null, "./resources/assets/js/components/organisations/components/B2CreateOrganisation.vue"));
+            return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, "./resources/assets/js/components/organisations/components/B2CreateOrganisation.vue"));
         }
     },
 
