@@ -10080,6 +10080,9 @@ var app = new Vue({
         },
         B2NewPasswordForm: function B2NewPasswordForm() {
             return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/B2NewPasswordForm.vue"));
+        },
+        B2OAuthForm: function B2OAuthForm() {
+            return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/B2OAuthForm.vue"));
         }
     }
 });

@@ -5,7 +5,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <b2-new-password-form email="{{ $email }}" reset-route="{{ route('password.request') }}"></b2-new-password-form>
+      <b2-new-password-form email="{{ $email }}" token="{{ $token }}" reset-route="{{ route('password.request') }}"></b2-new-password-form>
     </div>
   </div>
 </div>

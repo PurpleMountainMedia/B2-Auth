@@ -83,6 +83,6 @@
 @endsection
 
 @push('scripts')
-    <script src="assets/js/particles.js" charset="utf-8"></script>
-    <script src="assets/js/particles-config.js" charset="utf-8"></script>
+    <script src="{{ mix('js/particles.js') }}" charset="utf-8"></script>
+    <script src="{{ mix('js/particles-config.js') }}" charset="utf-8"></script>
 @endpush

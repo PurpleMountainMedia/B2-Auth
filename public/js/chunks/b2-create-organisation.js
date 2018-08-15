@@ -1,4 +1,4 @@
-webpackJsonp([9],{
+webpackJsonp([11],{
 
 /***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/organisations/components/B2CreateOrganisation.vue":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -61,10 +61,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     components: {
         B2OrganisationsBasicFields: function B2OrganisationsBasicFields() {
-            return __webpack_require__.e/* import() */(14).then(__webpack_require__.bind(null, "./resources/assets/js/components/organisations/fields/B2OrganisationsBasicFields.vue"));
+            return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, "./resources/assets/js/components/organisations/fields/B2OrganisationsBasicFields.vue"));
         },
         B2Errors: function B2Errors() {
-            return __webpack_require__.e/* import() */(8).then(__webpack_require__.bind(null, "./resources/assets/js/components/B2Errors.vue"));
+            return __webpack_require__.e/* import() */(10).then(__webpack_require__.bind(null, "./resources/assets/js/components/B2Errors.vue"));
         }
     },
 

@@ -78,5 +78,6 @@ const app = new Vue({
         B2LoginForm: () => import(/* webpackChunkName: "b2-login-form" */'./components/auth/B2LoginForm.vue'),
         B2PasswordResetForm: () => import(/* webpackChunkName: "b2-password-reset-form" */'./components/auth/B2PasswordResetForm.vue'),
         B2NewPasswordForm: () => import(/* webpackChunkName: "b2-new-password-form" */'./components/auth/B2NewPasswordForm.vue'),
+        B2OAuthForm: () => import(/* webpackChunkName: "b2-o-auth-form" */'./components/auth/B2OAuthForm.vue'),
     },
 });

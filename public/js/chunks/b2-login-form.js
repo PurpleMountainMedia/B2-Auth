@@ -50,7 +50,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   components: {
     AuthForm: function AuthForm() {
-      return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/AuthForm.vue"));
+      return __webpack_require__.e/* import() */(9).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/AuthForm.vue"));
     }
   },
 

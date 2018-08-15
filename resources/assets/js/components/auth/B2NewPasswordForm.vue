@@ -10,12 +10,11 @@
                         :rules="{ required: true, message: __('Email is required.') }">
               <el-input v-model="slotProps.form.email"
                         placeholder="josh@educationinventory.com"
-                        name="email"
-                        :disabled="slotProps.form.email ? true : false"
-                        class="short_input"
-                        id="login_email">
+                        :disabled="true"
+                        class="short_input">
               </el-input>
           </el-form-item>
+          <input type="hidden" name="email" id="login_email" :value="slotProps.form.email">
 
           <el-form-item :label="__('Password')"
                         prop="password"
@@ -39,13 +38,11 @@
                         name="password_confirmation"
                         type="password"
                         class="short_input"
-                        id="login_password">
+                        id="login_password_confirmation">
               </el-input>
           </el-form-item>
 
-          <!-- <a :href="forgottenPasswordRoute">
-            <el-button type="text">{{ __("I've forgotten my password.") }}</el-button>
-          </a> -->
+          <input type="hidden" name="token" :value="token">
 
           <el-button class="mt-3" :loading="slotProps.loading" native-type="submit" type="primary">{{ __('Reset') }} <i class="far fa-lock"></i></el-button>
         </el-card>
@@ -64,6 +61,11 @@ export default {
 
   props: {
     resetRoute: {
+      required: true,
+      type: String
+    },
+
+    token: {
       required: true,
       type: String
     },

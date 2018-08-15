@@ -52,6 +52,9 @@ if (!mix.inProduction()) {
 }
 
 mix.js('resources/assets/js/app.js', 'public/js')
+   .js('resources/assets/js/particles.js', 'public/js')
+   .js('resources/assets/js/particles-config.js', 'public/js')
+   .copy('resources/assets/js/particles.json', 'public')
    .sass('resources/assets/sass/site.scss', 'public/css')
    .sass('resources/assets/sass/app.scss', 'public/css')
    .extract(['vue', 'element-ui', 'axios'])

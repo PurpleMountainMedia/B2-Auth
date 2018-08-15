@@ -33,5 +33,11 @@ class AuthServiceProvider extends ServiceProvider
         Passport::tokensExpireIn(now()->addDays(1));
 
         Passport::refreshTokensExpireIn(now()->addDays(15));
+
+        //custom authorization routes
+
+        \Route::get('oauth/authorize', [
+            'uses' => '\App\Http\Controllers\CustomOauthAuthorizationController@authorize',
+        ])->middleware(['web', 'auth']);
     }
 }
