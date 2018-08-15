@@ -1,4 +1,4 @@
-webpackJsonp([4],{
+webpackJsonp([5],{
 
 /***/ "./node_modules/babel-polyfill/lib/index.js":
 /***/ (function(module, exports, __webpack_require__) {
@@ -10073,10 +10073,13 @@ var app = new Vue({
             return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, "./resources/assets/js/components/organisations/B2OrganisationsForm.vue"));
         },
         B2LoginForm: function B2LoginForm() {
-            return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/B2LoginForm.vue"));
+            return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/B2LoginForm.vue"));
         },
         B2PasswordResetForm: function B2PasswordResetForm() {
             return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/B2PasswordResetForm.vue"));
+        },
+        B2NewPasswordForm: function B2NewPasswordForm() {
+            return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/B2NewPasswordForm.vue"));
         }
     }
 });
@@ -10131,7 +10134,7 @@ if (token) {
 /***/ "./resources/assets/js/lang/en.json":
 /***/ (function(module, exports) {
 
-module.exports = {"Email":"Email","Password":"Password","Email is required.":"Email is required.","Password is required.":"Password is required.","Return to main website.":"Return to main website."}
+module.exports = {"Email":"Email","Password":"Password","Email is required.":"Email is required.","Password is required.":"Password is required.","Return to main website.":"Return to main website.","Login":"Login","Reset":"Reset"}
 
 /***/ }),
 

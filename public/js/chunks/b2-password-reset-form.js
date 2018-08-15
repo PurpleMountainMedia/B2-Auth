@@ -9,9 +9,63 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'B2PasswordResetForm'
+  name: 'B2PasswordResetForm',
+
+  components: {
+    AuthForm: function AuthForm() {
+      return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/AuthForm.vue"));
+    }
+  },
+
+  props: {
+    resetRoute: {
+      required: true,
+      type: String
+    },
+
+    successMessage: {
+      required: false,
+      type: String,
+      default: function _default() {
+        return '';
+      }
+    }
+  }
 });
 
 /***/ }),
@@ -24,7 +78,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2PasswordResetForm.vue","sourceRoot":""}]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2PasswordResetForm.vue","sourceRoot":""}]);
 
 // exports
 
@@ -148,7 +202,91 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c(
+    "div",
+    { staticClass: "mt-4" },
+    [
+      _c("auth-form", {
+        attrs: { "form-action-route": _vm.resetRoute },
+        scopedSlots: _vm._u([
+          {
+            key: "default",
+            fn: function(slotProps) {
+              return [
+                _vm.successMessage
+                  ? _c("el-alert", {
+                      staticClass: "my-2",
+                      attrs: {
+                        title: _vm.successMessage,
+                        type: "success",
+                        closable: false,
+                        "show-icon": ""
+                      }
+                    })
+                  : _vm._e(),
+                _vm._v(" "),
+                _c(
+                  "el-card",
+                  [
+                    _c(
+                      "el-form-item",
+                      {
+                        attrs: {
+                          label: _vm.__("Email"),
+                          prop: "email",
+                          error: slotProps.errors("email"),
+                          rules: {
+                            required: true,
+                            message: _vm.__("Email is required.")
+                          }
+                        }
+                      },
+                      [
+                        _c("el-input", {
+                          staticClass: "short_input",
+                          attrs: {
+                            placeholder: "josh@educationinventory.com",
+                            name: "email",
+                            id: "login_email"
+                          },
+                          model: {
+                            value: slotProps.form.email,
+                            callback: function($$v) {
+                              _vm.$set(slotProps.form, "email", $$v)
+                            },
+                            expression: "slotProps.form.email"
+                          }
+                        })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "el-button",
+                      {
+                        staticClass: "mt-3",
+                        attrs: {
+                          loading: slotProps.loading,
+                          "native-type": "submit",
+                          type: "primary"
+                        }
+                      },
+                      [
+                        _vm._v(_vm._s(_vm.__("Reset")) + " "),
+                        _c("i", { staticClass: "far fa-lock" })
+                      ]
+                    )
+                  ],
+                  1
+                )
+              ]
+            }
+          }
+        ])
+      })
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

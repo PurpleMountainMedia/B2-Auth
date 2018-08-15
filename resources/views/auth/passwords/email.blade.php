@@ -3,8 +3,8 @@
 @section('content')
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-8">
-      <b2-password-reset-form></b2-password-reset-form>
+    <div class="col-md-6">
+      <b2-password-reset-form reset-route="{{ route('password.email') }}" success-message="{{ session('status') }}"></b2-password-reset-form>
     </div>
   </div>
 </div>

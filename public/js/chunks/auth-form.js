@@ -1,4 +1,4 @@
-webpackJsonp([13],{
+webpackJsonp([7],{
 
 /***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/auth/AuthForm.vue":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -26,6 +26,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     formActionRoute: {
       required: true,
       type: String
+    },
+
+    values: {
+      required: false,
+      type: Object,
+      default: function _default() {
+        return {};
+      }
     }
   },
 
@@ -38,6 +46,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
   mounted: function mounted() {
     var _this = this;
+
+    Object.keys(this.values).map(function (key) {
+      _this.$set(_this.form, key, _this.values[key]);
+    });
 
     Object.keys(this.b2FormData.old).map(function (key) {
       _this.$set(_this.form, key, _this.b2FormData.old[key]);
@@ -84,7 +96,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"AuthForm.vue","sourceRoot":""}]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"AuthForm.vue","sourceRoot":""}]);
 
 // exports
 

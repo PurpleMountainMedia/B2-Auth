@@ -20,6 +20,12 @@ export default {
       required: true,
       type: String
     },
+
+    values: {
+      required: false,
+      type: Object,
+      default: () => { return {} }
+    },
   },
 
   data () {
@@ -31,6 +37,10 @@ export default {
   },
 
   mounted () {
+    Object.keys(this.values).map((key) => {
+        this.$set(this.form, key, this.values[key])
+    })
+
     Object.keys(this.b2FormData.old).map((key) => {
         this.$set(this.form, key, this.b2FormData.old[key])
     })
