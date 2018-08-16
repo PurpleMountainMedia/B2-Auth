@@ -1,7 +1,7 @@
 <div class="container">
   <nav class="navbar navbar-light bg-light shadow">
     <a class="navbar-brand" href="/">
-      <img src="{{ url('storage/b2_logo1.png') }}" class="site_logo" alt="B2 Systems">
+      <img src="{{ getB2Config('logo') }}" class="site_logo" alt="B2 Systems">
     </a>
     @auth()
       <a class="" href="{{ route('login') }}">
