@@ -24,8 +24,3 @@ Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::get('/organisations', 'OrganisationsController@index')->name('organisations');
 Route::get('/schools', 'DashboardController@index')->name('schools');
 Route::get('/licences', 'DashboardController@index')->name('licences');
-
-
-// Dev
-Route::get('/sdk', 'SDKController@index')->name('sdk');
-Route::get('/sdk/token', 'SDKController@token')->name('sdk.token');
