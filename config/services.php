@@ -35,4 +35,9 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'goCardless' => [
+        'secret' => env('GO_CARDLESS_SECRET'),
+        'enviroment' => env('GO_CARDLESS_ENV', 'live'),
+        'redirectUrl' => 'http://www.b2systems.test/licences/callback'
+    ],
 ];

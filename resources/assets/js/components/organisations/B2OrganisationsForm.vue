@@ -1,7 +1,7 @@
 <template lang="html">
 
 <div v-loading="loading">
-    <b2-create-organisation :on-create="(org) => this.clonedOrganisations.push(org)" />
+    <b2-create-organisation-modal :on-create="(org) => this.clonedOrganisations.push(org)" />
 
     <el-row class="mt-5" :gutter="40" v-for="(row, key) in groupedOrganisations" :key="key">
         <el-col :span="12" v-for="organisation in row" :key="organisation.id">
@@ -26,7 +26,7 @@ export default {
     name: 'B2OrganisationsForm',
 
     components: {
-        B2CreateOrganisation: () => import(/* webpackChunkName: "b2-create-organisation" */'./components/B2CreateOrganisation'),
+        B2CreateOrganisationModal: () => import(/* webpackChunkName: "b2-create-organisation-modal" */'./components/B2CreateOrganisationModal'),
     },
 
     props: {

@@ -20,7 +20,13 @@ Route::middleware('auth')->get('logout', function () {
 });
 Auth::routes();
 
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-Route::get('/organisations', 'OrganisationsController@index')->name('organisations');
-Route::get('/schools', 'DashboardController@index')->name('schools');
-Route::get('/licences', 'DashboardController@index')->name('licences');
+Route::middleware(['no-organisation'])->group(function () {
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+    Route::get('/dashboard/organisations', 'OrganisationsController@index')->name('organisations');
+    Route::get('/dashboard/schools', 'DashboardController@index')->name('schools');
+    Route::get('/dashboard/licences', 'LicencesController@index')->name('licences');
+    Route::get('/dashboard/licences/callback', 'LicencesController@callback')->name('licences.callback');
+});
+
+Route::get('organisations', 'OrganisationsController@create')->name('organisations.create');
+Route::post('organisations', 'OrganisationsController@store')->name('organisations.store');

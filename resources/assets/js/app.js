@@ -79,5 +79,7 @@ const app = new Vue({
         B2PasswordResetForm: () => import(/* webpackChunkName: "b2-password-reset-form" */'./components/auth/B2PasswordResetForm.vue'),
         B2NewPasswordForm: () => import(/* webpackChunkName: "b2-new-password-form" */'./components/auth/B2NewPasswordForm.vue'),
         B2OAuthForm: () => import(/* webpackChunkName: "b2-o-auth-form" */'./components/auth/B2OAuthForm.vue'),
+        B2RegisterForm: () => import(/* webpackChunkName: "b2-register-form" */'./components/auth/B2RegisterForm.vue'),
+        B2CreateOrganisationForm: () => import(/* webpackChunkName: "b2-create-organisation-form" */'./components/organisations/B2CreateOrganisationForm.vue'),
     },
 });

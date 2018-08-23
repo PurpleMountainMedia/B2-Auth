@@ -27,4 +27,26 @@ class OrganisationsController extends Controller
         $user = Auth::User();
         return view('organisations', compact('user'));
     }
+
+    /**
+     * Add a new organisation
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $user = Auth::User();
+        return view('organisations.add', compact('user'));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
 }
