@@ -1,13 +1,15 @@
 <template lang="html">
     <div>
         <el-row :gutter="10">
+          <el-col>
             <p><strong>Basic Information</strong></p>
             <hr>
+          </el-col>
         </el-row>
 
         <!-- Name -->
         <el-row :gutter="10">
-            <el-col :span="9" :offset="6">
+            <el-col :md="14">
                 <el-form-item label="Organisation Name"
                               prop="name"
                               :error="errors.name"
@@ -20,11 +22,8 @@
                     </el-input>
                 </el-form-item>
             </el-col>
-        </el-row>
 
-        <!-- Type -->
-        <el-row :gutter="10">
-            <el-col :span="9" :offset="6">
+            <el-col :md="10">
                 <el-form-item label="Organisation Type"
                               prop="type"
                               :error="errors.type"
@@ -42,7 +41,7 @@
 
         <!-- Default -->
         <el-row :gutter="10">
-            <el-col :span="9" :offset="6">
+            <el-col :span="9">
                 <el-form-item label="Default"
                               prop="default"
                               :error="errors.is_default">

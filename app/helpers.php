@@ -106,12 +106,17 @@ function deletionSuccessful()
     ];
 }
 
-function getB2Config()
+function getB2Config($key = null)
 {
-    return [
+    $array = [
       'name' => config('app.name'),
       'site_url' => config('app.url'),
       'api_prefix' => config('app.api_prefix'),
-      'logo' => url('storage/b2_logo1.png')
+      'logo' => asset('storage/system/b2_logo1.png')
     ];
+
+    if ($key) {
+        return $array[$key] ?? null;
+    }
+    return $array;
 }

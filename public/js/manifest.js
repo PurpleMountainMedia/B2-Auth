@@ -34,7 +34,7 @@
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		17: 0
+/******/ 		21: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -91,7 +91,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "js/chunks/" + ({"0":"b2-user-form","1":"b2-organisations-form","2":"b2-password-reset-form","3":"b2-new-password-form","4":"b2-login-form","9":"auth-form","10":"b2-errors","11":"b2-create-organisation","12":"b2-user-security","13":"b2-user-privacy","14":"b2-user-preferces","15":"b2-user-basic","16":"b2-organisations-basic"}[chunkId]||chunkId) + ".js";
+/******/ 		script.src = __webpack_require__.p + "js/chunks/" + ({"0":"b2-user-form","1":"b2-organisations-form","2":"b2-create-organisation-form","3":"b2-register-form","4":"b2-password-reset-form","5":"b2-o-auth-form","6":"b2-new-password-form","7":"b2-login-form","12":"b2-form","13":"b2-organisations-basic-fields","14":"b2-errors","15":"b2-create-organisation-modal","16":"b2-user-security","17":"b2-user-privacy","18":"b2-user-preferces","19":"b2-user-basic","20":"b2-organisations-address-fields"}[chunkId]||chunkId) + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {

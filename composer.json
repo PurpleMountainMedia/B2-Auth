@@ -7,12 +7,12 @@
     "require": {
         "php": "^7.1.3",
         "fideloper/proxy": "^4.0",
+        "gocardless/gocardless-pro": "^2.1",
         "laravel/framework": "5.6.*",
         "laravel/passport": "^6.0",
         "laravel/tinker": "^1.0",
         "spatie/laravel-permission": "^2.12",
-        "webpatser/laravel-uuid": "^3.0",
-        "b2systems/b2-sdk": "@dev"
+        "webpatser/laravel-uuid": "^3.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.1",
@@ -43,18 +43,10 @@
     "extra": {
         "laravel": {
             "dont-discover": [
+                "laravel/dusk"
             ]
         }
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./packages/b2-sdk",
-            "options": {
-                "symlink": true
-            }
-        }
-    ],
     "scripts": {
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""

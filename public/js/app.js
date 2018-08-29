@@ -1,4 +1,4 @@
-webpackJsonp([5],{
+webpackJsonp([8],{
 
 /***/ "./node_modules/babel-polyfill/lib/index.js":
 /***/ (function(module, exports, __webpack_require__) {
@@ -10073,16 +10073,22 @@ var app = new Vue({
             return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, "./resources/assets/js/components/organisations/B2OrganisationsForm.vue"));
         },
         B2LoginForm: function B2LoginForm() {
-            return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/B2LoginForm.vue"));
+            return __webpack_require__.e/* import() */(7).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/B2LoginForm.vue"));
         },
         B2PasswordResetForm: function B2PasswordResetForm() {
-            return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/B2PasswordResetForm.vue"));
+            return __webpack_require__.e/* import() */(4).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/B2PasswordResetForm.vue"));
         },
         B2NewPasswordForm: function B2NewPasswordForm() {
-            return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/B2NewPasswordForm.vue"));
+            return __webpack_require__.e/* import() */(6).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/B2NewPasswordForm.vue"));
         },
         B2OAuthForm: function B2OAuthForm() {
-            return __webpack_require__.e/* import() */(18).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/B2OAuthForm.vue"));
+            return __webpack_require__.e/* import() */(5).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/B2OAuthForm.vue"));
+        },
+        B2RegisterForm: function B2RegisterForm() {
+            return __webpack_require__.e/* import() */(3).then(__webpack_require__.bind(null, "./resources/assets/js/components/auth/B2RegisterForm.vue"));
+        },
+        B2CreateOrganisationForm: function B2CreateOrganisationForm() {
+            return __webpack_require__.e/* import() */(2).then(__webpack_require__.bind(null, "./resources/assets/js/components/organisations/B2CreateOrganisationForm.vue"));
         }
     }
 });

@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="mt-4">
-    <auth-form :form-action-route="loginRoute">
+    <b2-form :form-action-route="loginRoute">
       <el-card slot-scope="slotProps">
         <el-form-item :label="__('Email')"
                       prop="email"
@@ -33,7 +33,7 @@
 
         <el-button class="mt-3" :loading="slotProps.loading" native-type="submit" type="primary">{{ __('Login') }} <i class="far fa-lock"></i></el-button>
       </el-card>
-    </auth-form>
+    </b2-form>
   </div>
 </template>
 
@@ -42,7 +42,7 @@ export default {
   name: 'B2LoginForm',
 
   components: {
-    AuthForm: () => import(/* webpackChunkName: "auth-form" */'./AuthForm'),
+    B2Form: () => import(/* webpackChunkName: "b2-form" */'../B2Form'),
   },
 
   props: {

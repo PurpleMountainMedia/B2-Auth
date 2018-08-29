@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="mt-4">
-    <auth-form :form-action-route="resetRoute" :values="{ email: email }">
+    <b2-form :form-action-route="resetRoute" :values="{ email: email }">
       <template slot-scope="slotProps">
 
         <el-card>
@@ -47,7 +47,7 @@
           <el-button class="mt-3" :loading="slotProps.loading" native-type="submit" type="primary">{{ __('Reset') }} <i class="far fa-lock"></i></el-button>
         </el-card>
       </template>
-    </auth-form>
+    </b2-form>
   </div>
 </template>
 
@@ -56,7 +56,7 @@ export default {
   name: 'B2NewPasswordForm',
 
   components: {
-    AuthForm: () => import(/* webpackChunkName: "auth-form" */'./AuthForm'),
+    B2Form: () => import(/* webpackChunkName: "b2-form" */'../B2Form'),
   },
 
   props: {
