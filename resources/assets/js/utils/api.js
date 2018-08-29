@@ -1,4 +1,4 @@
-const BASE_URL = b2_systems.site_url + '/' + b2_systems.api_prefix + '/';
+const BASE_URL = b2Systems.site_url + '/' + b2Systems.api_prefix + '/';
 const SERVER_ERROR_MESSAGE = "We could not access the server at this time. Please try again. If the issue persists, please contact support.";
 const SERVER_UNAUTH_MESSAGE = "We could not complete the request, because you are not authorised to do so.";
 

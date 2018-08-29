@@ -701,7 +701,7 @@ module.exports = Component.exports
 "use strict";
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-var BASE_URL = b2_systems.site_url + '/' + b2_systems.api_prefix + '/';
+var BASE_URL = b2Systems.site_url + '/' + b2Systems.api_prefix + '/';
 var SERVER_ERROR_MESSAGE = "We could not access the server at this time. Please try again. If the issue persists, please contact support.";
 var SERVER_UNAUTH_MESSAGE = "We could not complete the request, because you are not authorised to do so.";
 
