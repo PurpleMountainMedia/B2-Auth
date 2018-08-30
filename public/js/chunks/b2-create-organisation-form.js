@@ -19,6 +19,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'B2CreateOrganisationForm',
@@ -33,7 +41,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   data: function data() {
     return {
       form: {
-        is_default: true
+        is_default: true,
+        address_country: 'GB'
+      },
+      show: {
+        address: true
       }
     };
   },
@@ -49,7 +61,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     B2OrganisationsAddressFields: function B2OrganisationsAddressFields() {
       return __webpack_require__.e/* import() */(20).then(__webpack_require__.bind(null, "./resources/assets/js/components/organisations/fields/B2OrganisationsAddressFields.vue"));
     }
-  }
+  },
+
+  computed: {
+    addressSectionHasErrors: function addressSectionHasErrors() {
+      var addressErrorKeys = ['address_line_1', 'address_town', 'address_county', 'address_postcode', 'address_country'];
+      var errors = this.$refs.organisationForm.errors;
+
+      var hasErrors = false;
+      addressErrorKeys.forEach(function (key) {
+        if (errors[key]) {
+          hasErrors = true;
+        }
+      });
+
+      return hasErrors;
+    }
+  },
+
+  methods: {}
 });
 
 /***/ }),
@@ -62,7 +92,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2CreateOrganisationForm.vue","sourceRoot":""}]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2CreateOrganisationForm.vue","sourceRoot":""}]);
 
 // exports
 
@@ -191,6 +221,7 @@ var render = function() {
     { staticClass: "mt-4" },
     [
       _c("b2-form", {
+        ref: "organisationForm",
         attrs: {
           "form-action-route": _vm.createOrganisationRoute,
           form: _vm.form
@@ -204,7 +235,60 @@ var render = function() {
                   attrs: { form: slotProps.form }
                 }),
                 _vm._v(" "),
+                _c(
+                  "el-row",
+                  { attrs: { gutter: 10 } },
+                  [
+                    _c(
+                      "el-col",
+                      [
+                        _c("p", [
+                          _c("strong", [_vm._v(_vm._s(_vm.__("Address")))])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "el-button",
+                          {
+                            attrs: { type: "text" },
+                            on: {
+                              click: function($event) {
+                                _vm.show.address = !_vm.show.address
+                              }
+                            }
+                          },
+                          [
+                            _vm._v(
+                              _vm._s(
+                                _vm.show.address
+                                  ? _vm.__("hide")
+                                  : _vm.__("show")
+                              ) + " "
+                            ),
+                            _c("i", {
+                              class:
+                                "el-icon-arrow-" +
+                                (_vm.show.address ? "up" : "down")
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("hr")
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
                 _c("b2-organisations-address-fields", {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.show.address || _vm.addressSectionHasErrors,
+                      expression: "show.address || addressSectionHasErrors"
+                    }
+                  ],
                   attrs: { form: slotProps.form }
                 }),
                 _vm._v(" "),

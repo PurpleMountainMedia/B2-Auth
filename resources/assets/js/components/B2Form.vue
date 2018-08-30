@@ -4,7 +4,7 @@
       <el-card class="bg-primary mb-2" >
         <a :href="b2Config.site_url"><img v-if="b2Config.logo" :src="b2Config.logo" class="site_logo" :alt="b2Config.name"></a>
       </el-card>
-      <slot v-bind:form="form" v-bind:loading="loading" v-bind:errors="(field) => getError(field)"/>
+      <slot v-bind:form="form" v-bind:loading="loading" v-bind:errors="(field) => getError(field)" v-bind:errorBag="errors"/>
 
       <input type="hidden" name="_token" :value="csrfToken">
     </el-form>
@@ -67,11 +67,12 @@ export default {
     onSubmit ($event) {
       this.loading = true;
       this.$refs.authForm.validate((valid, errors) => {
-          if (valid) {
-            $event.target.submit()
-          } else {
-            this.loading = false;
-          }
+        this.errors = errors
+        if (valid) {
+          $event.target.submit()
+        } else {
+          this.loading = false
+        }
       });
     },
 

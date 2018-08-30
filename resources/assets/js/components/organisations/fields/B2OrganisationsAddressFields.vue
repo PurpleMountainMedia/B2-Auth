@@ -1,14 +1,6 @@
 <template lang="html">
   <div class="">
-    <el-row :gutter="10">
-      <el-col>
-        <p><strong>{{ __('Address') }}</strong></p>
-        <el-button @click="show = !show" type="text">{{ show ? __('hide') : __('expand') }}</el-button>
-        <hr>
-      </el-col>
-    </el-row>
-
-    <template v-if="show">
+    <template>
       <el-row :gutter="10">
           <el-col :md="12">
               <el-form-item :label="__('Address Line 1')"
@@ -83,11 +75,15 @@
                             prop="address_country"
                             :error="errors.address_country"
                             :rules="{ required: true, message: __('Address country is required.') }">
-                  <el-input v-model="form.address_country"
-                            size="small"
-                            name="address_country"
-                            id="organisation_address_country">
-                  </el-input>
+                <el-select v-model="form.address_country" filterable placeholder="Select">
+                  <el-option v-for="c in countries"
+                             :key="c.code"
+                             :label="c.name"
+                             name="address_country"
+                             size="small"
+                             :value="c.code">
+                  </el-option>
+                </el-select>
               </el-form-item>
           </el-col>
       </el-row>
@@ -97,6 +93,8 @@
 </template>
 
 <script>
+import countries from '../../../utils/countries.json'
+
 export default {
   name: 'B2OrganisationsAddressFields',
 
@@ -105,19 +103,18 @@ export default {
         type: Object,
         required: true,
       },
-      show: {
-        type: Boolean,
-        required: false,
-        default: () => {
-          return true
-        }
-      }
   },
 
   data () {
       return {
           errors: {},
       }
+  },
+
+  computed: {
+    countries () {
+      return countries
+    }
   }
 }
 </script>
