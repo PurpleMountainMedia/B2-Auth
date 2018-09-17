@@ -27,8 +27,8 @@ class ApiOrganisationsController extends Controller
         $this->authorize('list', Organisation::class);
 
         return OrganisationResource::collection(
-            Organisation::with($request->with ?: []
-        )->responseAdapter());
+            $request->organisations()->with($request->with ?: [])->responseAdapter()
+        );
     }
 
     /**
