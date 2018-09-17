@@ -31,22 +31,22 @@ class LicencesController extends Controller
         $sessionId = md5($user->email);
         $request->session()->put('goCardlessKey', $sessionId);
 
-        // $client = $client->redirectFlows()->create([
-        //   "params" => ["description" => "Wine boxes",
-        //                "session_token" => $sessionId,
-        //                "success_redirect_url" => config('services.goCardless.redirectUrl'),
-        //                "prefilled_customer" => [
-        //                  "given_name" => $user->first_name,
-        //                  "family_name" => $user->last_name,
-        //                  "email" => $user->email
-        //                ]]
-        // ]);
-
-        $client = $client->mandatePdfs()->create([
-          "params" => ["account_number" => "44779911",
-                       "branch_code" => "200000",
-                       "country_code" => "GB"]
+        $client = $client->redirectFlows()->create([
+          "params" => ["description" => "Wine boxes",
+                       "session_token" => $sessionId,
+                       "success_redirect_url" => config('services.goCardless.redirectUrl'),
+                       "prefilled_customer" => [
+                         "given_name" => $user->first_name,
+                         "family_name" => $user->last_name,
+                         "email" => $user->email
+                       ]]
         ]);
+
+        // $client = $client->mandatePdfs()->create([
+        //   "params" => ["account_number" => "44779911",
+        //                "branch_code" => "200000",
+        //                "country_code" => "GB"]
+        // ]);
 
         return view('licences', compact('user', 'client'));
     }
