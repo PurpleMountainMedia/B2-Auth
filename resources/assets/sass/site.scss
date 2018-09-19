@@ -71,3 +71,44 @@ a.product_link {
 .short_input input {
   max-width: 300px!important;
 }
+
+.screen_full_height {
+    height: 100vh!important;
+}
+
+.bg-eams.screen_full_height::after {
+    content: "";
+    background: url(http://b2systems.test/storage/system/nathan-dumlao-572047-unsplash.jpg);
+    opacity: 0.24;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-size: cover;
+}
+.bg-people.screen_full_height::after {
+    content: "";
+    background: url(http://b2systems.test/storage/system/santi-vedri-707620-unsplash.jpg);
+    opacity: 0.24;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-size: cover;
+}
+.bg-finance.screen_full_height::after {
+    content: "";
+    background: url(http://b2systems.test/storage/system/rawpixel-761474-unsplash.jpg);
+    opacity: 0.24;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-size: cover;
+}
+.bg-eams.screen_full_height div {
+  z-index: 100;
+}

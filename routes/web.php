@@ -15,6 +15,18 @@ Route::get('/', function () {
     return view('web.home');
 })->name('home');
 
+Route::get('inventory', function () {
+    return view('web.inventory');
+})->name('inventory');
+
+Route::get('our-products', function () {
+    return view('web.our-products');
+})->name('our-products');
+
+Route::post('contact', function () {
+    return 'hi';
+})->name('contact');
+
 Route::middleware('auth')->get('logout', function () {
     return view('auth.logout');
 });

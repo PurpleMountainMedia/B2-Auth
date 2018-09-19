@@ -86,6 +86,9 @@ $theme-colors: map-merge((
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "eams":       $eams,
+  "finance":    $finance,
+  "people":     $people
 ), $theme-colors);
 // stylelint-enable

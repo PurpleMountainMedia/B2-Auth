@@ -26,15 +26,9 @@
 </head>
 <body>
     <div id="app">
-        @component('_partials.site-header')
-        @endcomponent
-
-        @yield('below_nav')
 
         @yield('content')
 
-        @component('_partials.site-footer')
-        @endcomponent
     </div>
 
     <!-- Scripts -->

@@ -5,7 +5,7 @@
     </a>
     @auth()
       <a class="" href="{{ route('login') }}">
-        {{ __('Welcome') }}, {{ Auth::user()->first_name }} | {{ __('Logout') }}
+        {{ __('Welcome') }}, {{ Auth::user()->first_name }} | Go to Account
       </a>
     @else
       <a class="" href="{{ route('login') }}">
