@@ -17,9 +17,9 @@
 
     <el-card class="mt-4">
       <div class="justify-around">
-        <a href="">Education Inventory</a>
-        <a href="">Finance</a>
-        <a href="">People</a>
+        <a href="">{{__('Education')}}</a>
+        <a href="">{{__('Finance')}}</a>
+        <a href="">{{__('People')}}</a>
       </div>
     </el-card>
   </div>
