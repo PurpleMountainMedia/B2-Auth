@@ -2,7 +2,8 @@
   <div class="mt-4">
     <b2-form :form-action-route="loginRoute">
       <el-card slot-scope="slotProps">
-        <el-form-item :label="__('Email')"
+        <h3>{{__('Please login to continue:')}}</h3>
+        <el-form-item :label="__('Email Address')"
                       prop="email"
                       :error="slotProps.errors('email')"
                       :rules="{ required: true, message: __('Email is required.') }">
@@ -27,11 +28,13 @@
             </el-input>
         </el-form-item>
 
-        <a :href="forgottenPasswordRoute">
-          <el-button type="text">{{ __("I've forgotten my password.") }}</el-button>
-        </a>
+        <div class="justify-between">
+            <a :href="forgottenPasswordRoute">
+                <el-button type="text" class="text-muted">{{ __("I've forgotten my password.") }}</el-button>
+            </a>
 
-        <el-button class="mt-3" :loading="slotProps.loading" native-type="submit" type="primary">{{ __('Login') }} <i class="far fa-lock"></i></el-button>
+            <el-button :loading="slotProps.loading" native-type="submit" type="primary">{{ __('Login') }} <i class="far fa-lock"></i></el-button>
+        </div>
       </el-card>
     </b2-form>
   </div>

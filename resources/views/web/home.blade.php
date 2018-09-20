@@ -1,15 +1,17 @@
 @extends('layouts.site')
 
 @section('below_nav')
-  <div id="particles-js" class="bg-dark">
-    <div class="below_nav_container container-fluid p-5 d-flex align-items-center">
-      <div class="container">
-        <h2 class="text-white font-weight-light">Your Data, Our Insights</h2>
-        <a class="btn btn-primary btn-sm" href="{{ route('our-products') }}">Our Products</a>
+  <div class="page-home">
+    <div id="particles-js" class="bg-dark">
+      <div class="below_nav_container container-fluid p-5 d-flex align-items-center">
+        <div class="container">
+          <h2 class="text-white font-weight-light">Your Data, Our Insights</h2>
+          <a class="btn btn-primary btn-sm" href="{{ route('our-products') }}">Our Products</a>
+        </div>
       </div>
     </div>
+    <div class="container-fluid below_nav_container_buffer"></div>
   </div>
-  <div class="container-fluid below_nav_container_buffer"></div>
 @endsection
 
 @section('content')

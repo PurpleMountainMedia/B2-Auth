@@ -1,9 +1,10 @@
 {
-  "Email": "Email",
+  "Email Address": "Email Address",
   "Password": "Password",
   "Email is required.": "Email is required.",
   "Password is required.": "Password is required.",
   "Return to main website.": "Return to main website.",
   "Login": "Login",
-  "Reset": "Reset"
+  "Reset": "Reset",
+  "A product of B2 Systems": "A product of B2 Systems"
 }

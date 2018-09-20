@@ -7,11 +7,13 @@ $people: yellow;
 
 // Body
 $body-bg: #f5f8fa;
+$app: teal !default;
 
 // Typography
 $font-family-sans-serif: "Raleway", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+
 
 
 // stylelint-disable
@@ -89,6 +91,7 @@ $theme-colors: map-merge((
   "dark":       $dark,
   "eams":       $eams,
   "finance":    $finance,
-  "people":     $people
+  "people":     $people,
+  "app":        $app
 ), $theme-colors);
 // stylelint-enable

@@ -18,9 +18,22 @@ body, html {
     font-family: "myriad-pro",sans-serif;
 }
 
+.justify-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.justify-around {
+    display: flex;
+    justify-content: space-around;
+}
+
 // Logo
 .site_logo {
     max-height: 40px;
+}
+.site_product {
+    text-align: right;
 }
 
 // Hero Icons
@@ -51,12 +64,36 @@ body, html {
 .below_nav_container_buffer {
     height: ($header_height - $navbar_top_height) - 40px;
 }
-div#particles-js {
-    position: absolute;
-    top: 0px;
-    height: $header_height;
-    z-index: 0;
+
+.page-home {
+    div#particles-js {
+        position: absolute;
+        top: 0px;
+        height: $header_height;
+        z-index: 0;
+        width: 100%;
+    }
+}
+
+// Login
+.auth-form {
     width: 100%;
+    z-index: 10;
+}
+
+.page-auth {
+    div#particles-js {
+        position: absolute;
+        top: 0px;
+        z-index: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .particles-js-canvas-el {
+        position: absolute;
+        top: 0;
+    }
 }
 
 // Products
