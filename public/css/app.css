@@ -16305,6 +16305,113 @@ readers do not read off random characters that represent icons */
   font-weight: 300;
 }
 
+.justify-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.justify-around {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.site_logo {
+  max-height: 40px;
+}
+
+.site_product {
+  text-align: right;
+}
+
+.heroicon-outline {
+  fill: #303034;
+}
+
+.heroicon-shadow {
+  fill: #303034;
+  opacity: 0.4;
+}
+
+.heroicon-component-fill {
+  fill: #FFFFFF;
+}
+
+.heroicon-inventory .heroicon-component-accent {
+  fill: #86af49;
+}
+
+.heroicon-finance .heroicon-component-accent {
+  fill: red;
+}
+
+.heroicon-people .heroicon-component-accent {
+  fill: yellow;
+}
+
+.coming_soon {
+  position: absolute;
+  right: 50px;
+}
+
+a.product_link {
+  text-decoration: none !important;
+}
+
+.short_input input {
+  max-width: 300px !important;
+}
+
+.screen_full_height {
+  height: 100vh !important;
+}
+
+.bg-eams.screen_full_height::after {
+  content: "";
+  background: url(http://b2systems.test/storage/system/nathan-dumlao-572047-unsplash.jpg);
+  opacity: 0.24;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-size: cover;
+}
+
+.bg-people.screen_full_height::after {
+  content: "";
+  background: url(http://b2systems.test/storage/system/santi-vedri-707620-unsplash.jpg);
+  opacity: 0.24;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-size: cover;
+}
+
+.bg-finance.screen_full_height::after {
+  content: "";
+  background: url(http://b2systems.test/storage/system/rawpixel-761474-unsplash.jpg);
+  opacity: 0.24;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-size: cover;
+}
+
+.bg-eams.screen_full_height div {
+  z-index: 100;
+}
+
 .el-dialog__header {
   background: #f5f8fa;
   padding-bottom: 17px !important;
@@ -16326,23 +16433,6 @@ readers do not read off random characters that represent icons */
 
 .product_header .site_product {
   text-align: right;
-}
-
-.justify-between {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.justify-around {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
 .profile-photo-container {

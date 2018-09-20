@@ -16305,11 +16305,6 @@ readers do not read off random characters that represent icons */
   font-weight: 300;
 }
 
-body,
-html {
-  font-family: "myriad-pro",sans-serif;
-}
-
 .justify-between {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16358,51 +16353,6 @@ html {
 
 .heroicon-people .heroicon-component-accent {
   fill: yellow;
-}
-
-.navbar {
-  z-index: 100;
-}
-
-.below_nav_container {
-  position: absolute;
-  top: 0px;
-  padding-top: 56px !important;
-  min-height: 450px;
-}
-
-.below_nav_container_buffer {
-  height: 354px;
-}
-
-.product-header {
-  height: 56px;
-}
-
-.page-home div#particles-js {
-  position: absolute;
-  top: 0px;
-  height: 450px;
-  z-index: 0;
-  width: 100%;
-}
-
-.auth-form {
-  width: 100%;
-  z-index: 10;
-}
-
-.page-auth div#particles-js {
-  position: absolute;
-  top: 0px;
-  z-index: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.page-auth .particles-js-canvas-el {
-  position: absolute;
-  top: 0;
 }
 
 .coming_soon {
@@ -16460,6 +16410,56 @@ a.product_link {
 
 .bg-eams.screen_full_height div {
   z-index: 100;
+}
+
+body,
+html {
+  font-family: "myriad-pro",sans-serif;
+}
+
+.navbar {
+  z-index: 100;
+}
+
+.below_nav_container {
+  position: absolute;
+  top: 0px;
+  padding-top: 56px !important;
+  min-height: 450px;
+}
+
+.below_nav_container_buffer {
+  height: 354px;
+}
+
+.product-header {
+  height: 56px;
+}
+
+.page-home div#particles-js {
+  position: absolute;
+  top: 0px;
+  height: 450px;
+  z-index: 0;
+  width: 100%;
+}
+
+.auth-form {
+  width: 100%;
+  z-index: 10;
+}
+
+.page-auth div#particles-js {
+  position: absolute;
+  top: 0px;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.page-auth .particles-js-canvas-el {
+  position: absolute;
+  top: 0;
 }
 
 
