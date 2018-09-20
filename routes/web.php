@@ -29,7 +29,7 @@ Route::post('contact', function () {
 
 Route::middleware('auth')->get('logout', function () {
     return view('auth.logout');
-});
+})->name('logout');
 Auth::routes();
 
 Route::middleware(['no-organisation'])->group(function () {

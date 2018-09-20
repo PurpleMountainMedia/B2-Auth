@@ -51,6 +51,11 @@
                                 <a class="nav-link" href="{{ route('licences') }}"><i class="far fa-credit-card-blank"></i> Licences</a>
                             </li>
                         </ul>
+                        <ul class="nav flex-column mt-2">
+                            <li class="nav-item">
+                                <a class="nav-link active text-danger" href="{{ route('logout') }}"><i class="far fa-sign-out"></i> Log Out</a>
+                            </li>
+                        </ul>
                     </div>
                     <div class="col-md-9">
                         @yield('content')
