@@ -74,6 +74,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: {
@@ -101,7 +111,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2UserBasicFields.vue","sourceRoot":""}]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2UserBasicFields.vue","sourceRoot":""}]);
 
 // exports
 
@@ -129,6 +139,30 @@ var render = function() {
         "el-row",
         { attrs: { gutter: 10 } },
         [
+          _c(
+            "el-col",
+            { staticClass: "profile-photo-container", attrs: { span: 6 } },
+            [
+              _c(
+                "label",
+                {
+                  staticClass: "el-form-item__label",
+                  attrs: { for: "user_form_field_profile_photo" }
+                },
+                [_vm._v("\n                 Photo\n          ")]
+              ),
+              _vm._v(" "),
+              _c("div", {
+                staticClass: "profile-photo",
+                staticStyle: {
+                  "background-image":
+                    "url('https://via.placeholder.com/500x500')"
+                },
+                attrs: { id: "user_form_field_profile_photo" }
+              })
+            ]
+          ),
+          _vm._v(" "),
           _c(
             "el-col",
             { attrs: { span: 9, offset: 6 } },

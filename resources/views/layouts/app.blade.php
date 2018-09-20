@@ -33,6 +33,8 @@
 <body>
     <div id="app">
 
+        @yield('header')
+
         <div class="container py-5">
             <div class="col-md-8 m-auto">
                 <div class="row">

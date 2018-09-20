@@ -64,6 +64,9 @@ body, html {
 .below_nav_container_buffer {
     height: ($header_height - $navbar_top_height) - 40px;
 }
+.product-header {
+    height: $navbar_top_height;
+}
 
 .page-home {
     div#particles-js {

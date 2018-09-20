@@ -16310,5 +16310,51 @@ readers do not read off random characters that represent icons */
   padding-bottom: 17px !important;
 }
 
+.justify-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.justify-around {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.profile-photo-container {
+  float: left;
+  position: absolute;
+}
+
+.profile-photo-container .profile-photo {
+  margin-right: 0.5rem;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+}
+
+.profile-photo-container .profile-photo:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 100%;
+}
+
+.profile-photo-container .profile-photo > .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 
 /*# sourceMappingURL=app.css.map*/

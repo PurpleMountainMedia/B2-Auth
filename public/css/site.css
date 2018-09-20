@@ -16375,6 +16375,10 @@ html {
   height: 354px;
 }
 
+.product-header {
+  height: 56px;
+}
+
 .page-home div#particles-js {
   position: absolute;
   top: 0px;
