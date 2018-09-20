@@ -1,12 +1,16 @@
 @extends('layouts.app')
 
 @section('header')
-  <div class="product-header bg-app">
+  <div id="site_product_header" class="bg-app">
     <div class="container">
       <div class="col-md-8 m-auto">
         <div class="py-3 justify-between">
-          <h3 class="mb-0 text-white">Education Inventory</h3>
-          <el-button type="success" size="mini" plain href="">Return to product</el-button>
+          <div class="product_header">
+            <img src="{{ getB2Config('logo') }}" class="site_logo" alt="B2 Systems">
+            <h3 class="ml-2 mb-0 text-white site_product">Education Inventory</h3>
+          </div>
+
+          <el-button type="primary" size="mini" href="">Return to product</el-button>
         </div>
       </div>
     </div>

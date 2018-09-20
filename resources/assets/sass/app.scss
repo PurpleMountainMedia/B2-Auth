@@ -36,6 +36,19 @@
     padding-bottom: 17px!important;
 }
 
+.product_header {
+  display: flex;
+  align-items: flex-end;
+
+  .site_logo {
+      max-height: 40px;
+      display: inline-block;
+  }
+  .site_product {
+      text-align: right;
+  }
+}
+
 .justify-between {
     display: flex;
     justify-content: space-between;
