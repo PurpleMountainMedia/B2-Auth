@@ -21,6 +21,7 @@ Route::namespace('Api')->group(function () {
     });
 
     Route::post('school-code-exchange', 'SchoolCodeExchangeController@exchange');
+    Route::options('school-code-exchange', 'SchoolCodeExchangeController@options');
 
     Route::get('user', 'ApiUsersController@user');
     Route::apiResource('users', 'ApiUsersController');
