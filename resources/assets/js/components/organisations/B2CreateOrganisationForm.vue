@@ -2,9 +2,20 @@
   <div class="mt-4">
     <b2-form :form-action-route="createOrganisationRoute" :form="form">
       <template slot-scope="slotProps">
-        <b2-organisations-basic-fields :form="slotProps.form"/>
+        <b2-organisations-basic-fields
+          :form="slotProps.form"
+          :show-default="false"/>
 
-        <b2-organisations-address-fields :form="slotProps.form"/>
+        <b2-organisations-address-fields
+          v-if="slotProps.form.type === 'School'"
+          :form="slotProps.form">
+          <el-button
+            slot="belowName"
+            slot-scope="slot"
+            @click="slot.show = !slot.show"
+            type="text">{{ show ? __('hide') : __('expand') }}
+          </el-button>
+        </b2-organisations-address-fields>
 
         <el-button class="mt-3" :loading="slotProps.loading" native-type="submit" type="primary">{{ __('Create') }} <i class="far fa-lock"></i></el-button>
       </template>
@@ -26,7 +37,8 @@ export default {
   data () {
     return {
       form: {
-        is_default: true
+        is_default: true,
+        address_country: 'GB'
       }
     }
   },

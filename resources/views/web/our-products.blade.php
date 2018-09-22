@@ -2,6 +2,13 @@
 
 @section('content')
   <div class="container-fluid h-100 text-center ">
+
+    <div class="row">
+      <div class="container">
+
+      </div>
+    </div>
+
     <div class="row h-100">
       <div class="col-md-4 bg-eams h-100 py-5 screen_full_height d-flex align-items-center">
         <div class="w-100">

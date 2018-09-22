@@ -3,7 +3,9 @@
     <el-row :gutter="10">
       <el-col>
         <p><strong>{{ __('Address') }}</strong></p>
-        <el-button @click="show = !show" type="text">{{ show ? __('hide') : __('expand') }}</el-button>
+        <slot
+          name="belowName"
+          :show="show" />
         <hr>
       </el-col>
     </el-row>
@@ -83,11 +85,15 @@
                             prop="address_country"
                             :error="errors.address_country"
                             :rules="{ required: true, message: __('Address country is required.') }">
-                  <el-input v-model="form.address_country"
-                            size="small"
-                            name="address_country"
-                            id="organisation_address_country">
-                  </el-input>
+                  <el-select v-model="form.address_country"
+                             size="small"
+                             name="address_country"
+                             id="organisation_address_country">
+                      <el-option v-for="(country, key) in countries"
+                                 :key="key"
+                                 :label="country.name"
+                                 :value="country.code"></el-option>
+                  </el-select>
               </el-form-item>
           </el-col>
       </el-row>
@@ -118,6 +124,17 @@ export default {
       return {
           errors: {},
       }
+  },
+
+  computed: {
+    countries () {
+      return [
+        {
+          name: 'United Kingdom',
+          code: 'GB'
+        }
+      ]
+    }
   }
 }
 </script>
