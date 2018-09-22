@@ -9,6 +9,6 @@ class SchoolCodeExchangeController
 {
     public function exchange(Request $request)
     {
-        return School::first()->id;
+        return ['id' => School::first()->id];
     }
 }
