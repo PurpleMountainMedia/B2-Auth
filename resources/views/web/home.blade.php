@@ -18,7 +18,7 @@
 
       <div class="col-md-4 p-3">
         <div class="card shadow-sm border-0">
-          <a class="product_link" href="/inventory">
+          <a class="product_link" href="{{ route('inventory') }}">
             <div class="card-body">
               <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" class="heroicon-package heroicon heroicon-sm d-block m-auto heroicon-inventory">
                 <path class="heroicon-package-box heroicon-component-fill" d="M3 11h54v48h4V11zm18 12a2 2 0 0 0 2 2h14a2 2 0 0 0 0-4H23a2 2 0 0 0-2 2z"></path>
@@ -35,7 +35,7 @@
 
       <div class="col-md-4 p-3">
         <div class="card shadow-sm border-0">
-          <a class="product_link" href="/inventory">
+          <a class="product_link" href="">
             <div class="card-body">
               <span class="badge badge-secondary coming_soon">Coming Soon</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" class="heroicon-calculator heroicon heroicon-sm d-block m-auto heroicon-finance">
@@ -55,7 +55,7 @@
 
       <div class="col-md-4 p-3">
         <div class="card shadow-sm border-0">
-          <a class="product_link" href="/inventory">
+          <a class="product_link" href="">
             <div class="card-body">
               <span class="badge badge-secondary coming_soon">Coming Soon</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" class="heroicon-couple2 heroicon heroicon-sm d-block m-auto heroicon-people">

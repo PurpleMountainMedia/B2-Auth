@@ -31,11 +31,20 @@ body, html {
 .heroicon-inventory {
     .heroicon-component-accent {fill: $eams;}
 }
+.heroicon-inventory:hover {
+    .heroicon-component-accent {fill: lighten($eams, 20%);}
+}
 .heroicon-finance {
     .heroicon-component-accent {fill: $finance;}
 }
+.heroicon-finance:hover {
+    .heroicon-component-accent {fill: lighten($finance, 20%);}
+}
 .heroicon-people {
     .heroicon-component-accent {fill: $people;}
+}
+.heroicon-people:hover {
+    .heroicon-component-accent {fill: lighten($people, 20%);}
 }
 
 // Header

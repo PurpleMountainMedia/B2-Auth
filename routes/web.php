@@ -15,9 +15,18 @@ Route::get('/', function () {
     return view('web.home');
 })->name('home');
 
-Route::get('inventory', function () {
+
+Route::get('our-products/security-labels', function () {
+    return view('web.inventory');
+})->name('security_labels');
+
+Route::get('our-products/inventory', function () {
     return view('web.inventory');
 })->name('inventory');
+
+Route::get('our-products/b2-freedom', function () {
+    return view('web.inventory');
+})->name('freedom');
 
 Route::get('our-products', function () {
     return view('web.our-products');
