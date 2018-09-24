@@ -6,7 +6,6 @@
       <div class="container">
         <h2 class="text-white font-weight-light">Education Inventory</h2>
         <p class="text-white">School Inventory Management</p>
-        {{-- <a class="btn btn-eams btn-sm" href="https://ei.b2systems.co.uk/dashboard">Go To Product Dashboard</a> --}}
       </div>
     </div>
   </div>
@@ -33,7 +32,7 @@
         <a href="#" class="btn btn-outline-eams btn-lg mt-4">Contact Us</a>
       </div>
       <div class="col-md-5 pr-0 pt-1">
-        <img class="img-fluid w-100" src="{{ url('web/ei-items-screenshot.png') }}" alt="Items">
+        <img class="img-fluid w-100" src="{{ url('storage/web/ei-items-screenshot.png') }}" alt="Items">
       </div>
     </div>
   </div>
@@ -129,7 +128,7 @@
   </div>
 
   <div class="container mb-5 pb-5">
-    <img src="{{ url('web/ei_screens.png') }}" class="img-fluid" alt="EI Screens">
+    <img src="{{ url('storage/web/ei_screens.png') }}" class="img-fluid" alt="EI Screens">
   </div>
 
   <div class="container-fluid bg-eams py-5 mt-5">
@@ -143,7 +142,7 @@
 @push('header_scripts')
   <style media="screen">
     .bg1 {
-      background: url({{ url('web/ei_head_6.jpg') }});
+      background: url({{ url('storage/web/ei_head_6.jpg') }});
       background-position: center;
       background-size: cover;
     }
