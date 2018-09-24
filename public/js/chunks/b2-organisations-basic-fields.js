@@ -1,9 +1,96 @@
 webpackJsonp([14],{
 
 /***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/organisations/fields/B2OrganisationsBasicFields.vue":
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed: SyntaxError: Unexpected token, expected ; (78:3)\n\n\u001b[0m \u001b[90m 76 | \u001b[39m      \u001b[36mdefault\u001b[39m\u001b[33m:\u001b[39m () \u001b[33m=>\u001b[39m { \u001b[36mreturn\u001b[39m \u001b[36mfalse\u001b[39m }\n \u001b[90m 77 | \u001b[39m    }\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 78 | \u001b[39m  }\u001b[33m,\u001b[39m\n \u001b[90m    | \u001b[39m   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 79 | \u001b[39m\n \u001b[90m 80 | \u001b[39m  computed\u001b[33m:\u001b[39m {\n \u001b[90m 81 | \u001b[39m    organisationTypes()\u001b[0m\n");
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'B2OrganisationsBasicFields',
+
+  props: {
+    form: {
+      type: Object,
+      required: true
+    },
+    showDefault: {
+      type: Boolean,
+      required: false,
+      default: function _default() {
+        return true;
+      }
+    }
+  },
+
+  computed: {
+    organisationTypes: function organisationTypes() {
+      return ['School', 'Multi Academy Trust', 'Council', 'Other'];
+    }
+  },
+
+  data: function data() {
+    return {
+      errors: {}
+    };
+  }
+});
 
 /***/ }),
 
@@ -15,7 +102,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2OrganisationsBasicFields.vue","sourceRoot":""}]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2OrganisationsBasicFields.vue","sourceRoot":""}]);
 
 // exports
 

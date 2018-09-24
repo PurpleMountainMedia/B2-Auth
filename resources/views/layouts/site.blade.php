@@ -27,7 +27,7 @@
     @stack('header_scripts')
 </head>
 <body>
-    <div id="app">
+    <div id="web">
         @component('_partials.site-header')
         @endcomponent
 

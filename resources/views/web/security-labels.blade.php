@@ -32,7 +32,9 @@
 
       </div>
       <div class="col-md-6 pr-0 pt-1">
-
+        <label-chooser-component
+          title="Barcoded Security Labels">
+        </label-chooser-component>
       </div>
     </div>
   </div>

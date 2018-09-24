@@ -58,24 +58,18 @@
 export default {
   name: 'B2OrganisationsBasicFields',
 
-    props: {
-      form: {
-          type: Object,
-          required: true,
-      },
-      showDefault: {
-        type: Boolean,
-        required: false,
-        default: () => { return true }
-      }
+  props: {
+    form: {
+        type: Object,
+        required: true,
     },
-
-    hideDefaultOrganisation: {
-      required: true,
+    showDefault: {
       type: Boolean,
-      default: () => { return false }
+      required: false,
+      default: () => { return true }
     }
   },
+
 
   computed: {
     organisationTypes()
