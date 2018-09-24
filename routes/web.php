@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 
 Route::get('our-products/security-labels', function () {
-    return view('web.inventory');
+    return view('web.security-labels');
 })->name('security_labels');
 
 Route::get('our-products/inventory', function () {
