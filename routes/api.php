@@ -20,11 +20,14 @@ Route::namespace('Api')->group(function () {
         return ['pong' => Carbon::now()->toDateTimeString()];
     });
 
+    Route::post('school-code-exchange', 'SchoolCodeExchangeController@exchange');
+    Route::options('school-code-exchange', 'SchoolCodeExchangeController@options');
+
     Route::get('user', 'ApiUsersController@user');
     Route::apiResource('users', 'ApiUsersController');
 
     Route::apiResource('organisations', 'ApiOrganisationsController');
     Route::get('organisations/{organisation}/users', 'ApiOrganisationsController@users')->name('organisations.users');
-    
+
     Route::apiResource('schools', 'ApiSchoolsController');
 });

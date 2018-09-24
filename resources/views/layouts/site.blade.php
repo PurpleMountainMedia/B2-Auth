@@ -23,6 +23,8 @@
 
     <!-- Styles -->
     <link href="{{ mix('css/site.css') }}" rel="stylesheet">
+
+    @stack('header_scripts')
 </head>
 <body>
     <div id="app">
@@ -32,12 +34,15 @@
         @yield('below_nav')
 
         @yield('content')
+
+        @component('_partials.site-footer')
+        @endcomponent
     </div>
 
     <!-- Scripts -->
     <script src="{{ mix('js/manifest.js') }}"></script>
     <script src="{{ mix('js/vendor.js') }}"></script>
-    <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ mix('js/web.js') }}"></script>
     @stack('scripts')
 </body>
 </html>

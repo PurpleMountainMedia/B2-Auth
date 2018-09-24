@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\Organisation;
 
 class OrganisationsController extends Controller
 {
@@ -47,6 +48,15 @@ class OrganisationsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'type' => 'required',
+        ]);
+
+        $organisation = Organisation::create([
+            'name' => $request->input('name'),
+            'type' => $request->input('type'),
+            'created_by' => Auth::user()->id,
+        ]);
     }
 }

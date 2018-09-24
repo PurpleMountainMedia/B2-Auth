@@ -19,6 +19,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Passport::withoutCookieSerialization();
+
         Blade::directive('b2Config', function () {
             $config = json_encode(getB2Config());
 

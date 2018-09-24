@@ -30,7 +30,8 @@
                               :rules="{ required: true, message: 'Type is required.' }">
                     <el-select v-model="form.type"
                                placeholder="Organisation Type"
-                               size="small">
+                               size="small"
+                               name="type">
                         <el-option v-for="(type, key) in organisationTypes"
                                    :key="key"
                                    :value="type"></el-option>
@@ -40,7 +41,7 @@
         </el-row>
 
         <!-- Default -->
-        <el-row :gutter="10" v-show="!hideDefaultOrganisation">
+        <el-row :gutter="10" v-show="showDefault">
             <el-col :span="9">
                 <el-form-item label="Default"
                               prop="default"
@@ -57,10 +58,16 @@
 export default {
   name: 'B2OrganisationsBasicFields',
 
-  props: {
-    form: {
-      type: Object,
-      required: true,
+    props: {
+      form: {
+          type: Object,
+          required: true,
+      },
+      showDefault: {
+        type: Boolean,
+        required: false,
+        default: () => { return true }
+      }
     },
 
     hideDefaultOrganisation: {

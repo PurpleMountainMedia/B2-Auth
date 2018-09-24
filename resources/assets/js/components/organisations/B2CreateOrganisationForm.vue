@@ -2,27 +2,20 @@
   <div class="mt-4">
     <b2-form :form-action-route="createOrganisationRoute" :form="form" ref="organisationForm">
       <template slot-scope="slotProps">
-        <b2-organisations-basic-fields :hide-default-organisation="hideDefaultOrganisation" :form="slotProps.form"/>
+        <b2-organisations-basic-fields
+          :form="slotProps.form"
+          :show-default="false"/>
 
-
-        <el-row :gutter="10">
-          <el-col>
-            <p><strong>{{ __('Address') }}</strong></p>
-            <el-button @click="show.address = !show.address" type="text">{{ show.address ? __('hide') : __('show') }} <i :class="'el-icon-arrow-' + (show.address ? 'up' : 'down')"></i></el-button>
-            <hr>
-          </el-col>
-        </el-row>
-        <b2-organisations-address-fields v-show="show.address || addressSectionHasErrors" :form="slotProps.form"/>
-
-
-        <el-row :gutter="10">
-          <el-col>
-            <p><strong>{{ __('Extra') }}</strong></p>
-            <el-button @click="show.advanced = !show.advanced" type="text">{{ show.advanced ? __('hide') : __('show') }} <i :class="'el-icon-arrow-' + (show.advanced ? 'up' : 'down')"></i></el-button>
-            <hr>
-          </el-col>
-        </el-row>
-        <b2-organisations-advanced-fields v-show="show.advanced || advancedSectionHasErrors" :form="slotProps.form"/>
+        <b2-organisations-address-fields
+          v-if="slotProps.form.type === 'School'"
+          :form="slotProps.form">
+          <el-button
+            slot="belowName"
+            slot-scope="slot"
+            @click="slot.show = !slot.show"
+            type="text">{{ show ? __('hide') : __('expand') }}
+          </el-button>
+        </b2-organisations-address-fields>
 
         <el-button class="mt-3" :loading="slotProps.loading" native-type="submit" type="primary">{{ __('Create') }} <i class="far fa-lock"></i></el-button>
       </template>
@@ -52,12 +45,7 @@ export default {
       form: {
         is_default: true,
         address_country: 'GB'
-      },
-
-      show: {
-        address: true,
-        advanced: true
-      },
+      }
     }
   },
 
