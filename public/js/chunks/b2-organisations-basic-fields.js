@@ -62,26 +62,34 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: 'B2OrganisationsBasicFields',
+  name: 'B2OrganisationsBasicFields',
 
-    props: {
-        form: {
-            type: Object,
-            required: true
-        }
+  props: {
+    form: {
+      type: Object,
+      required: true
     },
 
-    computed: {
-        organisationTypes: function organisationTypes() {
-            return ['School', 'Multi Academy Trust', 'Council', 'Other'];
-        }
-    },
-
-    data: function data() {
-        return {
-            errors: {}
-        };
+    hideDefaultOrganisation: {
+      required: true,
+      type: Boolean,
+      default: function _default() {
+        return false;
+      }
     }
+  },
+
+  computed: {
+    organisationTypes: function organisationTypes() {
+      return ['School', 'Multi Academy Trust', 'Council', 'Other'];
+    }
+  },
+
+  data: function data() {
+    return {
+      errors: {}
+    };
+  }
 });
 
 /***/ }),
@@ -94,7 +102,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2OrganisationsBasicFields.vue","sourceRoot":""}]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2OrganisationsBasicFields.vue","sourceRoot":""}]);
 
 // exports
 
@@ -214,7 +222,17 @@ var render = function() {
       _vm._v(" "),
       _c(
         "el-row",
-        { attrs: { gutter: 10 } },
+        {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: !_vm.hideDefaultOrganisation,
+              expression: "!hideDefaultOrganisation"
+            }
+          ],
+          attrs: { gutter: 10 }
+        },
         [
           _c(
             "el-col",

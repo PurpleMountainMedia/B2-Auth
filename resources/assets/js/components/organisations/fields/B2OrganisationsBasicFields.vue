@@ -40,7 +40,7 @@
         </el-row>
 
         <!-- Default -->
-        <el-row :gutter="10">
+        <el-row :gutter="10" v-show="!hideDefaultOrganisation">
             <el-col :span="9">
                 <el-form-item label="Default"
                               prop="default"
@@ -55,27 +55,33 @@
 
 <script>
 export default {
-    name: 'B2OrganisationsBasicFields',
+  name: 'B2OrganisationsBasicFields',
 
-    props: {
-        form: {
-            type: Object,
-            required: true,
-        }
+  props: {
+    form: {
+      type: Object,
+      required: true,
     },
 
-    computed: {
-        organisationTypes()
-        {
-            return ['School', 'Multi Academy Trust', 'Council', 'Other']
-        }
-    },
-
-    data () {
-        return {
-            errors: {},
-        }
+    hideDefaultOrganisation: {
+      required: true,
+      type: Boolean,
+      default: () => { return false }
     }
+  },
+
+  computed: {
+    organisationTypes()
+    {
+      return ['School', 'Multi Academy Trust', 'Council', 'Other']
+    }
+  },
+
+  data () {
+    return {
+      errors: {},
+    }
+  }
 }
 </script>
 

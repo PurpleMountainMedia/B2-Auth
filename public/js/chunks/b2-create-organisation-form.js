@@ -27,6 +27,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'B2CreateOrganisationForm',
@@ -35,6 +45,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     createOrganisationRoute: {
       required: true,
       type: String
+    },
+
+    hideDefaultOrganisation: {
+      required: true,
+      type: Boolean,
+      default: function _default() {
+        return false;
+      }
     }
   },
 
@@ -44,8 +62,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         is_default: true,
         address_country: 'GB'
       },
+
       show: {
-        address: true
+        address: true,
+        advanced: true
       }
     };
   },
@@ -59,17 +79,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       return __webpack_require__.e/* import() */(13).then(__webpack_require__.bind(null, "./resources/assets/js/components/organisations/fields/B2OrganisationsBasicFields.vue"));
     },
     B2OrganisationsAddressFields: function B2OrganisationsAddressFields() {
-      return __webpack_require__.e/* import() */(20).then(__webpack_require__.bind(null, "./resources/assets/js/components/organisations/fields/B2OrganisationsAddressFields.vue"));
+      return __webpack_require__.e/* import() */(16).then(__webpack_require__.bind(null, "./resources/assets/js/components/organisations/fields/B2OrganisationsAddressFields.vue"));
+    },
+    B2OrganisationsAdvancedFields: function B2OrganisationsAdvancedFields() {
+      return __webpack_require__.e/* import() */(21).then(__webpack_require__.bind(null, "./resources/assets/js/components/organisations/fields/B2OrganisationsAdvancedFields.vue"));
     }
   },
 
   computed: {
     addressSectionHasErrors: function addressSectionHasErrors() {
       var addressErrorKeys = ['address_line_1', 'address_town', 'address_county', 'address_postcode', 'address_country'];
-      var errors = this.$refs.organisationForm.errors;
+      return this.hasErrors(addressErrorKeys);
+    },
+    advancedSectionHasErrors: function advancedSectionHasErrors() {
+      var advancedSectionKeys = ['pupil_count', 'room_count'];
+      return this.hasErrors(advancedSectionKeys);
+    }
+  },
+
+  methods: {
+    hasErrors: function hasErrors(keys) {
+      var errors = this.$refs.organisationForm ? this.$refs.organisationForm.errors : {};
 
       var hasErrors = false;
-      addressErrorKeys.forEach(function (key) {
+      keys.forEach(function (key) {
+        console.log(key);
         if (errors[key]) {
           hasErrors = true;
         }
@@ -77,9 +111,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
       return hasErrors;
     }
-  },
-
-  methods: {}
+  }
 });
 
 /***/ }),
@@ -92,7 +124,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2CreateOrganisationForm.vue","sourceRoot":""}]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2CreateOrganisationForm.vue","sourceRoot":""}]);
 
 // exports
 
@@ -232,7 +264,10 @@ var render = function() {
             fn: function(slotProps) {
               return [
                 _c("b2-organisations-basic-fields", {
-                  attrs: { form: slotProps.form }
+                  attrs: {
+                    "hide-default-organisation": _vm.hideDefaultOrganisation,
+                    form: slotProps.form
+                  }
                 }),
                 _vm._v(" "),
                 _c(
@@ -287,6 +322,63 @@ var render = function() {
                       rawName: "v-show",
                       value: _vm.show.address || _vm.addressSectionHasErrors,
                       expression: "show.address || addressSectionHasErrors"
+                    }
+                  ],
+                  attrs: { form: slotProps.form }
+                }),
+                _vm._v(" "),
+                _c(
+                  "el-row",
+                  { attrs: { gutter: 10 } },
+                  [
+                    _c(
+                      "el-col",
+                      [
+                        _c("p", [
+                          _c("strong", [_vm._v(_vm._s(_vm.__("Extra")))])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "el-button",
+                          {
+                            attrs: { type: "text" },
+                            on: {
+                              click: function($event) {
+                                _vm.show.advanced = !_vm.show.advanced
+                              }
+                            }
+                          },
+                          [
+                            _vm._v(
+                              _vm._s(
+                                _vm.show.advanced
+                                  ? _vm.__("hide")
+                                  : _vm.__("show")
+                              ) + " "
+                            ),
+                            _c("i", {
+                              class:
+                                "el-icon-arrow-" +
+                                (_vm.show.advanced ? "up" : "down")
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("hr")
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("b2-organisations-advanced-fields", {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.show.advanced || _vm.advancedSectionHasErrors,
+                      expression: "show.advanced || advancedSectionHasErrors"
                     }
                   ],
                   attrs: { form: slotProps.form }

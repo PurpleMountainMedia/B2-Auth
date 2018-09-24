@@ -41,7 +41,7 @@ if (!mix.inProduction()) {
     mix.browserSync({
         open: 'external',
         host: 'b2systems.test',
-        proxy: 'b2systems.test',
+        proxy: 'http://b2systems.test',
         browser: "google chrome",
         files: [
             'resources/views/**/*.php',

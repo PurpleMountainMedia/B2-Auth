@@ -1,4 +1,4 @@
-webpackJsonp([20],{
+webpackJsonp([16],{
 
 /***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]],\"plugins\":[\"transform-object-rest-spread\",[\"transform-runtime\",{\"polyfill\":false,\"helpers\":false}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/organisations/fields/B2OrganisationsAddressFields.vue":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -7,9 +7,6 @@ webpackJsonp([20],{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_countries_json__ = __webpack_require__("./resources/assets/js/utils/countries.json");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_countries_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__utils_countries_json__);
-//
-//
-//
 //
 //
 //
@@ -138,7 +135,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2OrganisationsAddressFields.vue","sourceRoot":""}]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2OrganisationsAddressFields.vue","sourceRoot":""}]);
 
 // exports
 
@@ -156,270 +153,268 @@ var render = function() {
     "div",
     {},
     [
-      [
-        _c(
-          "el-row",
-          { attrs: { gutter: 10 } },
-          [
-            _c(
-              "el-col",
-              { attrs: { md: 12 } },
-              [
-                _c(
-                  "el-form-item",
-                  {
-                    attrs: {
-                      label: _vm.__("Address Line 1"),
-                      prop: "address_line_1",
-                      error: _vm.errors.address_line_1,
-                      rules: {
-                        required: true,
-                        message: _vm.__("Address line 1 is required.")
-                      }
+      _c(
+        "el-row",
+        { attrs: { gutter: 10 } },
+        [
+          _c(
+            "el-col",
+            { attrs: { md: 12 } },
+            [
+              _c(
+                "el-form-item",
+                {
+                  attrs: {
+                    label: _vm.__("Address Line 1"),
+                    prop: "address_line_1",
+                    error: _vm.errors.address_line_1,
+                    rules: {
+                      required: true,
+                      message: _vm.__("Address line 1 is required.")
                     }
-                  },
-                  [
-                    _c("el-input", {
-                      attrs: {
-                        size: "small",
-                        name: "address_line_1",
-                        id: "organisation_address_line_1"
+                  }
+                },
+                [
+                  _c("el-input", {
+                    attrs: {
+                      size: "small",
+                      name: "address_line_1",
+                      id: "organisation_address_line_1"
+                    },
+                    model: {
+                      value: _vm.form.address_line_1,
+                      callback: function($$v) {
+                        _vm.$set(_vm.form, "address_line_1", $$v)
                       },
-                      model: {
-                        value: _vm.form.address_line_1,
-                        callback: function($$v) {
-                          _vm.$set(_vm.form, "address_line_1", $$v)
-                        },
-                        expression: "form.address_line_1"
-                      }
-                    })
-                  ],
-                  1
-                )
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "el-col",
-              { attrs: { md: 12 } },
-              [
-                _c(
-                  "el-form-item",
-                  {
-                    attrs: {
-                      label: _vm.__("Address Line 2"),
-                      prop: "address_line_2",
-                      error: _vm.errors.address_line_2
+                      expression: "form.address_line_1"
                     }
-                  },
-                  [
-                    _c("el-input", {
-                      attrs: {
-                        size: "small",
-                        name: "address_line_2",
-                        id: "organisation_address_line_2"
+                  })
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "el-col",
+            { attrs: { md: 12 } },
+            [
+              _c(
+                "el-form-item",
+                {
+                  attrs: {
+                    label: _vm.__("Address Line 2"),
+                    prop: "address_line_2",
+                    error: _vm.errors.address_line_2
+                  }
+                },
+                [
+                  _c("el-input", {
+                    attrs: {
+                      size: "small",
+                      name: "address_line_2",
+                      id: "organisation_address_line_2"
+                    },
+                    model: {
+                      value: _vm.form.address_line_2,
+                      callback: function($$v) {
+                        _vm.$set(_vm.form, "address_line_2", $$v)
                       },
-                      model: {
-                        value: _vm.form.address_line_2,
-                        callback: function($$v) {
-                          _vm.$set(_vm.form, "address_line_2", $$v)
-                        },
-                        expression: "form.address_line_2"
-                      }
-                    })
-                  ],
-                  1
-                )
-              ],
-              1
-            )
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "el-row",
-          { attrs: { gutter: 10 } },
-          [
-            _c(
-              "el-col",
-              { attrs: { md: 12 } },
-              [
-                _c(
-                  "el-form-item",
-                  {
-                    attrs: {
-                      label: _vm.__("Address Town"),
-                      prop: "address_town",
-                      error: _vm.errors.address_town,
-                      rules: {
-                        required: true,
-                        message: _vm.__("Address town is required.")
-                      }
+                      expression: "form.address_line_2"
                     }
-                  },
-                  [
-                    _c("el-input", {
-                      attrs: {
-                        size: "small",
-                        name: "address_town",
-                        id: "organisation_address_town"
+                  })
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "el-row",
+        { attrs: { gutter: 10 } },
+        [
+          _c(
+            "el-col",
+            { attrs: { md: 12 } },
+            [
+              _c(
+                "el-form-item",
+                {
+                  attrs: {
+                    label: _vm.__("Address Town"),
+                    prop: "address_town",
+                    error: _vm.errors.address_town,
+                    rules: {
+                      required: true,
+                      message: _vm.__("Address town is required.")
+                    }
+                  }
+                },
+                [
+                  _c("el-input", {
+                    attrs: {
+                      size: "small",
+                      name: "address_town",
+                      id: "organisation_address_town"
+                    },
+                    model: {
+                      value: _vm.form.address_town,
+                      callback: function($$v) {
+                        _vm.$set(_vm.form, "address_town", $$v)
                       },
-                      model: {
-                        value: _vm.form.address_town,
-                        callback: function($$v) {
-                          _vm.$set(_vm.form, "address_town", $$v)
-                        },
-                        expression: "form.address_town"
-                      }
-                    })
-                  ],
-                  1
-                )
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "el-col",
-              { attrs: { md: 12 } },
-              [
-                _c(
-                  "el-form-item",
-                  {
-                    attrs: {
-                      label: _vm.__("Address County"),
-                      prop: "address_county",
-                      error: _vm.errors.address_county,
-                      rules: {
-                        required: true,
-                        message: _vm.__("Address county is required.")
-                      }
+                      expression: "form.address_town"
                     }
-                  },
-                  [
-                    _c("el-input", {
-                      attrs: {
-                        size: "small",
-                        name: "address_county",
-                        id: "organisation_address_county"
+                  })
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "el-col",
+            { attrs: { md: 12 } },
+            [
+              _c(
+                "el-form-item",
+                {
+                  attrs: {
+                    label: _vm.__("Address County"),
+                    prop: "address_county",
+                    error: _vm.errors.address_county,
+                    rules: {
+                      required: true,
+                      message: _vm.__("Address county is required.")
+                    }
+                  }
+                },
+                [
+                  _c("el-input", {
+                    attrs: {
+                      size: "small",
+                      name: "address_county",
+                      id: "organisation_address_county"
+                    },
+                    model: {
+                      value: _vm.form.address_county,
+                      callback: function($$v) {
+                        _vm.$set(_vm.form, "address_county", $$v)
                       },
-                      model: {
-                        value: _vm.form.address_county,
-                        callback: function($$v) {
-                          _vm.$set(_vm.form, "address_county", $$v)
-                        },
-                        expression: "form.address_county"
-                      }
-                    })
-                  ],
-                  1
-                )
-              ],
-              1
-            )
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "el-row",
-          { attrs: { gutter: 10 } },
-          [
-            _c(
-              "el-col",
-              { attrs: { md: 12 } },
-              [
-                _c(
-                  "el-form-item",
-                  {
-                    attrs: {
-                      label: _vm.__("Address Postcode"),
-                      prop: "address_postcode",
-                      error: _vm.errors.address_postcode,
-                      rules: {
-                        required: true,
-                        message: _vm.__("Address postcode is required.")
-                      }
+                      expression: "form.address_county"
                     }
-                  },
-                  [
-                    _c("el-input", {
-                      attrs: {
-                        size: "small",
-                        name: "address_postcode",
-                        id: "organisation_address_postcode"
+                  })
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "el-row",
+        { attrs: { gutter: 10 } },
+        [
+          _c(
+            "el-col",
+            { attrs: { md: 12 } },
+            [
+              _c(
+                "el-form-item",
+                {
+                  attrs: {
+                    label: _vm.__("Address Postcode"),
+                    prop: "address_postcode",
+                    error: _vm.errors.address_postcode,
+                    rules: {
+                      required: true,
+                      message: _vm.__("Address postcode is required.")
+                    }
+                  }
+                },
+                [
+                  _c("el-input", {
+                    attrs: {
+                      size: "small",
+                      name: "address_postcode",
+                      id: "organisation_address_postcode"
+                    },
+                    model: {
+                      value: _vm.form.address_postcode,
+                      callback: function($$v) {
+                        _vm.$set(_vm.form, "address_postcode", $$v)
                       },
-                      model: {
-                        value: _vm.form.address_postcode,
-                        callback: function($$v) {
-                          _vm.$set(_vm.form, "address_postcode", $$v)
-                        },
-                        expression: "form.address_postcode"
-                      }
-                    })
-                  ],
-                  1
-                )
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "el-col",
-              { attrs: { md: 12 } },
-              [
-                _c(
-                  "el-form-item",
-                  {
-                    attrs: {
-                      label: _vm.__("Address Country"),
-                      prop: "address_country",
-                      error: _vm.errors.address_country,
-                      rules: {
-                        required: true,
-                        message: _vm.__("Address country is required.")
-                      }
+                      expression: "form.address_postcode"
                     }
-                  },
-                  [
-                    _c(
-                      "el-select",
-                      {
-                        attrs: { filterable: "", placeholder: "Select" },
-                        model: {
-                          value: _vm.form.address_country,
-                          callback: function($$v) {
-                            _vm.$set(_vm.form, "address_country", $$v)
-                          },
-                          expression: "form.address_country"
+                  })
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "el-col",
+            { attrs: { md: 12 } },
+            [
+              _c(
+                "el-form-item",
+                {
+                  attrs: {
+                    label: _vm.__("Address Country"),
+                    prop: "address_country",
+                    error: _vm.errors.address_country,
+                    rules: {
+                      required: true,
+                      message: _vm.__("Address country is required.")
+                    }
+                  }
+                },
+                [
+                  _c(
+                    "el-select",
+                    {
+                      attrs: { filterable: "", placeholder: "Select" },
+                      model: {
+                        value: _vm.form.address_country,
+                        callback: function($$v) {
+                          _vm.$set(_vm.form, "address_country", $$v)
+                        },
+                        expression: "form.address_country"
+                      }
+                    },
+                    _vm._l(_vm.countries, function(c) {
+                      return _c("el-option", {
+                        key: c.code,
+                        attrs: {
+                          label: c.name,
+                          name: "address_country",
+                          size: "small",
+                          value: c.code
                         }
-                      },
-                      _vm._l(_vm.countries, function(c) {
-                        return _c("el-option", {
-                          key: c.code,
-                          attrs: {
-                            label: c.name,
-                            name: "address_country",
-                            size: "small",
-                            value: c.code
-                          }
-                        })
                       })
-                    )
-                  ],
-                  1
-                )
-              ],
-              1
-            )
-          ],
-          1
-        )
-      ]
+                    })
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
     ],
-    2
+    1
   )
 }
 var staticRenderFns = []
