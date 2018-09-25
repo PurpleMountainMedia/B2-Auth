@@ -1,13 +1,27 @@
 <template lang="html">
   <div class="">
     <el-form :model="form" label-position="top" label-width="100px" ref="authForm" method="POST" :action="formActionRoute" @submit.native.prevent="onSubmit($event)">
-      <el-card class="bg-primary mb-2" >
-        <a :href="b2Config.site_url"><img v-if="b2Config.logo" :src="b2Config.logo" class="site_logo" :alt="b2Config.name"></a>
+      <el-card class="bg-app mb-4">
+        <div class="justify-between">
+          <a :href="b2Config.site_url"><img v-if="b2Config.logo" :src="b2Config.logo" class="site_logo" :alt="b2Config.name"></a>
+          <div class="site_product text-white">
+            <h3 class="m-0"># app name #</h3>
+            <p class="m-0">{{__('A product of B2 Systems')}}</p>
+          </div>
+        </div>
       </el-card>
       <slot v-bind:form="form" v-bind:loading="loading" v-bind:errors="(field) => getError(field)" v-bind:errorBag="errors"/>
 
       <input type="hidden" name="_token" :value="csrfToken">
     </el-form>
+
+    <el-card class="mt-4">
+      <div class="justify-around">
+        <a href="">{{__('Education')}}</a>
+        <a href="">{{__('Finance')}}</a>
+        <a href="">{{__('People')}}</a>
+      </div>
+    </el-card>
   </div>
 </template>
 

@@ -13,9 +13,38 @@
 @import './fontawesome/scss/fa-regular';
 @import './fontawesome/scss/fa-light';
 
+// Shared items
+@import "shared";
 
 // Dialog
 .el-dialog__header {
     background: $body-bg;
     padding-bottom: 17px!important;
+}
+
+.product_header {
+  display: flex;
+  align-items: flex-end;
+
+  .site_logo {
+      max-height: 40px;
+      display: inline-block;
+  }
+  .site_product {
+      text-align: right;
+  }
+}
+
+.profile-photo-container {
+    float: left;
+    position: absolute;
+
+    .profile-photo {
+        margin-right: 0.5rem;
+        @include aspect-ratio(1, 1);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 100%;
+    }
 }

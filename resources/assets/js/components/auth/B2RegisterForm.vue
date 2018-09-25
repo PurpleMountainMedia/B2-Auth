@@ -2,7 +2,7 @@
   <div class="mt-4">
     <b2-form :form-action-route="registerRoute">
       <el-card slot-scope="slotProps">
-
+          <h3>{{__('Register a new account:')}}</h3>
           <el-form-item :label="__('First Name')"
                         prop="first_name"
                         :error="slotProps.errors('first_name')"
@@ -65,11 +65,13 @@
               </el-input>
           </el-form-item>
 
-        <a :href="loginRoute" v-if="loginRoute">
-          <el-button type="text">{{ __("Already have an account? Login.") }}</el-button>
-        </a>
+        <div class="justify-between">
+          <a :href="loginRoute" v-if="loginRoute">
+            <el-button type="text">{{ __("Already have an account? Login.") }}</el-button>
+          </a>
 
-        <el-button class="mt-3" :loading="slotProps.loading" native-type="submit" type="primary">{{ __('Register') }} <i class="far fa-lock"></i></el-button>
+          <el-button :loading="slotProps.loading" native-type="submit" type="primary">{{ __('Register') }} <i class="far fa-lock"></i></el-button>
+        </div>
       </el-card>
     </b2-form>
   </div>

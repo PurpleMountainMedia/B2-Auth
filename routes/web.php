@@ -40,7 +40,7 @@ Route::post('contact', 'ContactFormController@contact')->name('contact');
 
 Route::middleware('auth')->get('logout', function () {
     return view('auth.logout');
-});
+})->name('logout');
 Auth::routes();
 
 Route::middleware(['no-organisation'])->group(function () {
