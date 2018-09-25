@@ -8,6 +8,7 @@
     </div>
   </div>
   <div class="container-fluid below_nav_container_buffer"></div>
+
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
