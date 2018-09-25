@@ -1,6 +1,9 @@
 <template lang="html">
   <div class="mt-4">
-    <b2-form :form-action-route="loginRoute">
+    <b2-form :form-action-route="loginRoute"
+             :url-education="urlEducation"
+             :url-freedom="urlFreedom"
+             :url-labels="urlLabels">
       <el-card slot-scope="slotProps">
         <h3>{{__('Please login to continue:')}}</h3>
         <el-form-item :label="__('Email Address')"
@@ -55,6 +58,18 @@ export default {
     },
     forgottenPasswordRoute: {
       required: true,
+      type: String
+    },
+    urlEducation: {
+      required: false,
+      type: String
+    },
+    urlFreedom: {
+      required: false,
+      type: String
+    },
+    urlLabels: {
+      required: false,
       type: String
     }
   },

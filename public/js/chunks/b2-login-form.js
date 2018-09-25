@@ -47,6 +47,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'B2LoginForm',
@@ -65,6 +68,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     forgottenPasswordRoute: {
       required: true,
       type: String
+    },
+    urlEducation: {
+      required: false,
+      type: String
+    },
+    urlFreedom: {
+      required: false,
+      type: String
+    },
+    urlLabels: {
+      required: false,
+      type: String
     }
   }
 });
@@ -79,7 +94,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2LoginForm.vue","sourceRoot":""}]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2LoginForm.vue","sourceRoot":""}]);
 
 // exports
 
@@ -208,7 +223,12 @@ var render = function() {
     { staticClass: "mt-4" },
     [
       _c("b2-form", {
-        attrs: { "form-action-route": _vm.loginRoute },
+        attrs: {
+          "form-action-route": _vm.loginRoute,
+          "url-education": _vm.urlEducation,
+          "url-freedom": _vm.urlFreedom,
+          "url-labels": _vm.urlLabels
+        },
         scopedSlots: _vm._u([
           {
             key: "default",

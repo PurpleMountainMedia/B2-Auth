@@ -9,6 +9,9 @@
             <div class="h-100 d-flex align-items-center">
               <b2-login-form login-route="{{ route('login') }}"
                              forgotten-password-route="{{ route('password.request') }}"
+                             url-education="{{ route('inventory') }}"
+                             url-freedom="{{ route('freedom') }}"
+                             url-labels="{{ route('security_labels') }}"
                              class="auth-form">
               </b2-login-form>
             </div>

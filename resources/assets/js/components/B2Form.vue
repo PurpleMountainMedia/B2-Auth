@@ -17,9 +17,9 @@
 
     <el-card class="mt-4">
       <div class="justify-around">
-        <a href="">{{__('Education')}}</a>
-        <a href="">{{__('Finance')}}</a>
-        <a href="">{{__('People')}}</a>
+        <a :href="urlEducation">{{__('Education')}}</a>
+        <a :href="urlFreedom">{{__('Freedom')}}</a>
+        <a :href="urlLabels">{{__('Labels')}}</a>
       </div>
     </el-card>
   </div>
@@ -32,6 +32,21 @@ export default {
   props: {
     formActionRoute: {
       required: true,
+      type: String
+    },
+
+    urlEducation: {
+      required: false,
+      type: String
+    },
+
+    urlFreedom: {
+      required: false,
+      type: String
+    },
+    
+    urlLabels: {
+      required: false,
       type: String
     },
 

@@ -10143,7 +10143,7 @@ if (token) {
 /***/ "./resources/assets/js/lang/en.json":
 /***/ (function(module, exports) {
 
-module.exports = {"Email Address":"Email Address","Password":"Password","Email is required.":"Email is required.","Password is required.":"Password is required.","Return to main website.":"Return to main website.","Login":"Login","Reset":"Reset","A product of B2 Systems":"A product of B2 Systems","Education":"Education Inventory","Finance":"Finance","People":"People"}
+module.exports = {"Email Address":"Email Address","Password":"Password","Email is required.":"Email is required.","Password is required.":"Password is required.","Return to main website.":"Return to main website.","Login":"Login","Reset":"Reset","A product of B2 Systems":"A product of B2 Systems","Education":"Education Inventory Platform","Finance":"Finance","People":"People","Freedom":"B2 Freedom","Labels":"Security Labels"}
 
 /***/ }),
 

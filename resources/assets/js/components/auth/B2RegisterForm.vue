@@ -1,6 +1,9 @@
 <template lang="html">
   <div class="mt-4">
-    <b2-form :form-action-route="registerRoute">
+    <b2-form :form-action-route="registerRoute"
+             :url-education="urlEducation"
+             :url-freedom="urlFreedom"
+             :url-labels="urlLabels">
       <el-card slot-scope="slotProps">
           <h3>{{__('Register a new account:')}}</h3>
           <el-form-item :label="__('First Name')"
@@ -86,12 +89,23 @@ export default {
       required: true,
       type: String
     },
-
     loginRoute: {
       required: false,
       type: String,
       default: () => { return null }
     },
+    urlEducation: {
+      required: false,
+      type: String
+    },
+    urlFreedom: {
+      required: false,
+      type: String
+    },
+    urlLabels: {
+      required: false,
+      type: String
+    }
   },
 
   components: {
