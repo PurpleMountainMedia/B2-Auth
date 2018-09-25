@@ -80,7 +80,7 @@
               <path class="heroicon-tag-hole heroicon-component-accent heroicon-component-fill" fill="#7ACFC0" d="M20 31a11 11 0 1 1 0-22 11 11 0 0 1 0 22zm0-3a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"></path>
               <path class="heroicon-outline" fill="#4A4A4A" fill-rule="nonzero" d="M0 10L10 0h30l58.59 58.59L100 60l-1.41 1.41L61.4 98.6 60 100l-1.41-1.41L0 40V10zm2 29.17l58 58L97.17 60l-58-58H10.83L2 10.83v28.34zM50 20l.7.7 38.6 38.6.7.7-.7.7-28.6 28.6-.7.7-.7-.7-38.6-38.6-.7-.7.7-.7 28.6-28.6.7-.7zm10 68.59L88.59 60 50 21.41 21.41 50 60 88.59zM49.3 25.7L50 25l.7.7 33.6 33.6.7.7-.7.7-23.6 23.6-.7.7-.7-.7-33.6-33.6-.7-.7.7-.7 23.6-23.6zM26.4 50L60 83.59 83.59 60 50 26.41 26.41 50zM20 31a11 11 0 1 1 0-22 11 11 0 0 1 0 22zm10-11a10 10 0 1 0-20 0 10 10 0 0 0 20 0zm-10 8a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm6-8a6 6 0 1 0-12 0 6 6 0 0 0 12 0z"></path>
           </svg>
-          <h4 class="my-4 text-white text-center">Optional barcoding of high value items using our <a class="text-dark" href="{{ 'security_labels' }}" title="Security Lables">security labels</a></h4>
+          <h4 class="my-4 text-white text-center">Optional barcoding of high value items using our <a class="text-dark" href="{{ route('security_labels') }}" title="Security Lables">security labels</a></h4>
         </div>
       </div>
 
