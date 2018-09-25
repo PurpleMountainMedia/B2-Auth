@@ -72,6 +72,7 @@ body, html {
     top: 0px;
     padding-top: $navbar_top_height!important;
     min-height: $header_height;
+    z-index: 10;
 }
 
 .below_nav_container_buffer {
