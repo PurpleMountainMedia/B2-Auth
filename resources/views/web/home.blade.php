@@ -20,14 +20,14 @@
         <div class="card shadow-sm border-0">
           <a class="product_link" href="{{ route('inventory') }}">
             <div class="card-body">
-              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" class="heroicon-package heroicon heroicon-sm d-block m-auto heroicon-inventory">
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" class="heroicon-package heroicon heroicon-sm d-block m-auto heroicon-b2">
                 <path class="heroicon-package-box heroicon-component-fill" d="M3 11h54v48h4V11zm18 12a2 2 0 0 0 2 2h14a2 2 0 0 0 0-4H23a2 2 0 0 0-2 2z"></path>
                 <rect class="heroicon-package-lid heroicon-component-accent heroicon-component-fill" width="58" height="10" x="1" y="1"></rect>
                 <path class="heroicon-package-handle heroicon-component-accent heroicon-component-fill" d="M18 23a5 5 0 0 1 5-5h14a5 5 0 0 1 0 10H23a5 5 0 0 1-5-5zm3 0a2 2 0 0 0 2 2h14a2 2 0 0 0 0-4H23a2 2 0 0 0-2 2z"></path>
                 <rect class="heroicon-shadows" width="56" height="6" x="2" y="8"></rect>
                 <path class="heroicon-outline" fill-rule="nonzero" d="M0 8V2C0 .9.9 0 2 0h56a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2v46a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V12a2 2 0 0 1-2-2V8zm2-6v6h18v1H2v1h56V2H2zm2 10v46h52V12H4zm20-4h2v1h-4V8h2zm22 0h2v1H28V8h18zM23 18h14a5 5 0 0 1 0 10H23a5 5 0 0 1 0-10zm0 1a4 4 0 0 0 0 8h14a4 4 0 0 0 0-8H23zm-3 4a3 3 0 0 1 3-3h14a3 3 0 1 1 0 6H23a3 3 0 0 1-3-3zm2 0a1 1 0 0 0 1 1h14a1 1 0 1 0 0-2H23a1 1 0 0 0-1 1z"></path>
               </svg>
-              <h4 class="text-center mt-3 text-dark">Inventory</h4>
+              <h4 class="text-center mt-3 text-dark">Education Inventory Platform</h4>
             </div>
           </a>
         </div>
@@ -44,7 +44,7 @@
                   <path class="heroicon-shadows" d="M12 17h5v-6H1v6h5a3 3 0 1 1 6 0zm21 0h5v-6H22v6h5a3 3 0 1 1 6 0zm21 0a3 3 0 1 0-6 0h-5v-6h16v6h-5zM22 53h16v6H22v-6z"></path>
                   <path class="heroicon-outline" d="M12 18v6a3 3 0 0 0 3 3h5c2.82 0 5.35 1.3 7 3.35V18h-6V0h18v18h-6v12.35A8.99 8.99 0 0 1 40 27h5a3 3 0 0 0 3-3v-6h-6V0h18v18h-6v6a9 9 0 0 1-9 9h-5a3 3 0 0 0-3 3v6h2v18H21V42h2v-6a3 3 0 0 0-3-3h-5a9 9 0 0 1-9-9v-6H0V0h18v18h-6zm4-16H2v9h14V2zm0 10H2v4h4.17a3 3 0 0 1 5.66 0H16v-4zm4 17h-5a5 5 0 0 1-5-5v-7a1 1 0 1 0-2 0v7a7 7 0 0 0 7 7h5a5 5 0 0 1 5 5v6h2v-6a7 7 0 0 0-7-7zm5 15h-2v9h14v-9H25zm10-2v-6a5 5 0 0 1 5-5h5a7 7 0 0 0 7-7v-7a1 1 0 1 0-2 0v7a5 5 0 0 1-5 5h-5a7 7 0 0 0-7 7v6h2zm-5-28a3 3 0 0 1 2.83 2H37v-4H23v4h4.17A3 3 0 0 1 30 14zm7-3V2H23v9h14zm-6 6a1 1 0 1 0-2 0v25h2V17zm17.17-1a3 3 0 0 1 5.66 0H58v-4H44v4h4.17zM58 11V2H44v9h14zM23 54v4h14v-4H23z"></path>
               </svg>
-              <h4 class="text-center mt-3 text-dark">Freedom</h4>
+              <h4 class="text-center mt-3 text-dark">B2 Freedom</h4>
             </div>
           </a>
         </div>
@@ -61,7 +61,7 @@
                   <rect class="heroicon-shadows" width="34" height="6" x="13" y="49"></rect>
                   <path class="heroicon-outline" d="M40 5.7V6h11a3 3 0 0 1 3 3v48a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V9a3 3 0 0 1 3-3h11v-.3c1.62-.57 3.3-1 5.03-1.3a5 5 0 0 1 9.94 0c1.73.3 3.41.73 5.03 1.3zm-6.85.43l-.17-1.49a3 3 0 0 0-5.96 0l-.17 1.5-1.49.24c-1.17.2-2.27.45-3.36.78V9h16V7.16c-1.1-.33-2.2-.58-3.36-.78l-1.49-.25zM20 8H9a1 1 0 0 0-1 1v48a1 1 0 0 0 1 1h42a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H40v1h8v46H12V9h8V8zm18 3v-1H22v1h16zm-24 0v37h32V11h-6v2H20v-2h-6zm32 40v-1H14v1h13v1H14v1h32v-1h-6v-1h6zM30 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm1-2a1 1 0 1 0-2 0 1 1 0 0 0 2 0zM18 17h24v1H18v-1zm0 2h23v1H18v-1zm22 3H18v-1h22v1zM18 41h24v1H18v-1zm0 2h21v1H18v-1zm5-17v-1h10v1H23zm0 3h10v1H23v-1zm0 4h10v1H23v-1zm0 4h10v1H23v-1zm-3.5-10a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm0 4a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm.5-13.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 4a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 4a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 4a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"></path>
               </svg>
-              <h4 class="text-center mt-3 text-dark">Labels</h4>
+              <h4 class="text-center mt-3 text-dark">Security Labels</h4>
             </div>
           </a>
         </div>

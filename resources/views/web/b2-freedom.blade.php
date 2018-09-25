@@ -74,48 +74,54 @@
   <div id="downloads" class="container py-5">
     <h2 class="text-center font-weight-bold pt-5">Download Today</h2>
 
-    <div class="row my-5 py-5">
-      <div class="col-md-4 my-3 py-4 text-center">
-        <i class="fab fa-windows fa-6x text-primary"></i>
-        <h3 class="text-center mt-4">Windows</h3>
-        <div class="mb-2">
-          <a class="btn btn-primary" href="">.exe (40mb)</a>
+    <div class="row py-4 my-5">
+      <div class="col-12 order-md-first order-last">
+        <div class="row">
+          <div class="col-md-4 my-3 py-4 text-center">
+            <i class="fab fa-windows fa-6x text-primary"></i>
+            <h3 class="text-center mt-4">Windows</h3>
+            <div class="mb-2">
+              <a class="btn btn-primary" href="">.exe (40mb)</a>
+            </div>
+          </div>
+          <div class="col-md-4 my-3 py-4 text-center">
+            <i class="fab fa-apple fa-6x text-primary"></i>
+            <h3 class="text-center mt-4">OS X</h3>
+            <div class="mb-2">
+              <a class="btn btn-primary" href="">.dmg (40mb)</a>
+            </div>
+          </div>
+          <div class="col-md-4 my-3 py-4 text-center">
+            <i class="fab fa-linux fa-6x text-primary"></i>
+            <h3 class="text-center mt-4">GNU/Linux</h3>
+            <div class="mb-2">
+              <a class="btn btn-primary" href="">.sh (40mb)</a>
+            </div>
+            <div class="mb-2">
+              <a class="btn btn-outline-primary btn-sm" href="">.tar.gz (40mb)</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-md-4 my-3 py-4 text-center">
-        <i class="fab fa-apple fa-6x text-primary"></i>
-        <h3 class="text-center mt-4">OS X</h3>
-        <div class="mb-2">
-          <a class="btn btn-primary" href="">.dmg (40mb)</a>
-        </div>
-      </div>
-      <div class="col-md-4 my-3 py-4 text-center">
-        <i class="fab fa-linux fa-6x text-primary"></i>
-        <h3 class="text-center mt-4">GNU/Linux</h3>
-        <div class="mb-2">
-          <a class="btn btn-primary" href="">.sh (40mb)</a>
-        </div>
-        <div class="mb-2">
-          <a class="btn btn-outline-primary btn-sm" href="">.tar.gz (40mb)</a>
-        </div>
-      </div>
-    </div>
-    <div class="row my-5 py-5">
-      <div class="col-md-6 my-3 py-4 text-center">
-        <i class="fab fa-app-store fa-6x text-primary"></i>
-        <h3 class="text-center mt-4">iPhone/iPad</h3>
-        <div class="mb-2">
-          <a class="btn btn-primary" href="">Download from App Store</a>
-        </div>
-      </div>
-      <div class="col-md-6 my-3 py-4 text-center">
-        <i class="fab fa-android fa-6x text-primary"></i>
-        <h3 class="text-center mt-4">Android</h3>
-        <div class="mb-2">
-          <a class="btn btn-primary" href="">Download from Google Play</a>
-        </div>
-        <div class="mb-2">
-          <a class="btn btn-outline-primary btn-sm" href="">.apk (40mb)</a>
+      <div class="col-12 order-md-last order-first mb-md-0 mb-5">
+        <div class="row">
+          <div class="col-md-6 my-3 py-4 text-center">
+            <i class="fab fa-app-store fa-6x text-primary"></i>
+            <h3 class="text-center mt-4">iPhone/iPad</h3>
+            <div class="mb-2">
+              <a class="btn btn-primary" href="">Download from App Store</a>
+            </div>
+          </div>
+          <div class="col-md-6 my-3 py-4 text-center">
+            <i class="fab fa-android fa-6x text-primary"></i>
+            <h3 class="text-center mt-4">Android</h3>
+            <div class="mb-2">
+              <a class="btn btn-primary" href="">Download from Google Play</a>
+            </div>
+            <div class="mb-2">
+              <a class="btn btn-outline-primary btn-sm" href="">.apk (40mb)</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
