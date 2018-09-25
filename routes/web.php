@@ -36,13 +36,11 @@ Route::get('our-services/onsite-asset-discovery', function () {
     return view('web.onsite-asset-discovery');
 })->name('onsite-asset-discovery');
 
-Route::post('contact', function () {
-    return 'hi';
-})->name('contact');
+Route::post('contact', 'ContactFormController@contact')->name('contact');
 
 Route::middleware('auth')->get('logout', function () {
     return view('auth.logout');
-});
+})->name('logout');
 Auth::routes();
 
 Route::middleware(['no-organisation'])->group(function () {

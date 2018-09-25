@@ -8,7 +8,22 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@stack('title') | B2 Systems</title>
+    <meta name="description" content="@stack('description')">
+    <meta name="robots" content="index, follow" />
+
+    {{-- <meta name="description" content="@stack('description')"/>
+    <link rel="canonical" href="https://www.paragosoftware.com/" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MAT &amp; School Asset Manager Software Made Simple - Parago" />
+    <meta property="og:description" content="The only asset manager solution developed in conjunction with schools &amp; districts, academies &amp; multi academy trusts. Contact us today to find out more!" />
+    <meta property="og:url" content="https://www.paragosoftware.com/" />
+    <meta property="og:site_name" content="Parago" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="The only asset manager solution developed in conjunction with schools &amp; districts, academies &amp; multi academy trusts. Contact us today to find out more!" />
+    <meta name="twitter:title" content="MAT &amp; School Asset Manager Software Made Simple - Parago" />
+    <script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.paragosoftware.com\/","name":"Parago","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.paragosoftware.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script> --}}
 
     <script>
         window.b2_systems = {

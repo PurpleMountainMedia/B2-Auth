@@ -11,17 +11,20 @@
 
               <div class="form-group">
                 <label for="contact_form_name">Name</label>
-                <input type="text" class="form-control" id="contact_form_name" placeholder="John Smith">
+                <input name="name" type="text" class="form-control @if ($errors->has('name')) is-invalid @endif" id="contact_form_name" placeholder="John Smith" value="{{ old('name') }}">
+                <div class="invalid-feedback">
+                  {{ $errors->first('name') }}
+                </div>
               </div>
 
               <div class="form-group">
                 <label for="contact_form_email">Email</label>
-                <input type="email" class="form-control" id="contact_form_email" placeholder="help@b2systems.co.uk">
+                <input name="email" type="email" class="form-control" id="contact_form_email" placeholder="help@b2systems.co.uk" value="{{ old('email') }}">
               </div>
 
               <div class="form-group">
                 <label for="contact_form_email">Message</label>
-                <textarea class="form-control" id="contact_form_email" placeholder="I would like some more information."></textarea>
+                <textarea name="message" class="form-control" id="contact_form_email" placeholder="I would like some more information." value="{{ old('message') }}"></textarea>
               </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>

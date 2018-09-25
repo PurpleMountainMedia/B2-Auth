@@ -8,7 +8,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
 
-    <title><?php echo e(config('app.name', 'Laravel')); ?></title>
+    <title><?php echo $__env->yieldPushContent('title'); ?> | B2 Systems</title>
+    <meta name="description" content="<?php echo $__env->yieldPushContent('description'); ?>">
+    <meta name="robots" content="index, follow" />
+
+    
 
     <script>
         window.b2_systems = {

@@ -1,0 +1,105 @@
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+    > .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+
+.justify-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.justify-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+// Logo
+.site_logo {
+    max-height: 40px;
+}
+.site_product {
+    text-align: right;
+}
+
+// Hero Icons
+.heroicon-outline {fill: #303034;}
+.heroicon-shadow {fill: #303034; opacity:0.4;}
+.heroicon-component-fill {fill: #FFFFFF;}
+
+.heroicon-inventory {
+    .heroicon-component-accent {fill: $eams;}
+}
+.heroicon-finance {
+    .heroicon-component-accent {fill: $finance;}
+}
+.heroicon-people {
+    .heroicon-component-accent {fill: $people;}
+}
+
+// Products
+.coming_soon {
+    position: absolute;
+    right: 50px;
+}
+a.product_link {
+    text-decoration: none!important;
+}
+
+.short_input input {
+  max-width: 300px!important;
+}
+
+.screen_full_height {
+    height: 100vh!important;
+}
+
+.bg-eams.screen_full_height::after {
+    content: "";
+    background: url(http://b2systems.test/storage/system/nathan-dumlao-572047-unsplash.jpg);
+    opacity: 0.24;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-size: cover;
+}
+.bg-people.screen_full_height::after {
+    content: "";
+    background: url(http://b2systems.test/storage/system/santi-vedri-707620-unsplash.jpg);
+    opacity: 0.24;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-size: cover;
+}
+.bg-finance.screen_full_height::after {
+    content: "";
+    background: url(http://b2systems.test/storage/system/rawpixel-761474-unsplash.jpg);
+    opacity: 0.24;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-size: cover;
+}
+.bg-eams.screen_full_height div {
+  z-index: 100;
+}

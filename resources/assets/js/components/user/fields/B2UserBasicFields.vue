@@ -7,6 +7,16 @@
 
         <!-- Name -->
         <el-row :gutter="10">
+            <el-col class="profile-photo-container" :span="6">
+              <label for="user_form_field_profile_photo"
+                     class="el-form-item__label">
+                     Photo
+              </label>
+              <div class="profile-photo"
+                   style="background-image: url('https://via.placeholder.com/500x500')"
+                   id="user_form_field_profile_photo">
+              </div>
+            </el-col>
             <el-col :span="9" :offset="6">
                 <el-form-item label="First Name"
                               prop="first_name"

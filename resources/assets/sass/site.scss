@@ -13,6 +13,9 @@
 @import './fontawesome/scss/fa-regular';
 @import './fontawesome/scss/fa-light';
 
+// Shared items
+@import "shared";
+
 
 body, html {
     font-family: "myriad-pro",sans-serif;
@@ -72,66 +75,39 @@ body, html {
 .below_nav_container_buffer {
     height: ($header_height - $navbar_top_height) - 40px;
 }
-div#particles-js {
-    position: absolute;
-    top: 0px;
-    height: $header_height;
-    z-index: 0;
+.product-header {
+    height: $navbar_top_height;
+}
+
+.page-home {
+    div#particles-js {
+        position: absolute;
+        top: 0px;
+        height: $header_height;
+        z-index: 0;
+        width: 100%;
+    }
+}
+
+// Login
+.auth-form {
     width: 100%;
+    z-index: 10;
 }
 
-// Products
-.coming_soon {
-    position: absolute;
-    right: 50px;
-}
-a.product_link {
-    text-decoration: none!important;
-}
+.page-auth {
+    div#particles-js {
+        position: absolute;
+        top: 0px;
+        z-index: 0;
+        height: 100%;
+        width: 100%;
+    }
 
-.short_input input {
-  max-width: 300px!important;
-}
-
-.screen_full_height {
-    height: 100vh!important;
-}
-
-.bg-eams.screen_full_height::after {
-    content: "";
-    background: url(http://b2systems.test/storage/system/nathan-dumlao-572047-unsplash.jpg);
-    opacity: 0.24;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    background-size: cover;
-}
-.bg-people.screen_full_height::after {
-    content: "";
-    background: url(http://b2systems.test/storage/system/santi-vedri-707620-unsplash.jpg);
-    opacity: 0.24;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    background-size: cover;
-}
-.bg-finance.screen_full_height::after {
-    content: "";
-    background: url(http://b2systems.test/storage/system/rawpixel-761474-unsplash.jpg);
-    opacity: 0.24;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    background-size: cover;
-}
-.bg-eams.screen_full_height div {
-  z-index: 100;
+    .particles-js-canvas-el {
+        position: absolute;
+        top: 0;
+    }
 }
 
 .pattern_bg_primary {
