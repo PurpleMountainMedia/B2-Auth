@@ -4,7 +4,7 @@
   <div>
     <div class="below_nav_container container-fluid p-5 d-flex align-items-center header_image" id="freedom_header">
       <div class="container header_container_inner">
-        <h2 class="text-dark font-weight-strong">B2 Freedom</h2>
+        <h2 class="text-dark font-weight-strong">B2 Freedom Tool</h2>
         <p class="text-dark font-weight-strong">Automated IT Discovery Tool</p>
       </div>
     </div>
@@ -58,7 +58,7 @@
 
       </div>
       <div class="col-md-6 pt-1">
-        <img class="img-fluid" src="{{ url('storage/web/freedom_screenshot.png') }}" alt="Freedom">
+        <img class="img-fluid" src="{{ url('storage/web/freedom_screenshot2.png') }}" alt="Freedom">
       </div>
     </div>
   </div>
