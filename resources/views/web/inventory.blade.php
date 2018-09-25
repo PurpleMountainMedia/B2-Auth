@@ -1,16 +1,39 @@
 @extends('layouts.site')
 
 @section('below_nav')
-  <div id="particles-js" class="bg-dark">
-    <div class="below_nav_container container-fluid p-5 d-flex align-items-center">
-      <div class="container">
-        <h2 class="text-white font-weight-light">Education Inventory</h2>
-        <p class="text-white">School Inventory Management</p>
+  <div>
+    <div class="below_nav_container container-fluid p-5 d-flex align-items-center bg-dark header_image" id="inventory_header">
+      <div class="container header_container_inner">
+        <h2 class="text-dark font-weight-strong">Education Inventory</h2>
+        <p class="text-dark font-weight-strong">School Inventory Management</p>
       </div>
     </div>
   </div>
   <div class="container-fluid below_nav_container_buffer"></div>
 @endsection
+
+@push('header_scripts')
+  <style media="screen">
+    #inventory_header {
+      background: url({{ url('storage/web/inventory_header_img.jpg') }});
+      background-size: cover;
+      background-position: center;
+    }
+    .header_image::after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.54);
+      content: "";
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%233a3a3a' fill-opacity='0.41' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    }
+    .header_container_inner {
+      z-index: 100;
+    }
+  </style>
+@endpush
 
 @section('content')
   <div class="container mt-5 pt-5">
@@ -147,9 +170,4 @@
       background-size: cover;
     }
   </style>
-@endpush
-
-@push('scripts')
-    <script src="{{ mix('js/particles.js') }}" charset="utf-8"></script>
-    <script src="{{ mix('js/particles-config.js') }}" charset="utf-8"></script>
 @endpush
