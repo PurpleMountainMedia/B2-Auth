@@ -25,12 +25,16 @@ Route::get('our-products/inventory', function () {
 })->name('inventory');
 
 Route::get('our-products/b2-freedom', function () {
-    return view('web.inventory');
+    return view('web.b2-freedom');
 })->name('freedom');
 
 Route::get('our-products', function () {
     return view('web.our-products');
 })->name('our-products');
+
+Route::get('our-services/onsite-asset-discovery', function () {
+    return view('web.onsite-asset-discovery');
+})->name('onsite-asset-discovery');
 
 Route::post('contact', function () {
     return 'hi';

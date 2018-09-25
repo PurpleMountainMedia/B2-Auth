@@ -2,37 +2,66 @@
   <div>
     {{ title }}
 
+    <img
+      v-for="(img, key) in images"
+      :key="key"
+      :src="img.src"
+      :class="{ 'img-fluid': true }"
+      :alt="img.alt"
+      :title="img.title">
 
-    <select
-      name="qty"
-      v-model="qty">
-      <option
-        v-for="(op, key) in qtyOptions"
-        :key="key"
-        :label="op.label"
-        :value="op.value" />
-    </select>
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <select
+          name="qty"
+          class="form-control"
+          v-model="qty">
+          <option
+            v-for="(op, key) in qtyOptions"
+            :key="key"
+            :label="op.label"
+            :value="op.value" />
+        </select>
+      </div>
+    </div>
 
-    <input
-      type="number"
-      name="barcode_start"
-      v-model="barcodeStart">
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <label for="">Barcode Range Start Number</label>
+        <input
+          type="number"
+          class="form-control short_input"
+          name="barcode_start"
+          v-model="barcodeStart">
+      </div>
+    </div>
 
-    <input
-      type="text"
-      name="barcode_prefix"
-      v-model="barcodePrefix">
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <label for="">Barcode Prefix</label>
+        <input
+          type="text"
+          class="form-control short_input"
+          name="barcode_prefix"
+          v-model="barcodePrefix">
+      </div>
+    </div>
 
-    <button
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <h3>Total: £{{ total }}</h3>
+        <small class="font-weight-strong">Barcode Range: {{ barcodePrefix }}{{ barcodeStart }} - {{ barcodePrefix }}{{ barcodeEnd }}</small>
+      </div>
+    </div>
+
+    <!-- <button
       type="button"
       name="button"
       class="btn btn-primary">Buy
-    </button>
+    </button> -->
 
 
-    Range: {{ barcodePrefix }}{{ barcodeStart }} - {{ barcodePrefix }}{{ barcodeEnd }}
 
-    Total: £{{ total }}
 
   </div>
 </template>
@@ -45,6 +74,11 @@ export default {
       type: String,
       required: false,
       default: () => { return null }
+    },
+    images: {
+      type: Array,
+      required: false,
+      default: () => { return [] }
     }
   },
   data () {
@@ -103,5 +137,8 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
+  .short_input {
+    max-width: 100px;
+  }
 </style>

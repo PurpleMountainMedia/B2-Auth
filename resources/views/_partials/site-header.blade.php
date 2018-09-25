@@ -29,7 +29,7 @@
             Services
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{{ route('inventory') }}">Onsite Asset Discovery</a>
+            <a class="dropdown-item" href="{{ route('onsite-asset-discovery') }}">Onsite Asset Discovery</a>
           </div>
         </li>
 

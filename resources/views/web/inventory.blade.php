@@ -24,23 +24,23 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-7 py-5">
+      <div class="col-md-6 py-5">
         <p>We appreciate that for school business leaders, time is the most valuable commodity and that time wasted manually collating and updating asset registers, is time that you will never get back. We have developed an ecosystem that is designed from the ground up to save you time and increase operational efficiency. Included in this ecosystem is a state-of-the-art cloud-based asset management system, our asset discovery agent <a href="{{ route('freedom') }}" class="text-eams">B2 Freedom</a> as well as our innovative, <a href="{{ route('security_labels') }}" class="text-eams">low cost barcoded security labels</a>.</p>
 
         <p>We have long standing relationships with Schools, Academies, Colleges and Universities, we therefore know what it takes when it comes to building asset management systems and software. We realise you are often confronted with many challenges in relation to asset management requirement and therefore developed a cost-effective, time-efficient and invaluable inventory system specifically for the education sector. We guarantee the system meets all the criteria in terms of providing computerised evidence for audit, insurance reporting and disaster recovery.</p>
 
         <a href="#" class="btn btn-outline-eams btn-lg mt-4">Contact Us</a>
       </div>
-      <div class="col-md-5 pr-0 pt-1">
-        <img class="img-fluid w-100" src="{{ url('storage/web/ei-items-screenshot.png') }}" alt="Items">
+      <div class="col-md-6 pt-1">
+        <img class="img-fluid" src="{{ url('storage/web/ei-items-screenshot.png') }}" alt="Items">
       </div>
     </div>
   </div>
 
-  <div class="bg1 py-5 my-4">
+  <div class="bg1 py-5 my-4 container-fluid">
     <div class="row py-5">
       <div class="col-md-12 py-5">
-
+        {{-- BG Image --}}
       </div>
     </div>
   </div>
