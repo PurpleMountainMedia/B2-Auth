@@ -8,8 +8,8 @@
         <a class="btn btn-primary btn-sm" href="{{ route('our-products') }}">Our Products</a>
       </div>
     </div>
-    <div class="container-fluid below_nav_container_buffer"></div>
   </div>
+  <div class="container-fluid below_nav_container_buffer"></div>
 @endsection
 
 @section('content')
