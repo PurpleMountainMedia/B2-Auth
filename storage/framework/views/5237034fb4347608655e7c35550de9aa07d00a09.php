@@ -130,7 +130,7 @@
 <?php $__env->startPush('header_scripts'); ?>
   <style media="screen">
     .bg1 {
-      background: url(<?php echo e(url('storage/web/ei_head_7.jpg')); ?>);
+      background: url(<?php echo e(url('storage/web/freedom_spacer_img.jpg')); ?>);
       background-position: center;
       background-size: cover;
     }
