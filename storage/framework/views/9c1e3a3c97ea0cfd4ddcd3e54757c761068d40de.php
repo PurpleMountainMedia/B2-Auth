@@ -2,11 +2,12 @@
   <div class="page-auth">
     <div id="particles-js" class="bg-dark">
       <div class="container">
-        <div class="row screen_full_height">
-          <div class="col-lg-6 col-12">
+        <div class="row screen_full_height d-flex justify-content-center">
+          <div class="col-lg-8 col-12">
             <div class="h-100 d-flex align-items-center">
               <b2-login-form login-route="<?php echo e(route('login')); ?>"
                              forgotten-password-route="<?php echo e(route('password.request')); ?>"
+                             url-return="<?php echo e(route('home')); ?>"
                              class="auth-form">
               </b2-login-form>
             </div>

@@ -81,5 +81,6 @@ const app = new Vue({
         B2OAuthForm: () => import(/* webpackChunkName: "b2-o-auth-form" */'./components/auth/B2OAuthForm.vue'),
         B2RegisterForm: () => import(/* webpackChunkName: "b2-register-form" */'./components/auth/B2RegisterForm.vue'),
         B2CreateOrganisationForm: () => import(/* webpackChunkName: "b2-create-organisation-form" */'./components/organisations/B2CreateOrganisationForm.vue'),
+        B2OrganisationForm: () => import(/* webpackChunkName: "b2-organisation-form" */'./components/organisations/B2OrganisationForm.vue')
     },
 });

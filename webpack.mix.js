@@ -10,6 +10,9 @@ let mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
+
+ const appPath = path.resolve(__dirname, 'resources', 'assets', 'js');
+
  mix.webpackConfig({
      node: {
        fs: "empty"
@@ -34,7 +37,16 @@ let mix = require('laravel-mix');
            loader: 'ejs-loader',
        },
       ],
-     }
+    },
+    resolve: {
+        alias: {
+            // 'vue$': 'vue/dist/vue.runtime.esm.js',
+            'axios': 'axios/dist/axios.min.js',
+            'components': path.resolve(appPath, 'components'),
+            'lang': path.resolve(appPath, 'lang'),
+            'utils': path.resolve(appPath, 'utils'),
+        }
+    }
  });
 
 if (!mix.inProduction()) {

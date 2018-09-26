@@ -3,16 +3,25 @@
 <div v-loading="loading">
     <b2-create-organisation-modal :on-create="(org) => this.clonedOrganisations.push(org)" />
 
+    <el-input
+      v-model="search"
+      :placeholder="__('Search')"
+      class="mt-4"/>
+
     <el-row class="mt-5" :gutter="40" v-for="(row, key) in groupedOrganisations" :key="key">
-        <el-col :span="12" v-for="organisation in row" :key="organisation.id">
-            <el-card shadow="hover">
-                <div slot="header" class="clearfix">
-                  <span><strong>{{ organisation.name }}</strong></span>
-                </div>
-                <ul class="organisation_card_list">
-                    <li><strong>Type:</strong> {{ organisation.type }}</li>
-                </ul>
-            </el-card>
+        <el-col :span="24" v-for="organisation in row" :key="organisation.id">
+          <el-card shadow="hover">
+              <div slot="header" class="clearfix">
+                <span><strong>{{ organisation.name }}</strong></span>
+                <a
+                  :href="`/dashboard/organisations/${organisation.id}`">
+                  <el-button style="float: right; padding: 3px 0" type="text">{{ __('Edit') }}</el-button>
+                </a>
+              </div>
+              <ul class="organisation_card_list">
+                  <li><strong>Type:</strong> {{ organisation.type }}</li>
+              </ul>
+          </el-card>
         </el-col>
     </el-row>
 </div>
@@ -30,25 +39,29 @@ export default {
     },
 
     props: {
-        organisations: {
-            type: Array,
-            required: true,
-        }
+      organisations: {
+        type: Array,
+        required: true
+      }
     },
 
     computed: {
 
-        groupedOrganisations()
-        {
-            return chunk(this.clonedOrganisations, 2);
+        searchedOrganisations () {
+          return this.search ? this.clonedOrganisations.filter(o => o.name.toUpperCase().includes(this.search.toUpperCase())) : this.clonedOrganisations
+        },
+
+        groupedOrganisations () {
+            return chunk(this.searchedOrganisations, 1);
         }
     },
 
     data () {
-        return {
-            loading: false,
-            clonedOrganisations: [],
-        }
+      return {
+        loading: false,
+        clonedOrganisations: [],
+        search: ''
+      }
     },
 
     mounted () {

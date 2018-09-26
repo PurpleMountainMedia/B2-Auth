@@ -5,9 +5,13 @@ namespace App;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Auth;
 use App\Traits\HasUUID;
+use App\Traits\CreatedByTrait;
+use App\Traits\LinkableTrait;
 
 class Organisation extends Model
 {
+    // use CreatedByTrait, LinkableTrait;
+
     public static $types = [
         'School', 'Multi Academy Trust', 'Council', 'Other'
     ];

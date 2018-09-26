@@ -33,8 +33,12 @@
 <body>
     <div id="app">
 
+        <?php echo $__env->yieldContent('header'); ?>
+
+        <?php echo $__env->yieldContent('products'); ?>
+
         <div class="container py-5">
-            <div class="col-md-8 m-auto">
+            <div class="col-lg-8 m-auto">
                 <div class="row">
                     <div class="col-md-3 border-right">
                         <ul class="nav flex-column">
@@ -49,6 +53,11 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="<?php echo e(route('licences')); ?>"><i class="far fa-credit-card-blank"></i> Licences</a>
+                            </li>
+                        </ul>
+                        <ul class="nav flex-column mt-2">
+                            <li class="nav-item">
+                                <a class="nav-link active text-danger" href="<?php echo e(route('logout')); ?>"><i class="far fa-sign-out"></i> Log Out</a>
                             </li>
                         </ul>
                     </div>

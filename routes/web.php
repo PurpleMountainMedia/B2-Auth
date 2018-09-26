@@ -42,9 +42,11 @@ Route::middleware('auth')->get('logout', function () {
 })->name('logout');
 Auth::routes();
 
+
 Route::middleware(['no-organisation'])->group(function () {
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
     Route::get('/dashboard/organisations', 'OrganisationsController@index')->name('organisations');
+    Route::get('/dashboard/organisations/{organisation}', 'OrganisationsController@show')->name('organisations.show');
     Route::get('/dashboard/schools', 'SchoolsController@index')->name('schools');
     Route::get('/dashboard/licences', 'LicencesController@index')->name('licences');
     Route::get('/dashboard/licences/callback', 'LicencesController@callback')->name('licences.callback');

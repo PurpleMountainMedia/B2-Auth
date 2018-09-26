@@ -38,82 +38,67 @@
           </el-col>
       </el-row>
 
+      <el-row :gutter="10">
         <el-col :md="12">
-          <el-form-item :label="__('Address Line 2')"
-                        prop="address_line_2"
-                        :error="errors.address_line_2">
-            <el-input v-model="form.address_line_2"
+          <el-form-item :label="__('Address Town')"
+                        prop="address_town"
+                        :error="errors.address_town"
+                        :rules="{ required: true, message: __('Address town is required.') }">
+            <el-input v-model="form.address_town"
                       size="small"
-                      name="address_line_2"
-                      id="organisation_address_line_2">
+                      name="address_town"
+                      id="organisation_address_town">
             </el-input>
           </el-form-item>
         </el-col>
-    </el-row>
 
-    <el-row :gutter="10">
-      <el-col :md="12">
-        <el-form-item :label="__('Address Town')"
-                      prop="address_town"
-                      :error="errors.address_town"
-                      :rules="{ required: true, message: __('Address town is required.') }">
-          <el-input v-model="form.address_town"
-                    size="small"
-                    name="address_town"
-                    id="organisation_address_town">
-          </el-input>
-        </el-form-item>
-      </el-col>
-
-      <el-col :md="12">
-        <el-form-item :label="__('Address County')"
-                      prop="address_county"
-                      :error="errors.address_county"
-                      :rules="{ required: true, message: __('Address county is required.') }">
-          <el-input v-model="form.address_county"
-                    size="small"
-                    name="address_county"
-                    id="organisation_address_county">
-          </el-input>
-        </el-form-item>
-      </el-col>
-    </el-row>
-
-          <el-col :md="12">
-              <el-form-item :label="__('Address Country')"
-                            prop="address_country"
-                            :error="errors.address_country"
-                            :rules="{ required: true, message: __('Address country is required.') }">
-                  <el-select v-model="form.address_country"
-                             size="small"
-                             name="address_country"
-                             id="organisation_address_country">
-                      <el-option v-for="(country, key) in countries"
-                                 :key="key"
-                                 :label="country.name"
-                                 :value="country.code"></el-option>
-                  </el-select>
-              </el-form-item>
-          </el-col>
+        <el-col :md="12">
+          <el-form-item :label="__('Address County')"
+                        prop="address_county"
+                        :error="errors.address_county"
+                        :rules="{ required: true, message: __('Address county is required.') }">
+            <el-input v-model="form.address_county"
+                      size="small"
+                      name="address_county"
+                      id="organisation_address_county">
+            </el-input>
+          </el-form-item>
+        </el-col>
       </el-row>
-    </template>
 
-      <el-col :md="12">
-        <el-form-item :label="__('Address Country')"
-                      prop="address_country"
-                      :error="errors.address_country"
-                      :rules="{ required: true, message: __('Address country is required.') }">
-          <el-select v-model="form.address_country" filterable placeholder="Select">
-            <el-option v-for="c in countries"
-                       :key="c.code"
-                       :label="c.name"
-                       name="address_country"
-                       size="small"
-                       :value="c.code">
-            </el-option>
-          </el-select>
-        </el-form-item>
-      </el-col>
+      <el-row :gutter="10">
+        <el-col :md="12">
+          <el-form-item :label="__('Address Postcode')"
+                        prop="address_postcode"
+                        :error="errors.address_postcode"
+                        :rules="{ required: true, message: __('Address postcode is required.') }">
+            <el-input v-model="form.address_postcode"
+                      size="small"
+                      name="address_postcode"
+                      id="organisation_address_postcode">
+            </el-input>
+          </el-form-item>
+        </el-col>
+
+        <el-col :md="12">
+          <el-form-item :label="__('Address Country')"
+                        prop="address_country"
+                        :error="errors.address_country"
+                        :rules="{ required: true, message: __('Address country is required.') }">
+              <el-select v-model="form.address_country"
+                         size="small"
+                         name="address_country"
+                         id="organisation_address_country">
+                  <el-option v-for="(country, key) in countries"
+                             :key="key"
+                             :label="country.name"
+                             :value="country.code"></el-option>
+              </el-select>
+          </el-form-item>
+        </el-col>
+      </el-row>
+
+    </template>
     </el-row>
   </div>
 </template>
@@ -132,9 +117,10 @@ export default {
   },
 
   data () {
-      return {
-          errors: {},
-      }
+    return {
+      errors: {},
+      show: true
+    }
   },
 
   computed: {
