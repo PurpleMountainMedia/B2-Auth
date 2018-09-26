@@ -250,12 +250,12 @@ var render = function() {
                       "el-form-item",
                       {
                         attrs: {
-                          label: _vm.__("Email"),
+                          label: _vm.__("label-email"),
                           prop: "email",
                           error: slotProps.errors("email"),
                           rules: {
                             required: true,
-                            message: _vm.__("Email is required.")
+                            message: _vm.__("required-email")
                           }
                         }
                       },
@@ -291,12 +291,12 @@ var render = function() {
                       "el-form-item",
                       {
                         attrs: {
-                          label: _vm.__("Password"),
+                          label: _vm.__("label-password"),
                           prop: "password",
                           error: slotProps.errors("password"),
                           rules: {
                             required: true,
-                            message: _vm.__("Password is required.")
+                            message: _vm.__("required-password")
                           }
                         }
                       },
@@ -325,12 +325,12 @@ var render = function() {
                       "el-form-item",
                       {
                         attrs: {
-                          label: _vm.__("Password Confirmation"),
+                          label: _vm.__("label-confirm-password"),
                           prop: "password_confirmation",
                           error: slotProps.errors("password_confirmation"),
                           rules: {
                             required: true,
-                            message: _vm.__("Password is required.")
+                            message: _vm.__("required-password")
                           }
                         }
                       },
@@ -375,7 +375,7 @@ var render = function() {
                         }
                       },
                       [
-                        _vm._v(_vm._s(_vm.__("Reset")) + " "),
+                        _vm._v(_vm._s(_vm.__("button-reset")) + " "),
                         _c("i", { staticClass: "far fa-lock" })
                       ]
                     )

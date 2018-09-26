@@ -192,7 +192,9 @@ var render = function() {
           _c(
             "el-col",
             [
-              _c("p", [_c("strong", [_vm._v(_vm._s(_vm.__("Address")))])]),
+              _c("p", [
+                _c("strong", [_vm._v(_vm._s(_vm.__("title-address")))])
+              ]),
               _vm._v(" "),
               _vm._t("belowName", null, { show: _vm.show }),
               _vm._v(" "),
@@ -218,12 +220,12 @@ var render = function() {
                       "el-form-item",
                       {
                         attrs: {
-                          label: _vm.__("Address Line 1"),
+                          label: _vm.__("label-address-line1"),
                           prop: "address_line_1",
                           error: _vm.errors.address_line_1,
                           rules: {
                             required: true,
-                            message: _vm.__("Address line 1 is required.")
+                            message: _vm.__("required-address-line1")
                           }
                         }
                       },
@@ -257,7 +259,7 @@ var render = function() {
                       "el-form-item",
                       {
                         attrs: {
-                          label: _vm.__("Address Line 2"),
+                          label: _vm.__("label-address-line2"),
                           prop: "address_line_2",
                           error: _vm.errors.address_line_2
                         }
@@ -295,7 +297,7 @@ var render = function() {
                   "el-form-item",
                   {
                     attrs: {
-                      label: _vm.__("Address Line 2"),
+                      label: _vm.__("label-address-line2"),
                       prop: "address_line_2",
                       error: _vm.errors.address_line_2
                     }
@@ -334,12 +336,12 @@ var render = function() {
                       "el-form-item",
                       {
                         attrs: {
-                          label: _vm.__("Address Town"),
+                          label: _vm.__("label-address-town"),
                           prop: "address_town",
                           error: _vm.errors.address_town,
                           rules: {
                             required: true,
-                            message: _vm.__("Address town is required.")
+                            message: _vm.__("required-address-town")
                           }
                         }
                       },
@@ -373,12 +375,12 @@ var render = function() {
                       "el-form-item",
                       {
                         attrs: {
-                          label: _vm.__("Address County"),
+                          label: _vm.__("label-address-county"),
                           prop: "address_county",
                           error: _vm.errors.address_county,
                           rules: {
                             required: true,
-                            message: _vm.__("Address county is required.")
+                            message: _vm.__("required-address-county")
                           }
                         }
                       },
@@ -415,12 +417,12 @@ var render = function() {
                   "el-form-item",
                   {
                     attrs: {
-                      label: _vm.__("Address Country"),
+                      label: _vm.__("label-address-country"),
                       prop: "address_country",
                       error: _vm.errors.address_country,
                       rules: {
                         required: true,
-                        message: _vm.__("Address country is required.")
+                        message: _vm.__("required-address-country")
                       }
                     }
                   },
@@ -465,12 +467,12 @@ var render = function() {
             "el-form-item",
             {
               attrs: {
-                label: _vm.__("Address Country"),
+                label: _vm.__("label-address-country"),
                 prop: "address_country",
                 error: _vm.errors.address_country,
                 rules: {
                   required: true,
-                  message: _vm.__("Address country is required.")
+                  message: _vm.__("required-address-country")
                 }
               }
             },

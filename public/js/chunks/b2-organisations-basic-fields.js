@@ -102,7 +102,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2OrganisationsBasicFields.vue","sourceRoot":""}]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2OrganisationsBasicFields.vue","sourceRoot":""}]);
 
 // exports
 
@@ -124,7 +124,9 @@ var render = function() {
         { attrs: { gutter: 10 } },
         [
           _c("el-col", [
-            _c("p", [_c("strong", [_vm._v("Basic Information")])]),
+            _c("p", [
+              _c("strong", [_vm._v(_vm._s(_vm.__("title-basic-info")))])
+            ]),
             _vm._v(" "),
             _c("hr")
           ])
@@ -144,17 +146,20 @@ var render = function() {
                 "el-form-item",
                 {
                   attrs: {
-                    label: "Organisation Name",
+                    label: _vm.__("label-org-name"),
                     prop: "name",
                     error: _vm.errors.name,
-                    rules: { required: true, message: "Name is required." }
+                    rules: {
+                      required: true,
+                      message: _vm.__("required-org-name")
+                    }
                   }
                 },
                 [
                   _c("el-input", {
                     attrs: {
                       size: "small",
-                      placeholder: "Organisation Name",
+                      placeholder: _vm.__("label-org-name"),
                       name: "name",
                       id: "organisation_form_field_name"
                     },
@@ -181,10 +186,13 @@ var render = function() {
                 "el-form-item",
                 {
                   attrs: {
-                    label: "Organisation Type",
+                    label: _vm.__("label-org-type"),
                     prop: "type",
                     error: _vm.errors.type,
-                    rules: { required: true, message: "Type is required." }
+                    rules: {
+                      required: true,
+                      message: _vm.__("required-org-type")
+                    }
                   }
                 },
                 [
@@ -192,7 +200,7 @@ var render = function() {
                     "el-select",
                     {
                       attrs: {
-                        placeholder: "Organisation Type",
+                        placeholder: _vm.__("label-org-type"),
                         size: "small",
                         name: "type"
                       },
@@ -243,7 +251,7 @@ var render = function() {
                 "el-form-item",
                 {
                   attrs: {
-                    label: "Default",
+                    label: _vm.__("default"),
                     prop: "default",
                     error: _vm.errors.is_default
                   }
@@ -261,7 +269,7 @@ var render = function() {
                         expression: "form.is_default"
                       }
                     },
-                    [_vm._v("Default Organisation")]
+                    [_vm._v(_vm._s(_vm._("label-org-default")))]
                   )
                 ],
                 1

@@ -2,10 +2,10 @@
   <div class="">
     <el-row :gutter="10">
       <el-col :md="12">
-        <el-form-item :label="__('Number of Pupils')"
+        <el-form-item :label="__('label-num-pupils')"
                       prop="pupil_count"
                       :error="errors.pupil_count"
-                      :rules="{ required: true, message: __('Number of Pupils is required.') }">
+                      :rules="{ required: true, message: __('required-num-pupils') }">
           <el-input-number v-model="form.pupil_count"
                     size="small"
                     name="pupil_count"
@@ -16,10 +16,10 @@
         </el-col>
 
         <el-col :md="12">
-          <el-form-item :label="__('Number of Classrooms')"
+          <el-form-item :label="__('label-num-classrooms')"
                         prop="pupil_count"
                         :error="errors.room_count"
-                        :rules="{ required: true, message: __('Number of Classrooms is required.') }">
+                        :rules="{ required: true, message: __('required-num-classrooms') }">
             <el-input-number v-model="form.room_count"
                       size="small"
                       name="room_count"

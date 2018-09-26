@@ -3,11 +3,11 @@
     <b2-form :form-action-route="registerRoute"
              :url-return="urlReturn">
       <el-card slot-scope="slotProps">
-          <h3>{{__('Register a new account:')}}</h3>
-          <el-form-item :label="__('First Name')"
+          <h3>{{__('title-register')}}</h3>
+          <el-form-item :label="__('label-fname')"
                         prop="first_name"
                         :error="slotProps.errors('first_name')"
-                        :rules="{ required: true, message: __('First name is required.') }">
+                        :rules="{ required: true, message: __('required-fname') }">
               <el-input v-model="slotProps.form.first_name"
                         placeholder="John"
                         name="first_name"
@@ -16,10 +16,10 @@
               </el-input>
           </el-form-item>
 
-          <el-form-item :label="__('Last Name')"
+          <el-form-item :label="__('label-lname')"
                         prop="last_name"
                         :error="slotProps.errors('last_name')"
-                        :rules="{ required: true, message: __('Last name is required.') }">
+                        :rules="{ required: true, message: __('required-lname') }">
               <el-input v-model="slotProps.form.last_name"
                         placeholder="Smith"
                         name="last_name"
@@ -28,10 +28,10 @@
               </el-input>
           </el-form-item>
 
-          <el-form-item :label="__('Email')"
+          <el-form-item :label="__('label-email')"
                         prop="email"
                         :error="slotProps.errors('email')"
-                        :rules="{ required: true, message: __('Email is required.') }">
+                        :rules="{ required: true, message: __('required-email') }">
               <el-input v-model="slotProps.form.email"
                         placeholder="jsmith@b2.com"
                         name="email"
@@ -40,10 +40,10 @@
               </el-input>
           </el-form-item>
 
-          <el-form-item :label="__('Password')"
+          <el-form-item :label="__('label-password')"
                         prop="password"
                         :error="slotProps.errors('password')"
-                        :rules="{ required: true, message: __('Password is required.') }">
+                        :rules="{ required: true, message: __('required-password') }">
               <el-input v-model="slotProps.form.password"
                         placeholder="****"
                         type="password"
@@ -53,10 +53,10 @@
               </el-input>
           </el-form-item>
 
-          <el-form-item :label="__('Password Confirmation')"
+          <el-form-item :label="__('label-confirm-password')"
                         prop="password_confirmation"
                         :error="slotProps.errors('password_confirmation')"
-                        :rules="{ required: true, message: __('Password confirmation is required.') }">
+                        :rules="{ required: true, message: __('required-confirm-password') }">
               <el-input v-model="slotProps.form.password_confirmation"
                         placeholder="****"
                         type="password"
@@ -68,10 +68,10 @@
 
         <div class="justify-between">
           <a :href="loginRoute" v-if="loginRoute">
-            <el-button type="text">{{ __("Already have an account? Login.") }}</el-button>
+            <el-button type="text">{{ __("account-login") }}</el-button>
           </a>
 
-          <el-button :loading="slotProps.loading" native-type="submit" type="primary">{{ __('Register') }} <i class="far fa-lock"></i></el-button>
+          <el-button :loading="slotProps.loading" native-type="submit" type="primary">{{ __('button-register') }} <i class="far fa-lock"></i></el-button>
         </div>
       </el-card>
     </b2-form>

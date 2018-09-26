@@ -97,12 +97,12 @@ var render = function() {
                 "el-form-item",
                 {
                   attrs: {
-                    label: _vm.__("Number of Pupils"),
+                    label: _vm.__("label-num-pupils"),
                     prop: "pupil_count",
                     error: _vm.errors.pupil_count,
                     rules: {
                       required: true,
-                      message: _vm.__("Number of Pupils is required.")
+                      message: _vm.__("required-num-pupils")
                     }
                   }
                 },
@@ -137,12 +137,12 @@ var render = function() {
                 "el-form-item",
                 {
                   attrs: {
-                    label: _vm.__("Number of Classrooms"),
+                    label: _vm.__("label-num-classrooms"),
                     prop: "pupil_count",
                     error: _vm.errors.room_count,
                     rules: {
                       required: true,
-                      message: _vm.__("Number of Classrooms is required.")
+                      message: _vm.__("required-num-classrooms")
                     }
                   }
                 },

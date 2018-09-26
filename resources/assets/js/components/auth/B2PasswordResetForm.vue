@@ -13,10 +13,10 @@
         </el-alert>
 
         <el-card>
-          <el-form-item :label="__('Email')"
+          <el-form-item :label="__('label-email')"
                         prop="email"
                         :error="slotProps.errors('email')"
-                        :rules="{ required: true, message: __('Email is required.') }">
+                        :rules="{ required: true, message: __('required-email') }">
               <el-input v-model="slotProps.form.email"
                         placeholder="josh@educationinventory.com"
                         name="email"
@@ -25,11 +25,7 @@
               </el-input>
           </el-form-item>
 
-          <!-- <a :href="forgottenPasswordRoute">
-            <el-button type="text">{{ __("I've forgotten my password.") }}</el-button>
-          </a> -->
-
-          <el-button class="mt-3" :loading="slotProps.loading" native-type="submit" type="primary">{{ __('Reset') }} <i class="far fa-lock"></i></el-button>
+          <el-button class="mt-3" :loading="slotProps.loading" native-type="submit" type="primary">{{ __('button-reset') }} <i class="far fa-lock"></i></el-button>
         </el-card>
       </template>
     </b2-form>

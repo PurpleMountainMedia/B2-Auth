@@ -2,7 +2,7 @@
   <div class="">
     <el-row :gutter="10">
       <el-col>
-        <p><strong>{{ __('Address') }}</strong></p>
+        <p><strong>{{ __('title-address') }}</strong></p>
         <slot
           name="belowName"
           :show="show" />
@@ -13,10 +13,10 @@
     <template v-if="show">
       <el-row :gutter="10">
           <el-col :md="12">
-              <el-form-item :label="__('Address Line 1')"
+              <el-form-item :label="__('label-address-line1')"
                             prop="address_line_1"
                             :error="errors.address_line_1"
-                            :rules="{ required: true, message: __('Address line 1 is required.') }">
+                            :rules="{ required: true, message: __('required-address-line1') }">
                   <el-input v-model="form.address_line_1"
                             size="small"
                             name="address_line_1"
@@ -26,7 +26,7 @@
           </el-col>
 
           <el-col :md="12">
-              <el-form-item :label="__('Address Line 2')"
+              <el-form-item :label="__('label-address-line2')"
                             prop="address_line_2"
                             :error="errors.address_line_2">
                   <el-input v-model="form.address_line_2"
@@ -39,7 +39,7 @@
       </el-row>
 
         <el-col :md="12">
-          <el-form-item :label="__('Address Line 2')"
+          <el-form-item :label="__('label-address-line2')"
                         prop="address_line_2"
                         :error="errors.address_line_2">
             <el-input v-model="form.address_line_2"
@@ -53,10 +53,10 @@
 
     <el-row :gutter="10">
       <el-col :md="12">
-        <el-form-item :label="__('Address Town')"
+        <el-form-item :label="__('label-address-town')"
                       prop="address_town"
                       :error="errors.address_town"
-                      :rules="{ required: true, message: __('Address town is required.') }">
+                      :rules="{ required: true, message: __('required-address-town') }">
           <el-input v-model="form.address_town"
                     size="small"
                     name="address_town"
@@ -66,10 +66,10 @@
       </el-col>
 
       <el-col :md="12">
-        <el-form-item :label="__('Address County')"
+        <el-form-item :label="__('label-address-county')"
                       prop="address_county"
                       :error="errors.address_county"
-                      :rules="{ required: true, message: __('Address county is required.') }">
+                      :rules="{ required: true, message: __('required-address-county') }">
           <el-input v-model="form.address_county"
                     size="small"
                     name="address_county"
@@ -80,10 +80,10 @@
     </el-row>
 
           <el-col :md="12">
-              <el-form-item :label="__('Address Country')"
+              <el-form-item :label="__('label-address-country')"
                             prop="address_country"
                             :error="errors.address_country"
-                            :rules="{ required: true, message: __('Address country is required.') }">
+                            :rules="{ required: true, message: __('required-address-country') }">
                   <el-select v-model="form.address_country"
                              size="small"
                              name="address_country"
@@ -99,10 +99,10 @@
     </template>
 
       <el-col :md="12">
-        <el-form-item :label="__('Address Country')"
+        <el-form-item :label="__('label-address-country')"
                       prop="address_country"
                       :error="errors.address_country"
-                      :rules="{ required: true, message: __('Address country is required.') }">
+                      :rules="{ required: true, message: __('required-address-country') }">
           <el-select v-model="form.address_country" filterable placeholder="Select">
             <el-option v-for="c in countries"
                        :key="c.code"

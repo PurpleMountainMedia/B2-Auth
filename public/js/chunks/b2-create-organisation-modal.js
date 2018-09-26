@@ -196,7 +196,7 @@ var render = function() {
             "el-tooltip",
             {
               attrs: {
-                content: "You don't have permission to create organisations",
+                content: _vm.__("label-org-create-not-allowed"),
                 placement: "top",
                 effect: "light"
               }
@@ -230,7 +230,7 @@ var render = function() {
           }
         },
         [
-          _vm._v("Create Organisation "),
+          _vm._v(_vm._s(_vm.__("button-org-create")) + " "),
           _c("i", { staticClass: "far fa-plus-circle" })
         ]
       ),
@@ -289,7 +289,7 @@ var render = function() {
                   },
                   on: { click: _vm.clearModal }
                 },
-                [_vm._v("Cancel")]
+                [_vm._v(_vm._s(_vm.__("cancel")))]
               ),
               _vm._v(" "),
               _c(
@@ -303,7 +303,7 @@ var render = function() {
                   },
                   on: { click: _vm.createOrganisation }
                 },
-                [_vm._v("Create")]
+                [_vm._v(_vm._s(_vm.__("create")))]
               )
             ],
             1

@@ -5,8 +5,8 @@
         <div class="justify-between">
           <a :href="b2Config.site_url"><img v-if="b2Config.logo" :src="b2Config.logo" class="site_logo" :alt="b2Config.name"></a>
           <div class="site_product text-white">
-            <h3 class="m-0">{{__('Education')}}</h3>
-            <p class="m-0">{{__('A product of B2 Systems')}}</p>
+            <h3 class="m-0">{{__('title-education')}}</h3>
+            <p class="m-0">{{__('title-product-of')}}</p>
           </div>
         </div>
       </el-card>
@@ -17,7 +17,7 @@
 
     <el-card class="mt-4">
       <div class="justify-around">
-        <a :href="urlReturn">{{__('Return')}}</a>
+        <a :href="urlReturn">{{__('return')}}</a>
       </div>
     </el-card>
   </div>

@@ -6,10 +6,10 @@
       <template slot-scope="slotProps">
 
         <el-card>
-          <el-form-item :label="__('Email')"
+          <el-form-item :label="__('label-email')"
                         prop="email"
                         :error="slotProps.errors('email')"
-                        :rules="{ required: true, message: __('Email is required.') }">
+                        :rules="{ required: true, message: __('required-email') }">
               <el-input v-model="slotProps.form.email"
                         placeholder="josh@educationinventory.com"
                         :disabled="true"
@@ -18,10 +18,10 @@
           </el-form-item>
           <input type="hidden" name="email" id="login_email" :value="slotProps.form.email">
 
-          <el-form-item :label="__('Password')"
+          <el-form-item :label="__('label-password')"
                         prop="password"
                         :error="slotProps.errors('password')"
-                        :rules="{ required: true, message: __('Password is required.') }">
+                        :rules="{ required: true, message: __('required-password') }">
               <el-input v-model="slotProps.form.password"
                         placeholder="*****"
                         name="password"
@@ -31,10 +31,10 @@
               </el-input>
           </el-form-item>
 
-          <el-form-item :label="__('Password Confirmation')"
+          <el-form-item :label="__('label-confirm-password')"
                         prop="password_confirmation"
                         :error="slotProps.errors('password_confirmation')"
-                        :rules="{ required: true, message: __('Password is required.') }">
+                        :rules="{ required: true, message: __('required-password') }">
               <el-input v-model="slotProps.form.password_confirmation"
                         placeholder="*****"
                         name="password_confirmation"
@@ -46,7 +46,7 @@
 
           <input type="hidden" name="token" :value="token">
 
-          <el-button class="mt-3" :loading="slotProps.loading" native-type="submit" type="primary">{{ __('Reset') }} <i class="far fa-lock"></i></el-button>
+          <el-button class="mt-3" :loading="slotProps.loading" native-type="submit" type="primary">{{ __('button-reset') }} <i class="far fa-lock"></i></el-button>
         </el-card>
       </template>
     </b2-form>

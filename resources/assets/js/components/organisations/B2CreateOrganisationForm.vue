@@ -17,7 +17,7 @@
           </el-button>
         </b2-organisations-address-fields>
 
-        <el-button class="mt-3" :loading="slotProps.loading" native-type="submit" type="primary">{{ __('Create') }} <i class="far fa-lock"></i></el-button>
+        <el-button class="mt-3" :loading="slotProps.loading" native-type="submit" type="primary">{{ __('create') }} <i class="far fa-lock"></i></el-button>
       </template>
     </b2-form>
   </div>

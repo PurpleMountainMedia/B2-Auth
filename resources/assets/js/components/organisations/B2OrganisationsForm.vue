@@ -10,7 +10,7 @@
                   <span><strong>{{ organisation.name }}</strong></span>
                 </div>
                 <ul class="organisation_card_list">
-                    <li><strong>Type:</strong> {{ organisation.type }}</li>
+                    <li><strong>{{__('type')}}:</strong> {{ organisation.type }}</li>
                 </ul>
             </el-card>
         </el-col>

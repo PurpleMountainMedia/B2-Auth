@@ -10,11 +10,11 @@
             <div class="card-header">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                     <span>
-                        OAuth Clients
+                        {{__('title-oauth')}}
                     </span>
 
                     <a class="action-link" tabindex="-1" @click="showCreateClientForm">
-                        Create New Client
+                        {{__('label-oauth-create')}}
                     </a>
                 </div>
             </div>
@@ -22,15 +22,15 @@
             <div class="card-body">
                 <!-- Current Clients -->
                 <p class="mb-0" v-if="clients.length === 0">
-                    You have not created any OAuth clients.
+                    {{__('error-oauth-none')}}
                 </p>
 
                 <table class="table table-borderless mb-0" v-if="clients.length > 0">
                     <thead>
                         <tr>
-                            <th>Client ID</th>
-                            <th>Name</th>
-                            <th>Secret</th>
+                            <th>{{__('client-id')}}</th>
+                            <th>{{__('name')}}</th>
+                            <th>{{__('secret')}}</th>
                             <th></th>
                             <th></th>
                         </tr>
@@ -56,14 +56,14 @@
                             <!-- Edit Button -->
                             <td style="vertical-align: middle;">
                                 <a class="action-link" tabindex="-1" @click="edit(client)">
-                                    Edit
+                                    {{__('edit')}}
                                 </a>
                             </td>
 
                             <!-- Delete Button -->
                             <td style="vertical-align: middle;">
                                 <a class="action-link text-danger" @click="destroy(client)">
-                                    Delete
+                                    {{__('delete')}}
                                 </a>
                             </td>
                         </tr>
@@ -78,7 +78,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">
-                            Create Client
+                            {{__('title-oauth-create')}}
                         </h4>
 
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -87,7 +87,7 @@
                     <div class="modal-body">
                         <!-- Form Errors -->
                         <div class="alert alert-danger" v-if="createForm.errors.length > 0">
-                            <p class="mb-0"><strong>Whoops!</strong> Something went wrong!</p>
+                            <p class="mb-0"><strong>{{__('error-whoops')}}</strong> {{__('error-something-wrong')}}</p>
                             <br>
                             <ul>
                                 <li v-for="error in createForm.errors">
@@ -100,28 +100,28 @@
                         <form role="form">
                             <!-- Name -->
                             <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Name</label>
+                                <label class="col-md-3 col-form-label">{{__('name')}}</label>
 
                                 <div class="col-md-9">
                                     <input id="create-client-name" type="text" class="form-control"
                                                                 @keyup.enter="store" v-model="createForm.name">
 
                                     <span class="form-text text-muted">
-                                        Something your users will recognize and trust.
+                                        {{__('label-suggest-recognize')}}
                                     </span>
                                 </div>
                             </div>
 
                             <!-- Redirect URL -->
                             <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Redirect URL</label>
+                                <label class="col-md-3 col-form-label">{{__('label-redirect-url')}}</label>
 
                                 <div class="col-md-9">
                                     <input type="text" class="form-control" name="redirect"
                                                     @keyup.enter="store" v-model="createForm.redirect">
 
                                     <span class="form-text text-muted">
-                                        Your application's authorization callback URL.
+                                        {{__('label-suggest-redirect-url')}}
                                     </span>
                                 </div>
                             </div>
@@ -130,10 +130,10 @@
 
                     <!-- Modal Actions -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{__('close')}}</button>
 
                         <button type="button" class="btn btn-primary" @click="store">
-                            Create
+                            {{__('create')}}
                         </button>
                     </div>
                 </div>
@@ -146,7 +146,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">
-                            Edit Client
+                            {{__('title-oauth-edit')}}
                         </h4>
 
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -155,7 +155,7 @@
                     <div class="modal-body">
                         <!-- Form Errors -->
                         <div class="alert alert-danger" v-if="editForm.errors.length > 0">
-                            <p class="mb-0"><strong>Whoops!</strong> Something went wrong!</p>
+                            <p class="mb-0"><strong>{{__('error-whoops')}}</strong> {{__('error-something-wrong')}}</p>
                             <br>
                             <ul>
                                 <li v-for="error in editForm.errors">
@@ -168,28 +168,28 @@
                         <form role="form">
                             <!-- Name -->
                             <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Name</label>
+                                <label class="col-md-3 col-form-label">{{__('name')}}</label>
 
                                 <div class="col-md-9">
                                     <input id="edit-client-name" type="text" class="form-control"
                                                                 @keyup.enter="update" v-model="editForm.name">
 
                                     <span class="form-text text-muted">
-                                        Something your users will recognize and trust.
+                                        {{__('label-suggest-recognize')}}
                                     </span>
                                 </div>
                             </div>
 
                             <!-- Redirect URL -->
                             <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Redirect URL</label>
+                                <label class="col-md-3 col-form-label">{{__('label-redirect-url')}}</label>
 
                                 <div class="col-md-9">
                                     <input type="text" class="form-control" name="redirect"
                                                     @keyup.enter="update" v-model="editForm.redirect">
 
                                     <span class="form-text text-muted">
-                                        Your application's authorization callback URL.
+                                        {{__('label-suggest-redirect-url')}}
                                     </span>
                                 </div>
                             </div>
@@ -198,10 +198,10 @@
 
                     <!-- Modal Actions -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{__('close')}}</button>
 
                         <button type="button" class="btn btn-primary" @click="update">
-                            Save Changes
+                            {{__('button-save-changes')}}
                         </button>
                     </div>
                 </div>

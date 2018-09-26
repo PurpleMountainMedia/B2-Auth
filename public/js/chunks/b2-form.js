@@ -171,11 +171,11 @@ var render = function() {
               _vm._v(" "),
               _c("div", { staticClass: "site_product text-white" }, [
                 _c("h3", { staticClass: "m-0" }, [
-                  _vm._v(_vm._s(_vm.__("Education")))
+                  _vm._v(_vm._s(_vm.__("title-education")))
                 ]),
                 _vm._v(" "),
                 _c("p", { staticClass: "m-0" }, [
-                  _vm._v(_vm._s(_vm.__("A product of B2 Systems")))
+                  _vm._v(_vm._s(_vm.__("title-product-of")))
                 ])
               ])
             ])
@@ -201,7 +201,7 @@ var render = function() {
       _c("el-card", { staticClass: "mt-4" }, [
         _c("div", { staticClass: "justify-around" }, [
           _c("a", { attrs: { href: _vm.urlReturn } }, [
-            _vm._v(_vm._s(_vm.__("Return")))
+            _vm._v(_vm._s(_vm.__("return")))
           ])
         ])
       ])

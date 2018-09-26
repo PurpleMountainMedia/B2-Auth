@@ -19,7 +19,7 @@
           <option
             v-for="(op, key) in qtyOptions"
             :key="key"
-            :label="op.label"
+            :label="`${__('label-pack-of')} ${op.value} (${op.label} ${__('label-per-label')})`"
             :value="op.value" />
         </select>
       </div>
@@ -27,7 +27,7 @@
 
     <div class="row mt-3">
       <div class="col-md-12">
-        <label for="">Barcode Range Start Number</label>
+        <label for="barcode_start">{{__('label-barcode-range-start')}}</label>
         <input
           type="number"
           class="form-control short_input"
@@ -38,7 +38,7 @@
 
     <div class="row mt-3">
       <div class="col-md-12">
-        <label for="">Barcode Prefix</label>
+        <label for="barcode_prefix">{{__('label-barcode-prefix')}}</label>
         <input
           type="text"
           class="form-control short_input"
@@ -49,18 +49,16 @@
 
     <div class="row mt-3">
       <div class="col-md-12">
-        <h3>Total: £{{ total }}</h3>
-        <small class="font-weight-strong">Barcode Range: {{ barcodePrefix }}{{ barcodeStart }} - {{ barcodePrefix }}{{ barcodeEnd }}</small>
+        <h3>{{__('label-total')}}: £{{ total }}</h3>
+        <small class="font-weight-strong">{{__('label-barcode-range')}}: {{ barcodePrefix }}{{ barcodeStart }} - {{ barcodePrefix }}{{ barcodeEnd }}</small>
       </div>
     </div>
 
     <!-- <button
       type="button"
       name="button"
-      class="btn btn-primary">Buy
+      class="btn btn-primary">{{__('button-buy')}}
     </button> -->
-
-
 
 
   </div>
@@ -92,27 +90,27 @@ export default {
     qtyOptions () {
       return [
         {
-          label: `Pack of 100 (£${this.qtyToCost[100]} per label)`,
+          label: `£${this.qtyToCost[100]}`,
           value: 100
         },
         {
-          label: `Pack of 250 (£${this.qtyToCost[250]} per label)`,
+          label: `£${this.qtyToCost[250]}`,
           value: 250
         },
         {
-          label: `Pack of 500 (£${this.qtyToCost[500]} per label)`,
+          label: `£${this.qtyToCost[500]}`,
           value: 500
         },
         {
-          label: `Pack of 750 (£${this.qtyToCost[750]} per label)`,
+          label: `£${this.qtyToCost[750]}`,
           value: 750
         },
         {
-          label: `Pack of 1000 (£${this.qtyToCost[1000]} per label)`,
+          label: `£${this.qtyToCost[1000]}`,
           value: 1000
         },
         {
-          label: `Pack of 1500 (£${this.qtyToCost[1500]} per label)`,
+          label: `£${this.qtyToCost[1500]}`,
           value: 1500
         }
       ]

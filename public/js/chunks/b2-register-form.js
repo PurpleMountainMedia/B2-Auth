@@ -265,18 +265,18 @@ var render = function() {
                 "el-card",
                 {},
                 [
-                  _c("h3", [_vm._v(_vm._s(_vm.__("Register a new account:")))]),
+                  _c("h3", [_vm._v(_vm._s(_vm.__("title-register")))]),
                   _vm._v(" "),
                   _c(
                     "el-form-item",
                     {
                       attrs: {
-                        label: _vm.__("First Name"),
+                        label: _vm.__("label-fname"),
                         prop: "first_name",
                         error: slotProps.errors("first_name"),
                         rules: {
                           required: true,
-                          message: _vm.__("First name is required.")
+                          message: _vm.__("required-fname")
                         }
                       }
                     },
@@ -304,12 +304,12 @@ var render = function() {
                     "el-form-item",
                     {
                       attrs: {
-                        label: _vm.__("Last Name"),
+                        label: _vm.__("label-lname"),
                         prop: "last_name",
                         error: slotProps.errors("last_name"),
                         rules: {
                           required: true,
-                          message: _vm.__("Last name is required.")
+                          message: _vm.__("required-lname")
                         }
                       }
                     },
@@ -337,12 +337,12 @@ var render = function() {
                     "el-form-item",
                     {
                       attrs: {
-                        label: _vm.__("Email"),
+                        label: _vm.__("label-email"),
                         prop: "email",
                         error: slotProps.errors("email"),
                         rules: {
                           required: true,
-                          message: _vm.__("Email is required.")
+                          message: _vm.__("required-email")
                         }
                       }
                     },
@@ -370,12 +370,12 @@ var render = function() {
                     "el-form-item",
                     {
                       attrs: {
-                        label: _vm.__("Password"),
+                        label: _vm.__("label-password"),
                         prop: "password",
                         error: slotProps.errors("password"),
                         rules: {
                           required: true,
-                          message: _vm.__("Password is required.")
+                          message: _vm.__("required-password")
                         }
                       }
                     },
@@ -404,12 +404,12 @@ var render = function() {
                     "el-form-item",
                     {
                       attrs: {
-                        label: _vm.__("Password Confirmation"),
+                        label: _vm.__("label-confirm-password"),
                         prop: "password_confirmation",
                         error: slotProps.errors("password_confirmation"),
                         rules: {
                           required: true,
-                          message: _vm.__("Password confirmation is required.")
+                          message: _vm.__("required-confirm-password")
                         }
                       }
                     },
@@ -448,11 +448,7 @@ var render = function() {
                             { attrs: { href: _vm.loginRoute } },
                             [
                               _c("el-button", { attrs: { type: "text" } }, [
-                                _vm._v(
-                                  _vm._s(
-                                    _vm.__("Already have an account? Login.")
-                                  )
-                                )
+                                _vm._v(_vm._s(_vm.__("account-login")))
                               ])
                             ],
                             1
@@ -469,7 +465,7 @@ var render = function() {
                           }
                         },
                         [
-                          _vm._v(_vm._s(_vm.__("Register")) + " "),
+                          _vm._v(_vm._s(_vm.__("button-register")) + " "),
                           _c("i", { staticClass: "far fa-lock" })
                         ]
                       )

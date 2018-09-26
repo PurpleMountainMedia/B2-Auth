@@ -39,10 +39,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'B2PasswordResetForm',
@@ -82,7 +78,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2PasswordResetForm.vue","sourceRoot":""}]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2PasswordResetForm.vue","sourceRoot":""}]);
 
 // exports
 
@@ -239,12 +235,12 @@ var render = function() {
                       "el-form-item",
                       {
                         attrs: {
-                          label: _vm.__("Email"),
+                          label: _vm.__("label-email"),
                           prop: "email",
                           error: slotProps.errors("email"),
                           rules: {
                             required: true,
-                            message: _vm.__("Email is required.")
+                            message: _vm.__("required-email")
                           }
                         }
                       },
@@ -279,7 +275,7 @@ var render = function() {
                         }
                       },
                       [
-                        _vm._v(_vm._s(_vm.__("Reset")) + " "),
+                        _vm._v(_vm._s(_vm.__("button-reset")) + " "),
                         _c("i", { staticClass: "far fa-lock" })
                       ]
                     )

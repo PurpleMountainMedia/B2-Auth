@@ -3,11 +3,11 @@
     <b2-form :form-action-route="loginRoute"
              :url-return="urlReturn">
       <el-card slot-scope="slotProps">
-        <h3>{{__('Please login to continue:')}}</h3>
-        <el-form-item :label="__('Email Address')"
+        <h3>{{__('title-login')}}</h3>
+        <el-form-item :label="__('label-email')"
                       prop="email"
                       :error="slotProps.errors('email')"
-                      :rules="{ required: true, message: __('Email is required.') }">
+                      :rules="{ required: true, message: __('required-email') }">
             <el-input v-model="slotProps.form.email"
                       placeholder="josh@educationinventory.com"
                       name="email"
@@ -16,10 +16,10 @@
             </el-input>
         </el-form-item>
 
-        <el-form-item :label="__('Password')"
+        <el-form-item :label="__('label-password')"
                       prop="password"
                       :error="slotProps.errors('password')"
-                      :rules="{ required: true, message: __('Password is required.') }">
+                      :rules="{ required: true, message: __('required-password') }">
             <el-input v-model="slotProps.form.password"
                       placeholder="*****"
                       name="password"
@@ -31,10 +31,10 @@
 
         <div class="justify-between">
             <a :href="forgottenPasswordRoute">
-                <el-button type="text">{{ __("I've forgotten my password.") }}</el-button>
+                <el-button type="text">{{ __("forgot-password") }}</el-button>
             </a>
 
-            <el-button :loading="slotProps.loading" native-type="submit" type="primary">{{ __('Login') }} <i class="far fa-lock"></i></el-button>
+            <el-button :loading="slotProps.loading" native-type="submit" type="primary">{{ __('login') }} <i class="far fa-lock"></i></el-button>
         </div>
       </el-card>
     </b2-form>

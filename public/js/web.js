@@ -71,8 +71,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'LabelChooserComponent',
@@ -103,22 +101,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   computed: {
     qtyOptions: function qtyOptions() {
       return [{
-        label: 'Pack of 100 (\xA3' + this.qtyToCost[100] + ' per label)',
+        label: '\xA3' + this.qtyToCost[100],
         value: 100
       }, {
-        label: 'Pack of 250 (\xA3' + this.qtyToCost[250] + ' per label)',
+        label: '\xA3' + this.qtyToCost[250],
         value: 250
       }, {
-        label: 'Pack of 500 (\xA3' + this.qtyToCost[500] + ' per label)',
+        label: '\xA3' + this.qtyToCost[500],
         value: 500
       }, {
-        label: 'Pack of 750 (\xA3' + this.qtyToCost[750] + ' per label)',
+        label: '\xA3' + this.qtyToCost[750],
         value: 750
       }, {
-        label: 'Pack of 1000 (\xA3' + this.qtyToCost[1000] + ' per label)',
+        label: '\xA3' + this.qtyToCost[1000],
         value: 1000
       }, {
-        label: 'Pack of 1500 (\xA3' + this.qtyToCost[1500] + ' per label)',
+        label: '\xA3' + this.qtyToCost[1500],
         value: 1500
       }];
     },
@@ -4085,7 +4083,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n.short_input[data-v-3fe05cf4] {\n  max-width: 100px;\n}\n", "", {"version":3,"sources":["/Users/jakecausier/local_sites/b2systems/resources/assets/js/components/web/resources/assets/js/components/web/LabelChooserComponent.vue"],"names":[],"mappings":";AA4IA;EACA,iBAAA;CACA","file":"LabelChooserComponent.vue","sourcesContent":["<template lang=\"html\">\n  <div>\n    {{ title }}\n\n    <img\n      v-for=\"(img, key) in images\"\n      :key=\"key\"\n      :src=\"img.src\"\n      :class=\"{ 'img-fluid': true }\"\n      :alt=\"img.alt\"\n      :title=\"img.title\">\n\n    <div class=\"row mt-4\">\n      <div class=\"col-md-12\">\n        <select\n          name=\"qty\"\n          class=\"form-control\"\n          v-model=\"qty\">\n          <option\n            v-for=\"(op, key) in qtyOptions\"\n            :key=\"key\"\n            :label=\"op.label\"\n            :value=\"op.value\" />\n        </select>\n      </div>\n    </div>\n\n    <div class=\"row mt-3\">\n      <div class=\"col-md-12\">\n        <label for=\"\">Barcode Range Start Number</label>\n        <input\n          type=\"number\"\n          class=\"form-control short_input\"\n          name=\"barcode_start\"\n          v-model=\"barcodeStart\">\n      </div>\n    </div>\n\n    <div class=\"row mt-3\">\n      <div class=\"col-md-12\">\n        <label for=\"\">Barcode Prefix</label>\n        <input\n          type=\"text\"\n          class=\"form-control short_input\"\n          name=\"barcode_prefix\"\n          v-model=\"barcodePrefix\">\n      </div>\n    </div>\n\n    <div class=\"row mt-3\">\n      <div class=\"col-md-12\">\n        <h3>Total: £{{ total }}</h3>\n        <small class=\"font-weight-strong\">Barcode Range: {{ barcodePrefix }}{{ barcodeStart }} - {{ barcodePrefix }}{{ barcodeEnd }}</small>\n      </div>\n    </div>\n\n    <!-- <button\n      type=\"button\"\n      name=\"button\"\n      class=\"btn btn-primary\">Buy\n    </button> -->\n\n\n\n\n  </div>\n</template>\n\n<script>\nexport default {\n  name: 'LabelChooserComponent',\n  props: {\n    title: {\n      type: String,\n      required: false,\n      default: () => { return null }\n    },\n    images: {\n      type: Array,\n      required: false,\n      default: () => { return [] }\n    }\n  },\n  data () {\n    return {\n      qty: 100,\n      barcodeStart: 1,\n      barcodePrefix: 'b2_',\n    }\n  },\n  computed: {\n    qtyOptions () {\n      return [\n        {\n          label: `Pack of 100 (£${this.qtyToCost[100]} per label)`,\n          value: 100\n        },\n        {\n          label: `Pack of 250 (£${this.qtyToCost[250]} per label)`,\n          value: 250\n        },\n        {\n          label: `Pack of 500 (£${this.qtyToCost[500]} per label)`,\n          value: 500\n        },\n        {\n          label: `Pack of 750 (£${this.qtyToCost[750]} per label)`,\n          value: 750\n        },\n        {\n          label: `Pack of 1000 (£${this.qtyToCost[1000]} per label)`,\n          value: 1000\n        },\n        {\n          label: `Pack of 1500 (£${this.qtyToCost[1500]} per label)`,\n          value: 1500\n        }\n      ]\n    },\n    qtyToCost () {\n      return {\n        100: 0.89,\n        250: 0.89,\n        500: 0.69,\n        750: 0.69,\n        1000: 0.59,\n        1500: 0.45,\n      }\n    },\n    total () {\n      return this.qtyToCost[this.qty] * this.qty\n    },\n    barcodeEnd () {\n      return this.barcodeStart ? parseInt(this.barcodeStart)+this.qty : this.qty\n    }\n  }\n}\n</script>\n\n<style lang=\"css\" scoped>\n  .short_input {\n    max-width: 100px;\n  }\n</style>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.short_input[data-v-3fe05cf4] {\n  max-width: 100px;\n}\n", "", {"version":3,"sources":["/Users/jakecausier/local_sites/b2systems/resources/assets/js/components/web/resources/assets/js/components/web/LabelChooserComponent.vue"],"names":[],"mappings":";AA0IA;EACA,iBAAA;CACA","file":"LabelChooserComponent.vue","sourcesContent":["<template lang=\"html\">\n  <div>\n    {{ title }}\n\n    <img\n      v-for=\"(img, key) in images\"\n      :key=\"key\"\n      :src=\"img.src\"\n      :class=\"{ 'img-fluid': true }\"\n      :alt=\"img.alt\"\n      :title=\"img.title\">\n\n    <div class=\"row mt-4\">\n      <div class=\"col-md-12\">\n        <select\n          name=\"qty\"\n          class=\"form-control\"\n          v-model=\"qty\">\n          <option\n            v-for=\"(op, key) in qtyOptions\"\n            :key=\"key\"\n            :label=\"`${__('label-pack-of')} ${op.value} (${op.label} ${__('label-per-label')})`\"\n            :value=\"op.value\" />\n        </select>\n      </div>\n    </div>\n\n    <div class=\"row mt-3\">\n      <div class=\"col-md-12\">\n        <label for=\"barcode_start\">{{__('label-barcode-range-start')}}</label>\n        <input\n          type=\"number\"\n          class=\"form-control short_input\"\n          name=\"barcode_start\"\n          v-model=\"barcodeStart\">\n      </div>\n    </div>\n\n    <div class=\"row mt-3\">\n      <div class=\"col-md-12\">\n        <label for=\"barcode_prefix\">{{__('label-barcode-prefix')}}</label>\n        <input\n          type=\"text\"\n          class=\"form-control short_input\"\n          name=\"barcode_prefix\"\n          v-model=\"barcodePrefix\">\n      </div>\n    </div>\n\n    <div class=\"row mt-3\">\n      <div class=\"col-md-12\">\n        <h3>{{__('label-total')}}: £{{ total }}</h3>\n        <small class=\"font-weight-strong\">{{__('label-barcode-range')}}: {{ barcodePrefix }}{{ barcodeStart }} - {{ barcodePrefix }}{{ barcodeEnd }}</small>\n      </div>\n    </div>\n\n    <!-- <button\n      type=\"button\"\n      name=\"button\"\n      class=\"btn btn-primary\">{{__('button-buy')}}\n    </button> -->\n\n\n  </div>\n</template>\n\n<script>\nexport default {\n  name: 'LabelChooserComponent',\n  props: {\n    title: {\n      type: String,\n      required: false,\n      default: () => { return null }\n    },\n    images: {\n      type: Array,\n      required: false,\n      default: () => { return [] }\n    }\n  },\n  data () {\n    return {\n      qty: 100,\n      barcodeStart: 1,\n      barcodePrefix: 'b2_',\n    }\n  },\n  computed: {\n    qtyOptions () {\n      return [\n        {\n          label: `£${this.qtyToCost[100]}`,\n          value: 100\n        },\n        {\n          label: `£${this.qtyToCost[250]}`,\n          value: 250\n        },\n        {\n          label: `£${this.qtyToCost[500]}`,\n          value: 500\n        },\n        {\n          label: `£${this.qtyToCost[750]}`,\n          value: 750\n        },\n        {\n          label: `£${this.qtyToCost[1000]}`,\n          value: 1000\n        },\n        {\n          label: `£${this.qtyToCost[1500]}`,\n          value: 1500\n        }\n      ]\n    },\n    qtyToCost () {\n      return {\n        100: 0.89,\n        250: 0.89,\n        500: 0.69,\n        750: 0.69,\n        1000: 0.59,\n        1500: 0.45,\n      }\n    },\n    total () {\n      return this.qtyToCost[this.qty] * this.qty\n    },\n    barcodeEnd () {\n      return this.barcodeStart ? parseInt(this.barcodeStart)+this.qty : this.qty\n    }\n  }\n}\n</script>\n\n<style lang=\"css\" scoped>\n  .short_input {\n    max-width: 100px;\n  }\n</style>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -17240,7 +17238,17 @@ var render = function() {
             _vm._l(_vm.qtyOptions, function(op, key) {
               return _c("option", {
                 key: key,
-                attrs: { label: op.label },
+                attrs: {
+                  label:
+                    _vm.__("label-pack-of") +
+                    " " +
+                    op.value +
+                    " (" +
+                    op.label +
+                    " " +
+                    _vm.__("label-per-label") +
+                    ")"
+                },
                 domProps: { value: op.value }
               })
             })
@@ -17250,8 +17258,8 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "row mt-3" }, [
         _c("div", { staticClass: "col-md-12" }, [
-          _c("label", { attrs: { for: "" } }, [
-            _vm._v("Barcode Range Start Number")
+          _c("label", { attrs: { for: "barcode_start" } }, [
+            _vm._v(_vm._s(_vm.__("label-barcode-range-start")))
           ]),
           _vm._v(" "),
           _c("input", {
@@ -17280,7 +17288,9 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "row mt-3" }, [
         _c("div", { staticClass: "col-md-12" }, [
-          _c("label", { attrs: { for: "" } }, [_vm._v("Barcode Prefix")]),
+          _c("label", { attrs: { for: "barcode_prefix" } }, [
+            _vm._v(_vm._s(_vm.__("label-barcode-prefix")))
+          ]),
           _vm._v(" "),
           _c("input", {
             directives: [
@@ -17308,11 +17318,14 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "row mt-3" }, [
         _c("div", { staticClass: "col-md-12" }, [
-          _c("h3", [_vm._v("Total: £" + _vm._s(_vm.total))]),
+          _c("h3", [
+            _vm._v(_vm._s(_vm.__("label-total")) + ": £" + _vm._s(_vm.total))
+          ]),
           _vm._v(" "),
           _c("small", { staticClass: "font-weight-strong" }, [
             _vm._v(
-              "Barcode Range: " +
+              _vm._s(_vm.__("label-barcode-range")) +
+                ": " +
                 _vm._s(_vm.barcodePrefix) +
                 _vm._s(_vm.barcodeStart) +
                 " - " +
@@ -17680,6 +17693,13 @@ module.exports = Component.exports
 
 /***/ }),
 
+/***/ "./resources/assets/js/lang/en.json":
+/***/ (function(module, exports) {
+
+module.exports = {"return":"Return to main website","create":"Create","close":"Close","cancel":"Cancel","default":"Default","name":"Name","scopes":"Scopes","type":"Type","revoke":"Revoke","client-id":"Client ID","secret":"Secret","edit":"Edit","delete":"Delete","title-authorized-apps":"Authorized Applications","title-basic-info":"Basic Information","title-address":"Address","title-login":"Please login to continue:","title-register":"Register a new account:","title-product-of":"A product of B2 Systems","title-education":"Education Inventory Platform","title-finance":"Finance","title-people":"People","title-freedom":"B2 Freedom","title-labels":"Security Labels","title-oauth":"OAuth Clients","title-oauth-create":"Create Client","title-oauth-edit":"Edit Client","account-login":"Already have an account? Login.","forgot-password":"I've forgotten my password","button-login":"Login","button-reset":"Reset","button-register":"Register","button-buy":"Buy","button-save-changes":"Save Changes","button-org-create":"Create Organisation","label-email":"Email Address","label-password":"Password","label-confirm-password":"Password Confirmation","label-fname":"First Name","label-lname":"Last Name","label-barcode-range":"Barcode Range","label-barcode-range-start":"Barcode Range Start Number","label-barcode-prefix":"Barcode Prefix","label-total":"Total","label-pack-of":"Pack of","label-per-label":"per label","label-address-line1":"Address Line 1","label-address-line2":"Address Town","label-org-name":"Organisation Name","label-org-type":"Organisation Type","label-org-default":"Default Organisation","label-org-create-not-allowed":"You don't have permission to create organisations","label-num-pupils":"Number of Pupils","label-num-classrooms":"Number of Classrooms","label-oauth-create":"Create New Client","label-suggest-recognize":"Something your users will recognize and trust.","label-redirect-url":"Redirect URL","label-suggest-redirect-url":"Your application's authorization callback URL.","required-email":"Email is required","required-password":"Password is required","required-confirm-password":"Password confirmation is required","required-fname":"First name is required","required-lname":"Last name is required","required-address-line1":"Address Line 1 is required","required-address-line2":"Address Line 2 is required","required-address-town":"Address Town is required","required-address-county":"Address County is required","required-address-country":"Address Country is required","required-num-pupils":"Number of Pupils is required","required-num-classrooms":"Number of Classrooms is required","error-oauth-none":"You have not created any OAuth clients.","error-whoops":"Whoops!","error-something-wrong":"Something went wrong!"}
+
+/***/ }),
+
 /***/ "./resources/assets/js/web.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -17687,6 +17707,8 @@ module.exports = Component.exports
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_web_LabelChooserComponent__ = __webpack_require__("./resources/assets/js/components/web/LabelChooserComponent.vue");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_web_LabelChooserComponent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_web_LabelChooserComponent__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__lang_en_json__ = __webpack_require__("./resources/assets/js/lang/en.json");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__lang_en_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__lang_en_json__);
 try {
     window.$ = window.jQuery = __webpack_require__("./node_modules/jquery/dist/jquery.js");
 
@@ -17695,6 +17717,15 @@ try {
 
 window.Vue = __webpack_require__("./node_modules/vue/dist/vue.common.js");
 
+
+
+Vue.mixin({
+    methods: {
+        __: function __(key) {
+            return __WEBPACK_IMPORTED_MODULE_1__lang_en_json___default.a[key] ? __WEBPACK_IMPORTED_MODULE_1__lang_en_json___default.a[key] : key;
+        }
+    }
+});
 
 // Init
 var app = new Vue({

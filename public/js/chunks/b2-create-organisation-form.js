@@ -297,7 +297,7 @@ var render = function() {
                     }
                   },
                   [
-                    _vm._v(_vm._s(_vm.__("Create")) + " "),
+                    _vm._v(_vm._s(_vm.__("create")) + " "),
                     _c("i", { staticClass: "far fa-lock" })
                   ]
                 )
