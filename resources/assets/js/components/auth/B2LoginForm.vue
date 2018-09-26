@@ -1,9 +1,7 @@
 <template lang="html">
   <div class="mt-4">
     <b2-form :form-action-route="loginRoute"
-             :url-education="urlEducation"
-             :url-freedom="urlFreedom"
-             :url-labels="urlLabels">
+             :url-return="urlReturn">
       <el-card slot-scope="slotProps">
         <h3>{{__('Please login to continue:')}}</h3>
         <el-form-item :label="__('Email Address')"
@@ -33,7 +31,7 @@
 
         <div class="justify-between">
             <a :href="forgottenPasswordRoute">
-                <el-button type="text" class="text-muted">{{ __("I've forgotten my password.") }}</el-button>
+                <el-button type="text">{{ __("I've forgotten my password.") }}</el-button>
             </a>
 
             <el-button :loading="slotProps.loading" native-type="submit" type="primary">{{ __('Login') }} <i class="far fa-lock"></i></el-button>
@@ -60,15 +58,7 @@ export default {
       required: true,
       type: String
     },
-    urlEducation: {
-      required: false,
-      type: String
-    },
-    urlFreedom: {
-      required: false,
-      type: String
-    },
-    urlLabels: {
+    urlReturn: {
       required: false,
       type: String
     }

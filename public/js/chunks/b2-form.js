@@ -30,8 +30,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'B2Form',
@@ -42,17 +40,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       type: String
     },
 
-    urlEducation: {
-      required: false,
-      type: String
-    },
-
-    urlFreedom: {
-      required: false,
-      type: String
-    },
-
-    urlLabels: {
+    urlReturn: {
       required: false,
       type: String
     },
@@ -133,7 +121,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2Form.vue","sourceRoot":""}]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2Form.vue","sourceRoot":""}]);
 
 // exports
 
@@ -182,7 +170,9 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "site_product text-white" }, [
-                _c("h3", { staticClass: "m-0" }, [_vm._v("# app name #")]),
+                _c("h3", { staticClass: "m-0" }, [
+                  _vm._v(_vm._s(_vm.__("Education")))
+                ]),
                 _vm._v(" "),
                 _c("p", { staticClass: "m-0" }, [
                   _vm._v(_vm._s(_vm.__("A product of B2 Systems")))
@@ -210,16 +200,8 @@ var render = function() {
       _vm._v(" "),
       _c("el-card", { staticClass: "mt-4" }, [
         _c("div", { staticClass: "justify-around" }, [
-          _c("a", { attrs: { href: _vm.urlEducation } }, [
-            _vm._v(_vm._s(_vm.__("Education")))
-          ]),
-          _vm._v(" "),
-          _c("a", { attrs: { href: _vm.urlFreedom } }, [
-            _vm._v(_vm._s(_vm.__("Freedom")))
-          ]),
-          _vm._v(" "),
-          _c("a", { attrs: { href: _vm.urlLabels } }, [
-            _vm._v(_vm._s(_vm.__("Labels")))
+          _c("a", { attrs: { href: _vm.urlReturn } }, [
+            _vm._v(_vm._s(_vm.__("Return")))
           ])
         ])
       ])

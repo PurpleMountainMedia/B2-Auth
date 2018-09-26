@@ -85,8 +85,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'B2RegisterForm',
@@ -103,15 +101,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return null;
       }
     },
-    urlEducation: {
-      required: false,
-      type: String
-    },
-    urlFreedom: {
-      required: false,
-      type: String
-    },
-    urlLabels: {
+    urlReturn: {
       required: false,
       type: String
     }
@@ -134,7 +124,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2RegisterForm.vue","sourceRoot":""}]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2RegisterForm.vue","sourceRoot":""}]);
 
 // exports
 
@@ -265,9 +255,7 @@ var render = function() {
       _c("b2-form", {
         attrs: {
           "form-action-route": _vm.registerRoute,
-          "url-education": _vm.urlEducation,
-          "url-freedom": _vm.urlFreedom,
-          "url-labels": _vm.urlLabels
+          "url-return": _vm.urlReturn
         },
         scopedSlots: _vm._u([
           {

@@ -48,8 +48,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'B2LoginForm',
@@ -69,15 +67,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       required: true,
       type: String
     },
-    urlEducation: {
-      required: false,
-      type: String
-    },
-    urlFreedom: {
-      required: false,
-      type: String
-    },
-    urlLabels: {
+    urlReturn: {
       required: false,
       type: String
     }
@@ -94,7 +84,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2LoginForm.vue","sourceRoot":""}]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2LoginForm.vue","sourceRoot":""}]);
 
 // exports
 
@@ -225,9 +215,7 @@ var render = function() {
       _c("b2-form", {
         attrs: {
           "form-action-route": _vm.loginRoute,
-          "url-education": _vm.urlEducation,
-          "url-freedom": _vm.urlFreedom,
-          "url-labels": _vm.urlLabels
+          "url-return": _vm.urlReturn
         },
         scopedSlots: _vm._u([
           {
@@ -316,18 +304,11 @@ var render = function() {
                         "a",
                         { attrs: { href: _vm.forgottenPasswordRoute } },
                         [
-                          _c(
-                            "el-button",
-                            {
-                              staticClass: "text-muted",
-                              attrs: { type: "text" }
-                            },
-                            [
-                              _vm._v(
-                                _vm._s(_vm.__("I've forgotten my password."))
-                              )
-                            ]
-                          )
+                          _c("el-button", { attrs: { type: "text" } }, [
+                            _vm._v(
+                              _vm._s(_vm.__("I've forgotten my password."))
+                            )
+                          ])
                         ],
                         1
                       ),

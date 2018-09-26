@@ -58,6 +58,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'B2NewPasswordForm',
@@ -73,18 +75,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       required: true,
       type: String
     },
-
     token: {
       required: true,
       type: String
     },
-
     email: {
       required: false,
       type: String,
       default: function _default() {
         return '';
       }
+    },
+    urlReturn: {
+      required: false,
+      type: String
     }
   }
 
@@ -100,7 +104,7 @@ exports = module.exports = __webpack_require__("./node_modules/css-loader/lib/cs
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2NewPasswordForm.vue","sourceRoot":""}]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"B2NewPasswordForm.vue","sourceRoot":""}]);
 
 // exports
 
@@ -226,12 +230,13 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "mt-4" },
+    { staticClass: "mt-4 w-100" },
     [
       _c("b2-form", {
         attrs: {
           "form-action-route": _vm.resetRoute,
-          values: { email: _vm.email }
+          values: { email: _vm.email },
+          "url-return": _vm.urlReturn
         },
         scopedSlots: _vm._u([
           {

@@ -2,19 +2,17 @@
 
 @section('content')
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <b2-password-reset-form reset-route="{{ route('password.email') }}" success-message="{{ session('status') }}"></b2-password-reset-form>
+  <div class="row screen_full_height d-flex justify-content-center">
+    <div class="col-lg-8 col-12">
+      <div class="h-100 d-flex align-items-center">
+        <b2-password-reset-form reset-route="{{ route('password.email') }}"
+                                success-message="{{ session('status') }}"
+                                url-return="{{ route('home') }}"></b2-password-reset-form>
+      </div>
     </div>
   </div>
 </div>
 @endsection
-
-
-
-
-
-
 
 
 {{-- @extends('layouts.site')
