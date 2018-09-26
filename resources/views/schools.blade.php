@@ -7,7 +7,7 @@
 
 @section('content')
     <div class="container">
-      <a href="{{ $client->redirect_url }}" class="btn btn-primary">Setup DD</a>
+      Schools info needs to go here!!
     </div>
 @endsection
 

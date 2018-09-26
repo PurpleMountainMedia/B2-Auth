@@ -1,6 +1,8 @@
 <template lang="html">
-  <div class="mt-4">
-    <b2-form :form-action-route="resetRoute" :values="{ email: email }">
+  <div class="mt-4 w-100">
+    <b2-form :form-action-route="resetRoute"
+             :values="{ email: email }"
+             :url-return="urlReturn">
       <template slot-scope="slotProps">
 
         <el-card>
@@ -64,17 +66,19 @@ export default {
       required: true,
       type: String
     },
-
     token: {
       required: true,
       type: String
     },
-
     email: {
       required: false,
       type: String,
       default: () => { return '' }
     },
+    urlReturn: {
+      required: false,
+      type: String
+    }
   },
 
 }

@@ -38,7 +38,7 @@
         @yield('products')
 
         <div class="container py-5">
-            <div class="col-md-8 m-auto">
+            <div class="col-lg-8 m-auto">
                 <div class="row">
                     <div class="col-md-3 border-right">
                         <ul class="nav flex-column">
