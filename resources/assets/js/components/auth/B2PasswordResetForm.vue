@@ -1,6 +1,7 @@
 <template lang="html">
-  <div class="mt-4">
-    <b2-form :form-action-route="resetRoute">
+  <div class="mt-4 w-100">
+    <b2-form :form-action-route="resetRoute"
+             :url-return="urlReturn">
       <template slot-scope="slotProps">
 
         <el-alert v-if="successMessage"
@@ -48,12 +49,15 @@ export default {
       required: true,
       type: String
     },
-
     successMessage: {
       required: false,
       type: String,
       default: () => { return '' }
     },
+    urlReturn: {
+      required: false,
+      type: String
+    }
   },
 }
 </script>

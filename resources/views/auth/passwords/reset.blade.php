@@ -3,9 +3,14 @@
 
 @section('content')
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <b2-new-password-form email="{{ $email }}" token="{{ $token }}" reset-route="{{ route('password.request') }}"></b2-new-password-form>
+  <div class="row screen_full_height d-flex justify-content-center">
+    <div class="col-lg-8 col-12">
+      <div class="h-100 d-flex align-items-center">
+        <b2-new-password-form email="{{ $email }}"
+                              token="{{ $token }}"
+                              reset-route="{{ route('password.request') }}"
+                              url-return="{{ route('home') }}"></b2-new-password-form>
+      </div>
     </div>
   </div>
 </div>

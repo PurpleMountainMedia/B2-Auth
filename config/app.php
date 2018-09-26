@@ -53,6 +53,7 @@ return [
     */
 
     'url' => env('APP_URL', 'http://localhost'),
+    'ei_url' => env('EI_URL', 'http://ei.b2systems.test/dashboard'),
 
     /*
     |--------------------------------------------------------------------------
