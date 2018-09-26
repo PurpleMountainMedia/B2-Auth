@@ -13,7 +13,7 @@
 
 @section('content')
     <div class="container">
-        <b2-organisations-form :organisations='@json($user->organisations)' />
+      Schools info needs to go here!!
     </div>
 @endsection
 
