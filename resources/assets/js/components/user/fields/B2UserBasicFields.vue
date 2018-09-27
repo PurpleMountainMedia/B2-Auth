@@ -79,19 +79,19 @@
 
 <script>
 export default {
-    props: {
-        form: {
-            type: Object,
-            required: true,
-        },
-        errors: {
-            type: Object,
-            required: false,
-            default () {
-                return {}
-            }
-        }
+  props: {
+    form: {
+      type: Object,
+      required: true
     },
+    errors: {
+      type: Object,
+      required: false,
+      default () {
+        return {}
+      }
+    }
+  }
 }
 </script>
 

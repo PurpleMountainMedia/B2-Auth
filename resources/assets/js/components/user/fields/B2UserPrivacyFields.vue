@@ -16,12 +16,12 @@
 
 <script>
 export default {
-    props: {
-        form: {
-            type: Object,
-            required: true,
-        }
+  props: {
+    form: {
+      type: Object,
+      required: true
     }
+  }
 }
 </script>
 

@@ -35,7 +35,7 @@
 
         <li class="nav-item">
           <?php if(auth()->guard()->check()): ?>
-            <a class="nav-link text-primary" href="<?php echo e(route('dashboard')); ?>">
+            <a class="nav-link text-primary" href="<?php echo e(route('web.dashboard.index')); ?>">
               <i class="far fa-user-circle"></i> <?php echo e(__('Welcome')); ?>, <?php echo e(Auth::user()->first_name); ?>
 
             </a>

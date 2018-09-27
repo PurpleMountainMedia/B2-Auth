@@ -28,7 +28,32 @@
 
             <button type="submit" class="btn btn-primary">{{__('web.submit')}}</button>
           </form>
+        </div>
 
+        <div class="col-lg-4 px-5 text-center border border-bottom-0 border-top-0 border-white">
+          <h3 class="text-white mb-5">Want to put our system through it's paces? Enquire below about a free trial and one of our sales team will be able to walk you through its capabilities.</h3>
+          {{-- <a href="#" class="btn btn-primary btn-lg">Book Free Trial</a> --}}
+          <button type="submit" disabled class="btn btn-primary btn-lg">Book Free Trial</button>
+        </div>
+
+        <div class="col-lg-4 px-5">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link text-light" href="{{ route('home') }}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="{{ route('security_labels') }}">Security Labels</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="{{ route('freedom') }}">B2 Freedom Tool</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="{{ route('inventory') }}">EI PLatform</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="{{ route('onsite-asset-discovery') }}">Onsite Asset Discovery</a>
+            </li>
+          </ul>
         </div>
 
         <div class="col-lg-8 text-white text-right">

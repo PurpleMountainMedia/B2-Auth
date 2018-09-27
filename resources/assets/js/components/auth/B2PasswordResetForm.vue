@@ -1,16 +1,17 @@
 <template lang="html">
   <div class="mt-4 w-100">
-    <b2-form :form-action-route="resetRoute"
-             :url-return="urlReturn">
+    <b2-form
+      :form-action-route="resetRoute"
+      :url-return="urlReturn">
       <template slot-scope="slotProps">
 
-        <el-alert v-if="successMessage"
-                  :title="successMessage"
-                  type="success"
-                  :closable="false"
-                  class="my-2"
-                  show-icon>
-        </el-alert>
+        <el-alert
+          v-if="successMessage"
+          :title="successMessage"
+          :closable="false"
+          type="success"
+          class="my-2"
+          show-icon/>
 
         <el-card>
           <el-form-item :label="__('label-email')"
@@ -37,7 +38,7 @@ export default {
   name: 'B2PasswordResetForm',
 
   components: {
-    B2Form: () => import(/* webpackChunkName: "b2-form" */'../B2Form'),
+    B2Form: () => import(/* webpackChunkName: "b2-form" */'../B2Form')
   },
 
   props: {
@@ -52,9 +53,10 @@ export default {
     },
     urlReturn: {
       required: false,
-      type: String
+      type: String,
+      default: () => { return null }
     }
-  },
+  }
 }
 </script>
 

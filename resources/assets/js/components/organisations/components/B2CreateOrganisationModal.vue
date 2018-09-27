@@ -48,98 +48,95 @@ import api from '../../../utils/api'
 import validation from '../../../utils/validation'
 
 export default {
-    name: 'B2CreateOrganisationModal',
+  name: 'B2CreateOrganisationModal',
 
-    components: {
-        B2OrganisationsBasicFields: () => import(/* webpackChunkName: "b2-organisations-basic-fields" */'../fields/B2OrganisationsBasicFields.vue'),
-        B2Errors: () => import(/* webpackChunkName: "b2-errors" */'../../B2Errors'),
+  components: {
+    B2OrganisationsBasicFields: () => import(/* webpackChunkName: "b2-organisations-basic-fields" */'../fields/B2OrganisationsBasicFields.vue'),
+    B2Errors: () => import(/* webpackChunkName: "b2-errors" */'../../B2Errors')
+  },
+
+  props: {
+    showBtn: {
+      type: Boolean,
+      required: false,
+      default () {
+        return true
+      }
     },
 
-    props: {
-        showBtn: {
-            type: Boolean,
-            required: false,
-            default () {
-                return true
-            }
-        },
+    onCreate: {
+      type: Function,
+      required: false,
+      default () {
+        return function (organisation) {}
+      }
+    }
+  },
 
-        onCreate: {
-            type: Function,
-            required: false,
-            default () {
-                return function (organisation) {}
-            }
-        }
-    },
+  data () {
+    return {
+      showModal: false,
+      organisationForm: {},
+      loading: false,
+      formErrors: {}
+    }
+  },
 
-    data () {
-        return {
-            showModal: false,
-            organisationForm: {},
-            loading: false,
-            formErrors: {},
-        }
-    },
+  methods: {
 
-    methods: {
-
-      /**
+    /**
        * Handle the closure of the modal
        *
        * @return Void
        */
-      clearModal()
-      {
-          this.showModal = false;
-          this.$refs.organisationForm.resetFields();
-          this.organisationForm = {};
-          this.formErrors = {};
-      },
+    clearModal () {
+      this.showModal = false
+      this.$refs.organisationForm.resetFields()
+      this.organisationForm = {}
+      this.formErrors = {}
+    },
 
-      /**
+    /**
        * Handle the form submission and create the org
        *
        * @return Void
        */
-      createOrganisation()
-      {
-          this.loading = true;
-          this.formErrors = {};
+    createOrganisation () {
+      this.loading = true
+      this.formErrors = {}
 
-          this.$refs.organisationForm.validate((valid, errors) => {
-
-              if (valid) {
-                  api.persist('post', {
-                      path: 'organisations',
-                      object: this.organisationForm
-                  })
-                  .then((data) => {
-                      this.loading = false;
-                      this.onCreate(data.data);
-                      this.clearModal();
-                      this.$message({
-                        message: validation.getSuccessMessage(),
-                        type: 'success'
-                      });
-                  })
-                  .catch((error) => {
-                      this.formErrors = error;
-                      this.loading = false;
-                      this.$message.error(validation.getErrorMessage());
-                  });
-              } else {
-                  this.loading = false;
-                  this.formErrors = {
-                      message: validation.getValidationErrorMessage(),
-                      errors: validation.getValidationMessages(errors)
-                  };
-                  return false;
-              }
-          });
-      },
-
+      this.$refs.organisationForm.validate((valid, errors) => {
+        if (valid) {
+          api.persist('post', {
+            path: 'organisations',
+            object: this.organisationForm
+          })
+            .then((data) => {
+              this.loading = false
+              this.onCreate(data.data)
+              this.clearModal()
+              this.$message({
+                message: validation.getSuccessMessage(),
+                type: 'success'
+              })
+            })
+            .catch((error) => {
+              this.formErrors = error
+              this.loading = false
+              this.$message.error(validation.getErrorMessage())
+            })
+        } else {
+          this.loading = false
+          this.formErrors = {
+            message: validation.getValidationErrorMessage(),
+            errors: validation.getValidationMessages(errors)
+          }
+          return false
+        }
+      })
     }
+
+  }
 }
 </script>
 

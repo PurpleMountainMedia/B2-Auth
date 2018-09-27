@@ -1,4 +1,5 @@
 <template lang="html">
+
     <div>
         <el-row :gutter="10">
           <el-col>
@@ -51,7 +52,7 @@
             </el-col>
         </el-row>
 
-    </div>
+  </div>
 </template>
 
 <script>
@@ -60,8 +61,8 @@ export default {
 
   props: {
     form: {
-        type: Object,
-        required: true,
+      type: Object,
+      required: true
     },
     showDefault: {
       type: Boolean,
@@ -77,9 +78,9 @@ export default {
     }
   },
 
-  data () {
-    return {
-      errors: {},
+  computed: {
+    organisationTypes () {
+      return ['School', 'Multi Academy Trust', 'Council', 'Other']
     }
   }
 }

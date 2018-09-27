@@ -40,6 +40,11 @@ class OrganisationsController extends Controller
         return view('organisations.add', compact('user'));
     }
 
+    public function show(Request $request, Organisation $organisation)
+    {
+        return view('organisations.show', compact('organisation'));
+    }
+
     /**
      * Store a newly created resource in storage.
      *

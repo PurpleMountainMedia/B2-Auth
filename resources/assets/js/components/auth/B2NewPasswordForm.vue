@@ -1,8 +1,9 @@
 <template lang="html">
   <div class="mt-4 w-100">
-    <b2-form :form-action-route="resetRoute"
-             :values="{ email: email }"
-             :url-return="urlReturn">
+    <b2-form
+      :form-action-route="resetRoute"
+      :values="{ email: email }"
+      :url-return="urlReturn">
       <template slot-scope="slotProps">
 
         <el-card>
@@ -16,7 +17,11 @@
                         class="short_input">
               </el-input>
           </el-form-item>
-          <input type="hidden" name="email" id="login_email" :value="slotProps.form.email">
+          <input
+            id="login_email"
+            :value="slotProps.form.email"
+            type="hidden"
+            name="email">
 
           <el-form-item :label="__('label-password')"
                         prop="password"
@@ -44,7 +49,10 @@
               </el-input>
           </el-form-item>
 
-          <input type="hidden" name="token" :value="token">
+          <input
+            :value="token"
+            type="hidden"
+            name="token">
 
           <el-button class="mt-3" :loading="slotProps.loading" native-type="submit" type="primary">{{ __('button-reset') }} <i class="far fa-lock"></i></el-button>
         </el-card>
@@ -58,7 +66,7 @@ export default {
   name: 'B2NewPasswordForm',
 
   components: {
-    B2Form: () => import(/* webpackChunkName: "b2-form" */'../B2Form'),
+    B2Form: () => import(/* webpackChunkName: "b2-form" */'../B2Form')
   },
 
   props: {
@@ -77,9 +85,10 @@ export default {
     },
     urlReturn: {
       required: false,
-      type: String
+      type: String,
+      default: () => { return null }
     }
-  },
+  }
 
 }
 </script>

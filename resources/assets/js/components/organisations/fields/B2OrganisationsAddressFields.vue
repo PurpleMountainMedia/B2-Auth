@@ -4,8 +4,8 @@
       <el-col>
         <p><strong>{{ __('title-address') }}</strong></p>
         <slot
-          name="belowName"
-          :show="show" />
+          :show="show"
+          name="belowName" />
         <hr>
       </el-col>
     </el-row>
@@ -38,6 +38,7 @@
           </el-col>
       </el-row>
 
+      <el-row :gutter="10">
         <el-col :md="12">
           <el-form-item :label="__('label-address-line2')"
                         prop="address_line_2"
@@ -49,7 +50,6 @@
             </el-input>
           </el-form-item>
         </el-col>
-    </el-row>
 
     <el-row :gutter="10">
       <el-col :md="12">
@@ -96,7 +96,6 @@
               </el-form-item>
           </el-col>
       </el-row>
-    </template>
 
       <el-col :md="12">
         <el-form-item :label="__('label-address-country')"
@@ -119,7 +118,7 @@
 </template>
 
 <script>
-import countries from '../../../utils/countries.json'
+// import countries from '../../../utils/countries.json'
 
 export default {
   name: 'B2OrganisationsAddressFields',
@@ -127,14 +126,15 @@ export default {
   props: {
     form: {
       type: Object,
-      required: true,
-    },
+      required: true
+    }
   },
 
   data () {
-      return {
-          errors: {},
-      }
+    return {
+      errors: {},
+      show: true
+    }
   },
 
   computed: {

@@ -13,7 +13,7 @@
                     id="organisation_pupil_count">
           </el-input-number>
         </el-form-item>
-        </el-col>
+      </el-col>
 
         <el-col :md="12">
           <el-form-item :label="__('label-num-classrooms')"
@@ -39,15 +39,15 @@ export default {
   props: {
     form: {
       type: Object,
-      required: true,
-    },
+      required: true
+    }
   },
 
   data () {
     return {
-      errors: {},
+      errors: {}
     }
-  },
+  }
 }
 </script>
 

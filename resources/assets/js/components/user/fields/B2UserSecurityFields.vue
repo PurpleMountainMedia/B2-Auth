@@ -41,32 +41,31 @@
 
 <script>
 export default {
-    props: {
-        form: {
-            type: Object,
-            required: true,
-        }
-    },
+  props: {
+    form: {
+      type: Object,
+      required: true
+    }
+  },
 
-    data () {
-        return {
-            changed: false,
-        }
-    },
+  data () {
+    return {
+      changed: false
+    }
+  },
 
-    computed: {
+  computed: {
 
-        passwordError()
-        {
-            var password = this.form.password;
-            var password_conf = this.form.password_confirmation;
-            if (password && password_conf && this.changed) {
-                if(password !== password_conf) {
-                    return "Passwords don't match."
-                }
-            }
+    passwordError () {
+      var password = this.form.password
+      var passwordConf = this.form.password_confirmation
+      if (password && passwordConf && this.changed) {
+        if (password !== passwordConf) {
+          return "Passwords don't match."
         }
-    },
+      }
+    }
+  }
 }
 </script>
 

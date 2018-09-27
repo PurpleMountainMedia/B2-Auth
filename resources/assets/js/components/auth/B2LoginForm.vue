@@ -1,7 +1,8 @@
 <template lang="html">
   <div class="mt-4">
-    <b2-form :form-action-route="loginRoute"
-             :url-return="urlReturn">
+    <b2-form
+      :form-action-route="loginRoute"
+      :url-return="urlReturn">
       <el-card slot-scope="slotProps">
         <h3>{{__('title-login')}}</h3>
         <el-form-item :label="__('label-email')"
@@ -46,7 +47,7 @@ export default {
   name: 'B2LoginForm',
 
   components: {
-    B2Form: () => import(/* webpackChunkName: "b2-form" */'../B2Form'),
+    B2Form: () => import(/* webpackChunkName: "b2-form" */'../B2Form')
   },
 
   props: {
@@ -60,9 +61,10 @@ export default {
     },
     urlReturn: {
       required: false,
-      type: String
+      type: String,
+      default: () => { return null }
     }
-  },
+  }
 }
 </script>
 

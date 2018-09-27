@@ -27,4 +27,15 @@ class SchoolsController extends Controller
         $user = Auth::User();
         return view('schools', compact('user'));
     }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function show()
+    {
+        $user = Auth::User();
+        return view('schools', compact('user'));
+    }
 }

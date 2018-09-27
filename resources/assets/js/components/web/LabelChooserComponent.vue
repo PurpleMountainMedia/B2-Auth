@@ -13,9 +13,9 @@
     <div class="row mt-4">
       <div class="col-md-12">
         <select
+          v-model="qty"
           name="qty"
-          class="form-control"
-          v-model="qty">
+          class="form-control">
           <option
             v-for="(op, key) in qtyOptions"
             :key="key"
@@ -29,10 +29,10 @@
       <div class="col-md-12">
         <label for="barcode_start">{{__('label-barcode-range-start')}}</label>
         <input
+          v-model="barcodeStart"
           type="number"
           class="form-control short_input"
-          name="barcode_start"
-          v-model="barcodeStart">
+          name="barcode_start">
       </div>
     </div>
 
@@ -40,10 +40,10 @@
       <div class="col-md-12">
         <label for="barcode_prefix">{{__('label-barcode-prefix')}}</label>
         <input
+          v-model="barcodePrefix"
           type="text"
           class="form-control short_input"
-          name="barcode_prefix"
-          v-model="barcodePrefix">
+          name="barcode_prefix">
       </div>
     </div>
 
@@ -83,7 +83,7 @@ export default {
     return {
       qty: 100,
       barcodeStart: 1,
-      barcodePrefix: 'b2_',
+      barcodePrefix: 'b2_'
     }
   },
   computed: {
@@ -122,14 +122,14 @@ export default {
         500: 0.69,
         750: 0.69,
         1000: 0.59,
-        1500: 0.45,
+        1500: 0.45
       }
     },
     total () {
       return this.qtyToCost[this.qty] * this.qty
     },
     barcodeEnd () {
-      return this.barcodeStart ? parseInt(this.barcodeStart)+this.qty : this.qty
+      return this.barcodeStart ? parseInt(this.barcodeStart) + this.qty : this.qty
     }
   }
 }

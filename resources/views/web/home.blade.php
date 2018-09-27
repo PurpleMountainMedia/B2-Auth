@@ -10,6 +10,7 @@
     </div>
   </div>
   <div class="container-fluid below_nav_container_buffer"></div>
+
 @endsection
 
 @section('content')
