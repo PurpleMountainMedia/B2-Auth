@@ -63,7 +63,7 @@ var render = function() {
         "el-row",
         { attrs: { gutter: 10 } },
         [
-          _c("p", [_c("strong", [_vm._v("Privacy")])]),
+          _c("p", [_c("strong", [_vm._v(_vm._s(_vm.__("title-privacy")))])]),
           _vm._v(" "),
           _c("hr"),
           _vm._v(" "),
@@ -85,7 +85,7 @@ var render = function() {
                         id: "user_form_field_request_user_data"
                       }
                     },
-                    [_vm._v("Request User Data")]
+                    [_vm._v(_vm._s(_vm.__("label-privacy-request")))]
                   )
                 ],
                 1

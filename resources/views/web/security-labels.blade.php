@@ -15,7 +15,7 @@
 @push('header_scripts')
   <style media="screen">
     #label_header {
-      background: url({{ url('storage/web/barcode_image.jpg') }});
+      background: url({{ url('storage/web/barcode_image_pack.jpg') }});
       background-size: cover;
       background-position: center;
     }

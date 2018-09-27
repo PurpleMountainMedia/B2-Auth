@@ -1,7 +1,7 @@
 <template lang="html">
     <div class="">
         <el-row :gutter="10">
-            <p><strong>Basic Information</strong></p>
+            <p><strong>{{__('title-basic-info')}}</strong></p>
             <hr>
         </el-row>
 
@@ -10,7 +10,7 @@
             <el-col class="profile-photo-container" :span="6">
               <label for="user_form_field_profile_photo"
                      class="el-form-item__label">
-                     Photo
+                     {{__('label-photo')}}
               </label>
               <div class="profile-photo"
                    style="background-image: url('https://via.placeholder.com/500x500')"
@@ -18,26 +18,26 @@
               </div>
             </el-col>
             <el-col :span="9" :offset="6">
-                <el-form-item label="First Name"
+                <el-form-item :label="__('label-fname')"
                               prop="first_name"
                               :error="errors.first_name"
-                              :rules="{ required: true, message: 'First name is required.' }">
+                              :rules="{ required: true, message: __('required-fname') }">
                     <el-input v-model="form.first_name"
                               size="small"
-                              placeholder="First Name"
+                              :placeholder="__('label-fname')"
                               name="first_name"
                               id="user_form_field_first_name">
                     </el-input>
                 </el-form-item>
             </el-col>
             <el-col :span="9">
-                <el-form-item label="Last Name"
+                <el-form-item :label="__('label-lname')"
                               prop="last_name"
                               :error="errors.last_name"
-                              :rules="{ required: true, message: 'Last name is required.' }">
+                              :rules="{ required: true, message: __('required-lname') }">
                     <el-input v-model="form.last_name"
                               size="small"
-                              placeholder="Last Name"
+                              :placeholder="__('label-lname')"
                               name="last_name"
                               id="user_form_field_last_name">
                     </el-input>
@@ -48,26 +48,26 @@
         <!-- Contact  -->
         <el-row :gutter="10">
             <el-col :span="9" :offset="6">
-                <el-form-item label="Email Address"
+                <el-form-item :label="__('label-email')"
                               prop="email"
                               :error="errors.email"
-                              :rules="{ required: true, message: 'Email address is required.' }">
+                              :rules="{ required: true, message: __('required-email') }">
                     <el-input v-model="form.email"
                               size="small"
-                              placeholder="Email Address"
+                              :placeholder="__('label-email')"
                               name="email"
                               id="user_form_field_email">
                     </el-input>
                 </el-form-item>
             </el-col>
             <el-col :span="9">
-                <el-form-item label="Phone Number"
+                <el-form-item :label="__('label-phone')"
                               prop="phone"
                               :error="errors.phone"
-                              :rules="{ required: true, message: 'Phone number is required.' }">
+                              :rules="{ required: true, message: __('required-phone') }">
                     <el-input v-model="form.phone"
                               size="small"
-                              placeholder="Phone Number"
+                              :placeholder="__('label-phone')"
                               name="phone"
                               id="user_form_field_phone">
                     </el-input>

@@ -11,11 +11,11 @@
                 <div class="card-header">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <span>
-                            Personal Access Tokens
+                            {{__('title-tokens')}}
                         </span>
 
                         <a class="action-link" tabindex="-1" @click="showCreateTokenForm">
-                            Create New Token
+                            {{__('label-token-create-new')}}
                         </a>
                     </div>
                 </div>
@@ -23,14 +23,14 @@
                 <div class="card-body">
                     <!-- No Tokens Notice -->
                     <p class="mb-0" v-if="tokens.length === 0">
-                        You have not created any personal access tokens.
+                        {{__('error-token-none')}}
                     </p>
 
                     <!-- Personal Access Tokens -->
                     <table class="table table-borderless mb-0" v-if="tokens.length > 0">
                         <thead>
                             <tr>
-                                <th>Name</th>
+                                <th>{{__('name')}}</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -45,7 +45,7 @@
                                 <!-- Delete Button -->
                                 <td style="vertical-align: middle;">
                                     <a class="action-link text-danger" @click="revoke(token)">
-                                        Delete
+                                        {{__('delete')}}
                                     </a>
                                 </td>
                             </tr>
@@ -61,7 +61,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">
-                            Create Token
+                            {{__('title-token-create')}}
                         </h4>
 
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -70,7 +70,7 @@
                     <div class="modal-body">
                         <!-- Form Errors -->
                         <div class="alert alert-danger" v-if="form.errors.length > 0">
-                            <p class="mb-0"><strong>Whoops!</strong> Something went wrong!</p>
+                            <p class="mb-0"><strong>{{__('error-whoops')}}</strong> {{__('error-something-wrong')}}</p>
                             <br>
                             <ul>
                                 <li v-for="error in form.errors">
@@ -83,7 +83,7 @@
                         <form role="form" @submit.prevent="store">
                             <!-- Name -->
                             <div class="form-group row">
-                                <label class="col-md-4 col-form-label">Name</label>
+                                <label class="col-md-4 col-form-label">{{__('name')}}</label>
 
                                 <div class="col-md-6">
                                     <input id="create-token-name" type="text" class="form-control" name="name" v-model="form.name">
@@ -92,7 +92,7 @@
 
                             <!-- Scopes -->
                             <div class="form-group row" v-if="scopes.length > 0">
-                                <label class="col-md-4 col-form-label">Scopes</label>
+                                <label class="col-md-4 col-form-label">{{__('scopes')}}</label>
 
                                 <div class="col-md-6">
                                     <div v-for="scope in scopes">
@@ -113,10 +113,10 @@
 
                     <!-- Modal Actions -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{__('close')}}</button>
 
                         <button type="button" class="btn btn-primary" @click="store">
-                            Create
+                            {{__('create')}}
                         </button>
                     </div>
                 </div>
@@ -129,7 +129,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">
-                            Personal Access Token
+                            {{__('title-tokens')}}
                         </h4>
 
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -137,8 +137,7 @@
 
                     <div class="modal-body">
                         <p>
-                            Here is your new personal access token. This is the only time it will be shown so don't lose it!
-                            You may now use this token to make API requests.
+                            {{__('label-token-about')}}
                         </p>
 
                         <textarea class="form-control" rows="10">{{ accessToken }}</textarea>
@@ -146,7 +145,7 @@
 
                     <!-- Modal Actions -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{__('close')}}</button>
                     </div>
                 </div>
             </div>

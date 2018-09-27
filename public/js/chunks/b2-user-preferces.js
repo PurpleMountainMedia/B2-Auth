@@ -77,7 +77,7 @@ var render = function() {
         "el-row",
         { attrs: { gutter: 10 } },
         [
-          _c("p", [_c("strong", [_vm._v("Preferences")])]),
+          _c("p", [_c("strong", [_vm._v(_vm._s(_vm.__("title-prefs")))])]),
           _vm._v(" "),
           _c("hr"),
           _vm._v(" "),
@@ -90,7 +90,7 @@ var render = function() {
                 [
                   _c("el-checkbox", {
                     attrs: {
-                      label: "Product Updates",
+                      label: _vm.__("label-product-updates"),
                       border: "",
                       size: "mini",
                       name: "product_updates_marketing",
@@ -114,7 +114,7 @@ var render = function() {
                 [
                   _c("el-checkbox", {
                     attrs: {
-                      label: "Product Notifications",
+                      label: _vm.__("label-product-notifications"),
                       border: "",
                       size: "mini",
                       name: "product_notifications_marketing",

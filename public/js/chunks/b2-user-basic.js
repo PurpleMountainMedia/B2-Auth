@@ -130,7 +130,7 @@ var render = function() {
     {},
     [
       _c("el-row", { attrs: { gutter: 10 } }, [
-        _c("p", [_c("strong", [_vm._v("Basic Information")])]),
+        _c("p", [_c("strong", [_vm._v(_vm._s(_vm.__("title-basic-info")))])]),
         _vm._v(" "),
         _c("hr")
       ]),
@@ -149,7 +149,13 @@ var render = function() {
                   staticClass: "el-form-item__label",
                   attrs: { for: "user_form_field_profile_photo" }
                 },
-                [_vm._v("\n                 Photo\n          ")]
+                [
+                  _vm._v(
+                    "\n                 " +
+                      _vm._s(_vm.__("label-photo")) +
+                      "\n          "
+                  )
+                ]
               ),
               _vm._v(" "),
               _c("div", {
@@ -171,20 +177,17 @@ var render = function() {
                 "el-form-item",
                 {
                   attrs: {
-                    label: "First Name",
+                    label: _vm.__("label-fname"),
                     prop: "first_name",
                     error: _vm.errors.first_name,
-                    rules: {
-                      required: true,
-                      message: "First name is required."
-                    }
+                    rules: { required: true, message: _vm.__("required-fname") }
                   }
                 },
                 [
                   _c("el-input", {
                     attrs: {
                       size: "small",
-                      placeholder: "First Name",
+                      placeholder: _vm.__("label-fname"),
                       name: "first_name",
                       id: "user_form_field_first_name"
                     },
@@ -211,17 +214,17 @@ var render = function() {
                 "el-form-item",
                 {
                   attrs: {
-                    label: "Last Name",
+                    label: _vm.__("label-lname"),
                     prop: "last_name",
                     error: _vm.errors.last_name,
-                    rules: { required: true, message: "Last name is required." }
+                    rules: { required: true, message: _vm.__("required-lname") }
                   }
                 },
                 [
                   _c("el-input", {
                     attrs: {
                       size: "small",
-                      placeholder: "Last Name",
+                      placeholder: _vm.__("label-lname"),
                       name: "last_name",
                       id: "user_form_field_last_name"
                     },
@@ -255,20 +258,17 @@ var render = function() {
                 "el-form-item",
                 {
                   attrs: {
-                    label: "Email Address",
+                    label: _vm.__("label-email"),
                     prop: "email",
                     error: _vm.errors.email,
-                    rules: {
-                      required: true,
-                      message: "Email address is required."
-                    }
+                    rules: { required: true, message: _vm.__("required-email") }
                   }
                 },
                 [
                   _c("el-input", {
                     attrs: {
                       size: "small",
-                      placeholder: "Email Address",
+                      placeholder: _vm.__("label-email"),
                       name: "email",
                       id: "user_form_field_email"
                     },
@@ -295,20 +295,17 @@ var render = function() {
                 "el-form-item",
                 {
                   attrs: {
-                    label: "Phone Number",
+                    label: _vm.__("label-phone"),
                     prop: "phone",
                     error: _vm.errors.phone,
-                    rules: {
-                      required: true,
-                      message: "Phone number is required."
-                    }
+                    rules: { required: true, message: _vm.__("required-phone") }
                   }
                 },
                 [
                   _c("el-input", {
                     attrs: {
                       size: "small",
-                      placeholder: "Phone Number",
+                      placeholder: _vm.__("label-phone"),
                       name: "phone",
                       id: "user_form_field_phone"
                     },

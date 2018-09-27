@@ -1,13 +1,13 @@
 <template lang="html">
     <div class="">
         <el-row :gutter="10">
-            <p><strong>Preferences</strong></p>
+            <p><strong>{{__('title-prefs')}}</strong></p>
             <hr>
 
             <el-row>
                 <el-col :span="9" :offset="6">
                     <el-checkbox v-model="form.product_updates_marketing"
-                                 label="Product Updates"
+                                 :label="__('label-product-updates')"
                                  border
                                  size="mini"
                                  name="product_updates_marketing"
@@ -16,7 +16,7 @@
                 </el-col>
                 <el-col :span="9">
                     <el-checkbox v-model="form.product_notifications_marketing"
-                                 label="Product Notifications"
+                                 :label="__('label-product-notifications')"
                                  border
                                  size="mini"
                                  name="product_notifications_marketing"

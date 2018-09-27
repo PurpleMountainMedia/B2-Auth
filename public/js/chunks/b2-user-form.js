@@ -314,7 +314,7 @@ var render = function() {
                   },
                   on: { click: _vm.reset }
                 },
-                [_vm._v("Reset")]
+                [_vm._v(_vm._s(_vm.__("reset")))]
               ),
               _vm._v(" "),
               _c(
@@ -329,7 +329,10 @@ var render = function() {
                   },
                   on: { click: _vm.submitForm }
                 },
-                [_vm._v("Save "), _c("i", { staticClass: "fal fa-save" })]
+                [
+                  _vm._v(_vm._s(_vm.__("save")) + " "),
+                  _c("i", { staticClass: "fal fa-save" })
+                ]
               )
             ],
             1

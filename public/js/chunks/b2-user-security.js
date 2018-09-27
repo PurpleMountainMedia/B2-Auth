@@ -104,7 +104,7 @@ var render = function() {
     {},
     [
       _c("el-row", { attrs: { gutter: 10 } }, [
-        _c("p", [_c("strong", [_vm._v("Security")])]),
+        _c("p", [_c("strong", [_vm._v(_vm._s(_vm.__("title-security")))])]),
         _vm._v(" "),
         _c("hr")
       ]),
@@ -121,7 +121,7 @@ var render = function() {
                 "el-form-item",
                 {
                   attrs: {
-                    label: "Password",
+                    label: _vm.__("label-password"),
                     prop: "password",
                     error: _vm.passwordError
                   }
@@ -131,7 +131,7 @@ var render = function() {
                     attrs: {
                       size: "small",
                       type: "password",
-                      placeholder: "New Password",
+                      placeholder: _vm.__("label-password"),
                       name: "password",
                       id: "user_form_field_password"
                     },
@@ -158,7 +158,7 @@ var render = function() {
                 "el-form-item",
                 {
                   attrs: {
-                    label: "Confirm Password",
+                    label: _vm.__("label-confirm-password"),
                     prop: "password_confirmation",
                     error: _vm.passwordError
                   }
@@ -169,7 +169,7 @@ var render = function() {
                     attrs: {
                       size: "small",
                       type: "password",
-                      placeholder: "Confirm Password",
+                      placeholder: _vm.__("label-confirm-password"),
                       name: "password_confirmation",
                       id: "user_form_field_password_confirmation"
                     },
