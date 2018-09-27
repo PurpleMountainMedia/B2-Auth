@@ -23,8 +23,10 @@ class School extends JsonResource
             'address_county' => $this->when(requestIncludes('schools.address'), $this->address_county),
             'address_postcode' => $this->when(requestIncludes('schools.address'), $this->address_postcode),
             'address_country' => $this->when(requestIncludes('schools.address'), $this->address_country),
+
             'phone' => $this->when(requestIncludes('schools.extra'), $this->phone),
             'website' => $this->when(requestIncludes('schools.extra'), $this->website),
+            'pupil_count' => $this->when(requestIncludes('schools.extra'), $this->pupil_count),
 
             'organisation' => new Organisation($this->whenLoaded('organisation')),
 

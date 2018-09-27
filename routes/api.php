@@ -32,4 +32,5 @@ Route::namespace('Api')->group(function () {
     Route::apiResource('schools', 'ApiSchoolsController');
 
     Route::apiResource('licences', 'ApiLicencesController');
+    Route::apiResource('licence-plans', 'ApiLicencePlansController');
 });

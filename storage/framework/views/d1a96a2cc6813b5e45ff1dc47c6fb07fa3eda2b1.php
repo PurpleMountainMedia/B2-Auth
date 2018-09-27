@@ -5,7 +5,11 @@
 
 <?php $__env->startSection('content'); ?>
     <div class="container">
-      <a href="<?php echo e($client->redirect_url); ?>" class="btn btn-primary">Setup DD</a>
+      
+
+      <b2-list-licences>
+      </b2-list-licences>
+
     </div>
 <?php $__env->stopSection(); ?>
 

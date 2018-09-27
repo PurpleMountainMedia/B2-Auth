@@ -40,8 +40,8 @@
 </template>
 
 <script>
-import api from '../../utils/api'
-import validation from '../../utils/validation'
+import api from 'utils/api'
+import validation from 'utils/validation'
 
 export default {
   name: 'B2UserForm',
