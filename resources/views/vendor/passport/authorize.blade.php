@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{{ config('app.name') }} - Authorization</title>
+    <title>{{ config('app.name') }} - {{__('app.title-auth')}}</title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
@@ -43,16 +43,16 @@
             <div class="col-md-6">
                 <div class="card card-default">
                     <div class="card-header">
-                        Authorization Request
+                        {{__('app.title-auth-request')}}
                     </div>
                     <div class="card-body">
                         <!-- Introduction -->
-                        <p><strong>{{ $client->name }}</strong> is requesting permission to access your account.</p>
+                        <p><strong>{{ $client->name }}</strong> {{__('app.label-auth-request-permission')}}</p>
 
                         <!-- Scope List -->
                         @if (count($scopes) > 0)
                             <div class="scopes">
-                                    <p><strong>This application will be able to:</strong></p>
+                                    <p><strong>{{__('app.label-auth-app-permissions')}}:</strong></p>
 
                                     <ul>
                                         @foreach ($scopes as $scope)
@@ -69,7 +69,7 @@
 
                                 <input type="hidden" name="state" value="{{ $request->state }}">
                                 <input type="hidden" name="client_id" value="{{ $client->id }}">
-                                <button type="submit" class="btn btn-success btn-approve">Authorize</button>
+                                <button type="submit" class="btn btn-success btn-approve">{{__('app.label-auth')}}</button>
                             </form>
 
                             <!-- Cancel Button -->
@@ -79,7 +79,7 @@
 
                                 <input type="hidden" name="state" value="{{ $request->state }}">
                                 <input type="hidden" name="client_id" value="{{ $client->id }}">
-                                <button class="btn btn-danger">Cancel</button>
+                                <button class="btn btn-danger">{{__('app.label-cancel')}}</button>
                             </form>
                         </div>
                     </div>

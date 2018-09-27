@@ -43,21 +43,21 @@
                     <div class="col-md-3 border-right">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link active" href="{{ route('dashboard') }}"><i class="far fa-tachometer-alt"></i> Dashboard</a>
+                                <a class="nav-link active" href="{{ route('dashboard') }}"><i class="far fa-tachometer-alt"></i> {{ __('app.nav-dashboard') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('organisations') }}"><i class="far fa-sitemap"></i> Organisations</a>
+                                <a class="nav-link" href="{{ route('organisations') }}"><i class="far fa-sitemap"></i> {{ __('app.nav-orgs') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('schools') }}"><i class="far fa-school"></i> Schools</a>
+                                <a class="nav-link" href="{{ route('schools') }}"><i class="far fa-school"></i> {{ __('app.nav-school') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('licences') }}"><i class="far fa-credit-card-blank"></i> Licences</a>
+                                <a class="nav-link" href="{{ route('licences') }}"><i class="far fa-credit-card-blank"></i> {{ __('app.nav-license') }}</a>
                             </li>
                         </ul>
                         <ul class="nav flex-column mt-2">
                             <li class="nav-item">
-                                <a class="nav-link active text-danger" href="{{ route('logout') }}"><i class="far fa-sign-out"></i> Log Out</a>
+                                <a class="nav-link active text-danger" href="{{ route('logout') }}"><i class="far fa-sign-out"></i> {{ __('app.nav-logout') }}</a>
                             </li>
                         </ul>
                     </div>

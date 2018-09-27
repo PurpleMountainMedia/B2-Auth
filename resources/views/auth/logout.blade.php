@@ -9,12 +9,12 @@
             <div class="h-100 d-flex align-items-center">
               <div class="w-100 text-center particles-above">
                 <el-card class="py-5">
-                    <h3 class="mb-4">Are you sure you wish to log out?</h3>
+                    <h3 class="mb-4">{{ __('app.title-logout-confirm') }}</h3>
                     <a class="btn btn-outline-primary" href="{{ route('dashboard') }}">
-                        Return to dashboard
+                        {{ __('app.label-logout-return') }}
                     </a>
                     <a class="btn btn-danger" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                        Log me out
+                        {{ __('app.label-logout-confirm') }}
                     </a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" hidden>
                         @csrf

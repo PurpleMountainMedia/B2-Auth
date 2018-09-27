@@ -42,19 +42,17 @@
   <div class="container py-4">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="mt-4">Define your network</h1>
-        <p>Seamlessly sync automatically with your cloud-based inventory register</p>
+        <h1 class="mt-4">{{__('web.body-freedom-section1-line1')}}</h1>
+        <p>{{__('web.body-freedom-section1-line2')}}</p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-6 py-5">
-        <p>Adding individual IT Equipment to an asset register, was once a long and time-consuming process with manual input of serial numbers, model information and even software usage. With our free discovery tool software for Windows, Mac, iOS, and Android it is now completely automated.</p>
+        {!!__('web.body-freedom-section1-line3')!!}
 
-        <p>B2 Freedom is a completely free piece of software which can be downloaded from the B2 Systems website or app store. Once downloaded, there is nothing to install – the software will automatically open and the user will be prompted to enter an 8 digit code. The software will then securely send the model, manufacturer, serial number and operating system data to the B2 servers.</p>
+        <p>{{__('web.body-freedom-section1-line4')}} <a href="{{ route('inventory') }}" class="text-primary">{{__('web.body-freedom-section1-button1')}}</a> {{__('web.body-freedom-section1-line5')}}</p>
 
-        <p>Once device information has been sent to our servers, users will find information about the IT Equipment within their <a href="{{ route('inventory') }}" class="text-primary">Education Inventory</a> dashboard.</p>
-
-        <a href="#downloads" class="btn btn-outline-primary btn-lg mt-4">Download Now</a>
+        <a href="#downloads" class="btn btn-outline-primary btn-lg mt-4">{{__('web.body-freedom-section1-button2')}}</a>
 
       </div>
       <div class="col-md-6 pt-1">
@@ -72,28 +70,28 @@
   </div>
 
   <div id="downloads" class="container py-5">
-    <h2 class="text-center font-weight-bold pt-5">Download Today</h2>
+    <h2 class="text-center font-weight-bold pt-5">{{__('web.body-freedom-section2-line1')}}</h2>
 
     <div class="row py-4 my-5">
       <div class="col-12 order-md-first order-last">
         <div class="row">
           <div class="col-md-4 my-3 py-4 text-center">
             <i class="fab fa-windows fa-6x text-primary"></i>
-            <h3 class="text-center mt-4">Windows</h3>
+            <h3 class="text-center mt-4">{{__('web.body-freedom-section2-windows')}}</h3>
             <div class="mb-2">
               <a class="btn btn-primary" href="">.exe (40mb)</a>
             </div>
           </div>
           <div class="col-md-4 my-3 py-4 text-center">
             <i class="fab fa-apple fa-6x text-primary"></i>
-            <h3 class="text-center mt-4">OS X</h3>
+            <h3 class="text-center mt-4">{{__('web.body-freedom-section2-osx')}}</h3>
             <div class="mb-2">
               <a class="btn btn-primary" href="">.dmg (40mb)</a>
             </div>
           </div>
           <div class="col-md-4 my-3 py-4 text-center">
             <i class="fab fa-linux fa-6x text-primary"></i>
-            <h3 class="text-center mt-4">GNU/Linux</h3>
+            <h3 class="text-center mt-4">{{__('web.body-freedom-section2-linux')}}</h3>
             <div class="mb-2">
               <a class="btn btn-primary" href="">.sh (40mb)</a>
             </div>
@@ -107,16 +105,16 @@
         <div class="row">
           <div class="col-md-6 my-3 py-4 text-center">
             <i class="fab fa-app-store fa-6x text-primary"></i>
-            <h3 class="text-center mt-4">iPhone/iPad</h3>
+            <h3 class="text-center mt-4">{{__('web.body-freedom-section2-ios')}}</h3>
             <div class="mb-2">
-              <a class="btn btn-primary" href="">Download from App Store</a>
+              <a class="btn btn-primary" href="">{{__('web.body-freedom-section2-ios-download')}}</a>
             </div>
           </div>
           <div class="col-md-6 my-3 py-4 text-center">
             <i class="fab fa-android fa-6x text-primary"></i>
-            <h3 class="text-center mt-4">Android</h3>
+            <h3 class="text-center mt-4">{{__('web.body-freedom-section2-android')}}</h3>
             <div class="mb-2">
-              <a class="btn btn-primary" href="">Download from Google Play</a>
+              <a class="btn btn-primary" href="">{{__('web.body-freedom-section2-android-download')}}</a>
             </div>
             <div class="mb-2">
               <a class="btn btn-outline-primary btn-sm" href="">.apk (40mb)</a>

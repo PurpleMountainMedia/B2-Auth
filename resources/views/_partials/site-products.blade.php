@@ -11,8 +11,8 @@
               <rect class="heroicon-shadows" width="56" height="6" x="2" y="8"></rect>
               <path class="heroicon-outline" fill-rule="nonzero" d="M0 8V2C0 .9.9 0 2 0h56a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2v46a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V12a2 2 0 0 1-2-2V8zm2-6v6h18v1H2v1h56V2H2zm2 10v46h52V12H4zm20-4h2v1h-4V8h2zm22 0h2v1H28V8h18zM23 18h14a5 5 0 0 1 0 10H23a5 5 0 0 1 0-10zm0 1a4 4 0 0 0 0 8h14a4 4 0 0 0 0-8H23zm-3 4a3 3 0 0 1 3-3h14a3 3 0 1 1 0 6H23a3 3 0 0 1-3-3zm2 0a1 1 0 0 0 1 1h14a1 1 0 1 0 0-2H23a1 1 0 0 0-1 1z"></path>
             </svg>
-            <p class="mt-3 mb-0 text-dark"><small>Go to</small></p>
-            <h4 class="text-center text-dark">Education Inventory Platform</h4>
+            <p class="mt-3 mb-0 text-dark"><small>{{__('web.label-goto')}}</small></p>
+            <h4 class="text-center text-dark">{{__('web.label-product-education')}}</h4>
           </div>
         </a>
       </div>

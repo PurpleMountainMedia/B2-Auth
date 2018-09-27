@@ -4,8 +4,8 @@
   <div id="particles-js" class="bg-dark">
     <div class="below_nav_container container-fluid p-5 d-flex align-items-center">
       <div class="container">
-        <h2 class="text-white font-weight-light">Onsite Asset Discovery Service</h2>
-        <p class="text-white">Carried out by our experienced auditors</p>
+        <h2 class="text-white font-weight-light">{{__('web.title-discovery-hero-primary')}}</h2>
+        <p class="text-white">{{__('web.title-discovery-hero-sub')}}</p>
       </div>
     </div>
   </div>
