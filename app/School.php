@@ -2,12 +2,12 @@
 
 namespace App;
 
-use App\Traits\HasUUID;
+use App\Traits\LinkableTrait;
 use Auth;
 
 class School extends Model
 {
-    use HasUUID;
+    use LinkableTrait;
 
     /**
      *  Setup model event hooks

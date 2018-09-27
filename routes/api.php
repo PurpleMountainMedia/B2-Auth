@@ -30,4 +30,6 @@ Route::namespace('Api')->group(function () {
     Route::get('organisations/{organisation}/users', 'ApiOrganisationsController@users')->name('organisations.users');
 
     Route::apiResource('schools', 'ApiSchoolsController');
+
+    Route::apiResource('licences', 'ApiLicencesController');
 });

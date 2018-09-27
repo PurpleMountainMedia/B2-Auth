@@ -10,7 +10,7 @@ use App\Traits\LinkableTrait;
 
 class Organisation extends Model
 {
-    // use CreatedByTrait, LinkableTrait;
+    use CreatedByTrait, LinkableTrait;
 
     public static $types = [
         'School', 'Multi Academy Trust', 'Council', 'Other'

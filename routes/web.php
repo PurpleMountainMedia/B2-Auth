@@ -44,12 +44,16 @@ Auth::routes();
 
 
 Route::middleware(['no-organisation'])->group(function () {
-    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-    Route::get('/dashboard/organisations', 'OrganisationsController@index')->name('organisations');
-    Route::get('/dashboard/organisations/{organisation}', 'OrganisationsController@show')->name('organisations.show');
-    Route::get('/dashboard/schools', 'SchoolsController@index')->name('schools');
-    Route::get('/dashboard/licences', 'LicencesController@index')->name('licences');
-    Route::get('/dashboard/licences/callback', 'LicencesController@callback')->name('licences.callback');
+    Route::get('/dashboard', 'DashboardController@index')->name('web.dashboard.index');
+
+    Route::get('/dashboard/organisations', 'OrganisationsController@index')->name('web.organisations.index');
+    Route::get('/dashboard/organisations/{organisation}', 'OrganisationsController@show')->name('web.organisations.show');
+
+    Route::get('/dashboard/schools', 'SchoolsController@index')->name('web.schools.index');
+    Route::get('/dashboard/schools/{school}', 'SchoolsController@show')->name('web.schools.show');
+
+    Route::get('/dashboard/licences', 'LicencesController@index')->name('web.licences.index');
+    Route::get('/dashboard/licences/callback', 'LicencesController@callback')->name('web.licences.callback');
 });
 
 Route::get('organisations', 'OrganisationsController@create')->name('organisations.create');

@@ -1,52 +1,67 @@
 <template lang="html">
   <div class="mt-4 w-100">
-    <b2-form :form-action-route="resetRoute"
-             :values="{ email: email }"
-             :url-return="urlReturn">
+    <b2-form
+      :form-action-route="resetRoute"
+      :values="{ email: email }"
+      :url-return="urlReturn">
       <template slot-scope="slotProps">
 
         <el-card>
-          <el-form-item :label="__('Email')"
-                        prop="email"
-                        :error="slotProps.errors('email')"
-                        :rules="{ required: true, message: __('Email is required.') }">
-              <el-input v-model="slotProps.form.email"
-                        placeholder="josh@educationinventory.com"
-                        :disabled="true"
-                        class="short_input">
-              </el-input>
+          <el-form-item
+            :label="__('Email')"
+            :error="slotProps.errors('email')"
+            :rules="{ required: true, message: __('Email is required.') }"
+            prop="email">
+            <el-input
+              v-model="slotProps.form.email"
+              :disabled="true"
+              placeholder="josh@educationinventory.com"
+              class="short_input"/>
           </el-form-item>
-          <input type="hidden" name="email" id="login_email" :value="slotProps.form.email">
+          <input
+            id="login_email"
+            :value="slotProps.form.email"
+            type="hidden"
+            name="email">
 
-          <el-form-item :label="__('Password')"
-                        prop="password"
-                        :error="slotProps.errors('password')"
-                        :rules="{ required: true, message: __('Password is required.') }">
-              <el-input v-model="slotProps.form.password"
-                        placeholder="*****"
-                        name="password"
-                        type="password"
-                        class="short_input"
-                        id="login_password">
-              </el-input>
-          </el-form-item>
-
-          <el-form-item :label="__('Password Confirmation')"
-                        prop="password_confirmation"
-                        :error="slotProps.errors('password_confirmation')"
-                        :rules="{ required: true, message: __('Password is required.') }">
-              <el-input v-model="slotProps.form.password_confirmation"
-                        placeholder="*****"
-                        name="password_confirmation"
-                        type="password"
-                        class="short_input"
-                        id="login_password_confirmation">
-              </el-input>
+          <el-form-item
+            :label="__('Password')"
+            :error="slotProps.errors('password')"
+            :rules="{ required: true, message: __('Password is required.') }"
+            prop="password">
+            <el-input
+              id="login_password"
+              v-model="slotProps.form.password"
+              placeholder="*****"
+              name="password"
+              type="password"
+              class="short_input"/>
           </el-form-item>
 
-          <input type="hidden" name="token" :value="token">
+          <el-form-item
+            :label="__('Password Confirmation')"
+            :error="slotProps.errors('password_confirmation')"
+            :rules="{ required: true, message: __('Password is required.') }"
+            prop="password_confirmation">
+            <el-input
+              id="login_password_confirmation"
+              v-model="slotProps.form.password_confirmation"
+              placeholder="*****"
+              name="password_confirmation"
+              type="password"
+              class="short_input"/>
+          </el-form-item>
 
-          <el-button class="mt-3" :loading="slotProps.loading" native-type="submit" type="primary">{{ __('Reset') }} <i class="far fa-lock"></i></el-button>
+          <input
+            :value="token"
+            type="hidden"
+            name="token">
+
+          <el-button
+            :loading="slotProps.loading"
+            class="mt-3"
+            native-type="submit"
+            type="primary">{{ __('Reset') }} <i class="far fa-lock"/></el-button>
         </el-card>
       </template>
     </b2-form>
@@ -58,7 +73,7 @@ export default {
   name: 'B2NewPasswordForm',
 
   components: {
-    B2Form: () => import(/* webpackChunkName: "b2-form" */'../B2Form'),
+    B2Form: () => import(/* webpackChunkName: "b2-form" */'../B2Form')
   },
 
   props: {
@@ -77,9 +92,10 @@ export default {
     },
     urlReturn: {
       required: false,
-      type: String
+      type: String,
+      default: () => { return null }
     }
-  },
+  }
 
 }
 </script>

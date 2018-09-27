@@ -15,7 +15,7 @@
     <?php echo '<script>window.b2Systems = {"name":"B2 Systems","site_url":"http:\/\/b2systems.test","api_prefix":"api","logo":"http:\/\/b2systems.test\/storage\/system\/b2_logo1.png"}</script>'; ?>
 
     <script>
-        window.b2_user = {
+        window.b2User = {
             id: '<?php echo e($user->id); ?>',
             name: '<?php echo e($user->name); ?>',
             email: '<?php echo e($user->email); ?>',
@@ -43,16 +43,16 @@
                     <div class="col-md-3 border-right">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link active" href="<?php echo e(route('dashboard')); ?>"><i class="far fa-tachometer-alt"></i> Dashboard</a>
+                                <a class="nav-link active" href="<?php echo e(route('web.dashboard.index')); ?>"><i class="far fa-tachometer-alt"></i> Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo e(route('organisations')); ?>"><i class="far fa-sitemap"></i> Organisations</a>
+                                <a class="nav-link" href="<?php echo e(route('web.organisations.index')); ?>"><i class="far fa-sitemap"></i> Organisations</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo e(route('schools')); ?>"><i class="far fa-school"></i> Schools</a>
+                                <a class="nav-link" href="<?php echo e(route('web.schools.index')); ?>"><i class="far fa-school"></i> Schools</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo e(route('licences')); ?>"><i class="far fa-credit-card-blank"></i> Licences</a>
+                                <a class="nav-link" href="<?php echo e(route('web.licences.index')); ?>"><i class="far fa-credit-card-blank"></i> Licences</a>
                             </li>
                         </ul>
                         <ul class="nav flex-column mt-2">

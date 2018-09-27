@@ -15,7 +15,7 @@
     @b2Config
 
     <script>
-        window.b2_user = {
+        window.b2User = {
             id: '{{$user->id}}',
             name: '{{$user->name}}',
             email: '{{$user->email}}',
@@ -43,16 +43,16 @@
                     <div class="col-md-3 border-right">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link active" href="{{ route('dashboard') }}"><i class="far fa-tachometer-alt"></i> Dashboard</a>
+                                <a class="nav-link active" href="{{ route('web.dashboard.index') }}"><i class="far fa-tachometer-alt"></i> Dashboard</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('organisations') }}"><i class="far fa-sitemap"></i> Organisations</a>
+                                <a class="nav-link" href="{{ route('web.organisations.index') }}"><i class="far fa-sitemap"></i> Organisations</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('schools') }}"><i class="far fa-school"></i> Schools</a>
+                                <a class="nav-link" href="{{ route('web.schools.index') }}"><i class="far fa-school"></i> Schools</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('licences') }}"><i class="far fa-credit-card-blank"></i> Licences</a>
+                                <a class="nav-link" href="{{ route('web.licences.index') }}"><i class="far fa-credit-card-blank"></i> Licences</a>
                             </li>
                         </ul>
                         <ul class="nav flex-column mt-2">

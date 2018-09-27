@@ -62,10 +62,6 @@ export default {
     }
   },
 
-  mounted () {
-    this.getOrganisation()
-  },
-
   computed: {
     searchedSchools () {
       return this.search ? this.organisation.schools.data.filter(o => o.name.toUpperCase().includes(this.search.toUpperCase())) : this.organisation.schools.data
@@ -86,6 +82,10 @@ export default {
     }
   },
 
+  mounted () {
+    this.getOrganisation()
+  },
+
   methods: {
     getOrganisation () {
       api.get({
@@ -93,7 +93,7 @@ export default {
         params: this.mergedParams
       })
         .then((data) => {
-         this.organisation = data.data
+          this.organisation = data.data
         })
         .catch((error) => {
           this.errors = error

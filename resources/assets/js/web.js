@@ -1,17 +1,18 @@
-try {
-    window.$ = window.jQuery = require('jquery');
+import LabelChooserComponent from './components/web/LabelChooserComponent'
 
-    require('bootstrap');
+try {
+  window.$ = window.jQuery = require('jquery')
+  require('bootstrap')
 } catch (e) {}
 
 window.Vue = require('vue')
-import LabelChooserComponent from './components/web/LabelChooserComponent'
 
 // Init
-const app = new Vue({
-    name: 'B2SystemsWeb',
-    el: '#web',
-    components: {
-      LabelChooserComponent
-    }
-});
+// eslint-disable-next-line
+new Vue({
+  el: '#web',
+  name: 'B2SystemsWeb',
+  components: {
+    LabelChooserComponent
+  }
+})

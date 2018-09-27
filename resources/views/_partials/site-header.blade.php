@@ -35,7 +35,7 @@
 
         <li class="nav-item">
           @auth()
-            <a class="nav-link text-primary" href="{{ route('dashboard') }}">
+            <a class="nav-link text-primary" href="{{ route('web.dashboard.index') }}">
               <i class="far fa-user-circle"></i> {{ __('Welcome') }}, {{ Auth::user()->first_name }}
             </a>
           @else

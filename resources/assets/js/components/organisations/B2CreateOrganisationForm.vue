@@ -1,6 +1,9 @@
 <template lang="html">
   <div class="mt-4">
-    <b2-form :form-action-route="createOrganisationRoute" :form="form" ref="organisationForm">
+    <b2-form
+      ref="organisationForm"
+      :form-action-route="createOrganisationRoute"
+      :form="form">
       <template slot-scope="slotProps">
         <b2-organisations-basic-fields
           :form="slotProps.form"
@@ -12,12 +15,16 @@
           <el-button
             slot="belowName"
             slot-scope="slot"
-            @click="slot.show = !slot.show"
-            type="text">{{ show ? __('hide') : __('expand') }}
+            type="text"
+            @click="slot.show = !slot.show">{{ show ? __('hide') : __('expand') }}
           </el-button>
         </b2-organisations-address-fields>
 
-        <el-button class="mt-3" :loading="slotProps.loading" native-type="submit" type="primary">{{ __('Create') }} <i class="far fa-lock"></i></el-button>
+        <el-button
+          :loading="slotProps.loading"
+          class="mt-3"
+          native-type="submit"
+          type="primary">{{ __('Create') }} <i class="far fa-lock"/></el-button>
       </template>
     </b2-form>
   </div>
@@ -26,6 +33,13 @@
 <script>
 export default {
   name: 'B2CreateOrganisationForm',
+
+  components: {
+    B2Form: () => import(/* webpackChunkName: "b2-form" */'../B2Form'),
+    B2OrganisationsBasicFields: () => import(/* webpackChunkName: "b2-organisations-basic-fields" */'./fields/B2OrganisationsBasicFields'),
+    B2OrganisationsAddressFields: () => import(/* webpackChunkName: "b2-organisations-address-fields" */'./fields/B2OrganisationsAddressFields'),
+    B2OrganisationsAdvancedFields: () => import(/* webpackChunkName: "b2-organisations-advanced-fields" */'./fields/B2OrganisationsAdvancedFields')
+  },
 
   props: {
     createOrganisationRoute: {
@@ -47,13 +61,6 @@ export default {
         address_country: 'GB'
       }
     }
-  },
-
-  components: {
-    B2Form: () => import(/* webpackChunkName: "b2-form" */'../B2Form'),
-    B2OrganisationsBasicFields: () => import(/* webpackChunkName: "b2-organisations-basic-fields" */'./fields/B2OrganisationsBasicFields'),
-    B2OrganisationsAddressFields: () => import(/* webpackChunkName: "b2-organisations-address-fields" */'./fields/B2OrganisationsAddressFields'),
-    B2OrganisationsAdvancedFields: () => import(/* webpackChunkName: "b2-organisations-advanced-fields" */'./fields/B2OrganisationsAdvancedFields'),
   },
 
   computed: {

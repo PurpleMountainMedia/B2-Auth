@@ -22,6 +22,14 @@ let mix = require('laravel-mix');
          chunkFilename: 'js/chunks/[name].js',
      },
      module: {
+       rules: [
+         {
+           enforce: 'pre',
+           test: /\.(js|vue)$/,
+           loader: 'eslint-loader',
+           exclude: /node_modules/
+         }
+       ],
      loaders: [
        {
            test: /\.jsx$/,

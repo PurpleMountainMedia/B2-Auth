@@ -1,8 +1,14 @@
 <template lang="html">
   <el-card>
-    <div slot="header" class="clearfix">
+    <div
+      slot="header"
+      class="clearfix">
       <span>{{ school.name }}</span>
-      <el-button style="float: right; padding: 3px 0" type="text">{{ __('Edit') }}</el-button>
+      <a :href="school.links.url">
+        <el-button
+          style="float: right; padding: 3px 0"
+          type="text">{{ __('Edit') }}</el-button>
+      </a>
     </div>
 
     <p><strong>Created At:</strong> {{ school.created_at }}</p>
