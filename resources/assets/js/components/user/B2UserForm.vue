@@ -1,22 +1,41 @@
 <template lang="html">
 
-<div v-loading="loading">
+  <div v-loading="loading">
 
-<el-form ref="userForm" :model="userForm" label-position="top" label-width="100px" status-icon id="user_form_dashboard">
-    <b2-user-basic-fields :form="userForm" />
-    <b2-user-security-fields :form="userForm" />
-    <b2-user-preferences-fields :form="userForm" />
-    <b2-user-privacy-fields :form="userForm" />
-    <b2-errors :errors="formErrors" />
+    <el-form
+      id="user_form_dashboard"
+      ref="userForm"
+      :model="userForm"
+      label-position="top"
+      label-width="100px"
+      status-icon>
+      <b2-user-basic-fields :form="userForm" />
+      <b2-user-security-fields :form="userForm" />
+      <b2-user-preferences-fields :form="userForm" />
+      <b2-user-privacy-fields :form="userForm" />
+      <b2-errors :errors="formErrors" />
 
+      <el-row
+        :gutter="10"
+        style="margin-top: 40px;">
+        <el-button
+          id="user_form_reset"
+          :loading="loading"
+          plain
+          type="primary"
+          size="small"
+          @click="reset">{{ __('reset') }}</el-button>
+        <el-button
+          id="user_form_submit"
+          :loading="loading"
+          plain
+          type="success"
+          size="small"
+          @click="submitForm">{{ __('save') }} <i class="fal fa-save"/></el-button>
+      </el-row>
+    </el-form>
 
-    <el-row :gutter="10" style="margin-top: 40px;">
-        <el-button plain type="primary" plain size="small" id="user_form_reset" :loading="loading" @click="reset">{{__('reset')}}</el-button>
-        <el-button plain type="success" size="small" id="user_form_submit" :loading="loading" @click="submitForm">{{__('save')}} <i class="fal fa-save"></i></el-button>
-    </el-row>
-</el-form>
-
-</div>
+  </div>
 
 </template>
 

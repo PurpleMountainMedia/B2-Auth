@@ -14,19 +14,24 @@
           show-icon/>
 
         <el-card>
-          <el-form-item :label="__('label-email')"
-                        prop="email"
-                        :error="slotProps.errors('email')"
-                        :rules="{ required: true, message: __('required-email') }">
-              <el-input v-model="slotProps.form.email"
-                        placeholder="josh@educationinventory.com"
-                        name="email"
-                        class="short_input"
-                        id="login_email">
-              </el-input>
+          <el-form-item
+            :label="__('label-email')"
+            :error="slotProps.errors('email')"
+            :rules="{ required: true, message: __('required-email') }"
+            prop="email">
+            <el-input
+              id="login_email"
+              v-model="slotProps.form.email"
+              placeholder="josh@educationinventory.com"
+              name="email"
+              class="short_input"/>
           </el-form-item>
 
-          <el-button class="mt-3" :loading="slotProps.loading" native-type="submit" type="primary">{{ __('button-reset') }} <i class="far fa-lock"></i></el-button>
+          <el-button
+            :loading="slotProps.loading"
+            class="mt-3"
+            native-type="submit"
+            type="primary">{{ __('button-reset') }} <i class="far fa-lock"/></el-button>
         </el-card>
       </template>
     </b2-form>

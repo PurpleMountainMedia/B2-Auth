@@ -16,8 +16,8 @@
             :alt="b2Config.name"
             class="site_logo"></a>
           <div class="site_product text-white">
-            <h3 class="m-0">{{__('title-education')}}</h3>
-            <p class="m-0">{{__('title-product-of')}}</p>
+            <h3 class="m-0">{{ __('title-education') }}</h3>
+            <p class="m-0">{{ __('title-product-of') }}</p>
           </div>
         </div>
       </el-card>
@@ -35,7 +35,7 @@
 
     <el-card class="mt-4">
       <div class="justify-around">
-        <a :href="urlReturn">{{__('return')}}</a>
+        <a :href="urlReturn">{{ __('return') }}</a>
       </div>
     </el-card>
   </div>

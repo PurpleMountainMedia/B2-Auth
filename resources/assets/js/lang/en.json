@@ -18,7 +18,6 @@
   "button-reset": "Reset",
   "button-buy": "Buy",
 
-<<<<<<< HEAD
   "title-authorized-apps": "Authorized Applications",
   "title-basic-info": "Basic Information",
   "title-address": "Address",
@@ -96,8 +95,8 @@
   "error-oauth-none": "You have not created any OAuth clients.",
   "error-token-none": "You have not created any personal access tokens.",
   "error-whoops": "Whoops!",
-  "error-something-wrong": "Something went wrong!"
-=======
+  "error-something-wrong": "Something went wrong!",
+
   "A product of B2 Systems": "A product of B2 Systems",
   "Education": "Education Inventory Platform",
   "Finance": "Finance",
@@ -106,5 +105,4 @@
   "Labels": "Security Labels",
   "Return": "Return to home",
   "Add Licence": "Add Licence"
->>>>>>> a90c655988fa5136324a0870e8b83e468044ff94
 }

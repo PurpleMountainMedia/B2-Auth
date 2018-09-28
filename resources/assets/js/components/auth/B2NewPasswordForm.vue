@@ -7,15 +7,16 @@
       <template slot-scope="slotProps">
 
         <el-card>
-          <el-form-item :label="__('label-email')"
-                        prop="email"
-                        :error="slotProps.errors('email')"
-                        :rules="{ required: true, message: __('required-email') }">
-              <el-input v-model="slotProps.form.email"
-                        placeholder="josh@educationinventory.com"
-                        :disabled="true"
-                        class="short_input">
-              </el-input>
+          <el-form-item
+            :label="__('label-email')"
+            :error="slotProps.errors('email')"
+            :rules="{ required: true, message: __('required-email') }"
+            prop="email">
+            <el-input
+              v-model="slotProps.form.email"
+              :disabled="true"
+              placeholder="josh@educationinventory.com"
+              class="short_input"/>
           </el-form-item>
           <input
             id="login_email"
@@ -23,30 +24,32 @@
             type="hidden"
             name="email">
 
-          <el-form-item :label="__('label-password')"
-                        prop="password"
-                        :error="slotProps.errors('password')"
-                        :rules="{ required: true, message: __('required-password') }">
-              <el-input v-model="slotProps.form.password"
-                        placeholder="*****"
-                        name="password"
-                        type="password"
-                        class="short_input"
-                        id="login_password">
-              </el-input>
+          <el-form-item
+            :label="__('label-password')"
+            :error="slotProps.errors('password')"
+            :rules="{ required: true, message: __('required-password') }"
+            prop="password">
+            <el-input
+              id="login_password"
+              v-model="slotProps.form.password"
+              placeholder="*****"
+              name="password"
+              type="password"
+              class="short_input"/>
           </el-form-item>
 
-          <el-form-item :label="__('label-confirm-password')"
-                        prop="password_confirmation"
-                        :error="slotProps.errors('password_confirmation')"
-                        :rules="{ required: true, message: __('required-password') }">
-              <el-input v-model="slotProps.form.password_confirmation"
-                        placeholder="*****"
-                        name="password_confirmation"
-                        type="password"
-                        class="short_input"
-                        id="login_password_confirmation">
-              </el-input>
+          <el-form-item
+            :label="__('label-confirm-password')"
+            :error="slotProps.errors('password_confirmation')"
+            :rules="{ required: true, message: __('required-password') }"
+            prop="password_confirmation">
+            <el-input
+              id="login_password_confirmation"
+              v-model="slotProps.form.password_confirmation"
+              placeholder="*****"
+              name="password_confirmation"
+              type="password"
+              class="short_input"/>
           </el-form-item>
 
           <input
@@ -54,7 +57,11 @@
             type="hidden"
             name="token">
 
-          <el-button class="mt-3" :loading="slotProps.loading" native-type="submit" type="primary">{{ __('button-reset') }} <i class="far fa-lock"></i></el-button>
+          <el-button
+            :loading="slotProps.loading"
+            class="mt-3"
+            native-type="submit"
+            type="primary">{{ __('button-reset') }} <i class="far fa-lock"/></el-button>
         </el-card>
       </template>
     </b2-form>
