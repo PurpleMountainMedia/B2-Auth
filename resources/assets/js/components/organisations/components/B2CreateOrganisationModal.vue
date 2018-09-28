@@ -1,46 +1,59 @@
 <template lang="html">
-    <div v-loading="loading">
+  <div v-loading="loading">
 
-        <el-tooltip :content="__('label-org-create-not-allowed')" placement="top" effect="light" v-if="userCan('create organisations')">
-            <i class="el-icon-info"></i>
-        </el-tooltip>
+    <el-tooltip
+      v-if="userCan('create organisations')"
+      :content="__('label-org-create-not-allowed')"
+      placement="top"
+      effect="light">
+      <i class="el-icon-info"/>
+    </el-tooltip>
 
-        <el-button type="primary"
-                   plain
-                   autofocus
-                   :disabled="userCan('create organisations')"
-                   size="small"
-                   @click="showModal = true"
-                   v-show="showBtn">{{__('button-org-create')}} <i class="far fa-plus-circle"></i>
-        </el-button>
+    <el-button
+      v-show="showBtn"
+      :disabled="userCan('create organisations')"
+      type="primary"
+      plain
+      autofocus
+      size="small"
+      @click="showModal = true">{{ __('button-org-create') }} <i class="far fa-plus-circle"/>
+    </el-button>
 
-        <el-dialog title="Create Organisation"
-                   :visible.sync="showModal"
-                   :before-close="clearModal">
+    <el-dialog
+      :visible.sync="showModal"
+      :before-close="clearModal"
+      title="Create Organisation">
 
+      <el-form
+        ref="organisationForm"
+        :model="organisationForm"
+        label-position="top"
+        label-width="100px"
+        status-icon>
+        <b2-organisations-basic-fields :form="organisationForm" />
+      </el-form>
 
-        <el-form ref="organisationForm" :model="organisationForm" label-position="top" label-width="100px" status-icon>
-            <b2-organisations-basic-fields :form="organisationForm" />
-        </el-form>
+      <b2-errors :errors="formErrors" />
 
-        <b2-errors :errors="formErrors" />
+      <span
+        slot="footer"
+        class="dialog-footer">
+        <el-button
+          :disabled="loading"
+          type="danger"
+          size="small"
+          @click="clearModal">{{ __('cancel') }}</el-button>
+        <el-button
+          :disabled="loading"
+          type="success"
+          size="small"
+          plain
+          @click="createOrganisation">{{ __('create') }}</el-button>
+      </span>
 
-        <span slot="footer" class="dialog-footer">
-            <el-button :disabled="loading"
-                       @click="clearModal"
-                       type="danger"
-                       size="small">{{__('cancel')}}</el-button>
-            <el-button :disabled="loading"
-                       type="success"
-                       size="small"
-                       plain
-                       @click="createOrganisation">{{__('create')}}</el-button>
-        </span>
+    </el-dialog>
 
-        </el-dialog>
-
-
-    </div>
+  </div>
 </template>
 
 <script>

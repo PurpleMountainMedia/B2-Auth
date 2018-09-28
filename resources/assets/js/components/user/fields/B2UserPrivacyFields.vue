@@ -1,17 +1,23 @@
 <template lang="html">
-    <div class="">
-        <el-row :gutter="10">
-            <p><strong>{{__('title-privacy')}}</strong></p>
-            <hr>
+  <div class="">
+    <el-row :gutter="10">
+      <p><strong>{{ __('title-privacy') }}</strong></p>
+      <hr>
 
-            <!-- Privacy  -->
-            <el-row :gutter="10">
-                <el-col :span="9" :offset="6">
-                    <el-button type="danger" size="mini" plain id="user_form_field_request_user_data">{{__('label-privacy-request')}}</el-button>
-                </el-col>
-            </el-row>
-        </el-row>
-    </div>
+      <!-- Privacy  -->
+      <el-row :gutter="10">
+        <el-col
+          :span="9"
+          :offset="6">
+          <el-button
+            id="user_form_field_request_user_data"
+            type="danger"
+            size="mini"
+            plain>{{ __('label-privacy-request') }}</el-button>
+        </el-col>
+      </el-row>
+    </el-row>
+  </div>
 </template>
 
 <script>

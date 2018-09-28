@@ -27,7 +27,7 @@
 
     <div class="row mt-3">
       <div class="col-md-12">
-        <label for="barcode_start">{{__('label-barcode-range-start')}}</label>
+        <label for="barcode_start">{{ __('label-barcode-range-start') }}</label>
         <input
           v-model="barcodeStart"
           type="number"
@@ -38,7 +38,7 @@
 
     <div class="row mt-3">
       <div class="col-md-12">
-        <label for="barcode_prefix">{{__('label-barcode-prefix')}}</label>
+        <label for="barcode_prefix">{{ __('label-barcode-prefix') }}</label>
         <input
           v-model="barcodePrefix"
           type="text"
@@ -49,8 +49,8 @@
 
     <div class="row mt-3">
       <div class="col-md-12">
-        <h3>{{__('label-total')}}: £{{ total }}</h3>
-        <small class="font-weight-strong">{{__('label-barcode-range')}}: {{ barcodePrefix }}{{ barcodeStart }} - {{ barcodePrefix }}{{ barcodeEnd }}</small>
+        <h3>{{ __('label-total') }}: £{{ total }}</h3>
+        <small class="font-weight-strong">{{ __('label-barcode-range') }}: {{ barcodePrefix }}{{ barcodeStart }} - {{ barcodePrefix }}{{ barcodeEnd }}</small>
       </div>
     </div>
 
@@ -59,7 +59,6 @@
       name="button"
       class="btn btn-primary">{{__('button-buy')}}
     </button> -->
-
 
   </div>
 </template>

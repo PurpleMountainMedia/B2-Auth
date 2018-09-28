@@ -447,6 +447,7 @@ class ComposerStaticInit4d361e19ac7602c1a8980d31d0c21c99
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\Api\\ApiLicencesController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/ApiLicencesController.php',
         'App\\Http\\Controllers\\Api\\ApiOrganisationsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/ApiOrganisationsController.php',
         'App\\Http\\Controllers\\Api\\ApiSchoolsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/ApiSchoolsController.php',
         'App\\Http\\Controllers\\Api\\ApiUsersController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/ApiUsersController.php',

@@ -4,7 +4,7 @@
       :form-action-route="loginRoute"
       :url-return="urlReturn">
       <el-card slot-scope="slotProps">
-        <h3>{{__('title-login')}}</h3>
+        <h3>{{ __('title-login') }}</h3>
         <el-form-item :label="__('label-email')"
                       prop="email"
                       :error="slotProps.errors('email')"
