@@ -7,11 +7,18 @@
         <div class="row screen_full_height d-flex justify-content-center">
           <div class="col-lg-8 col-12">
             <div class="h-100 d-flex align-items-center">
-              <b2-login-form login-route="{{ route('login') }}"
-                             forgotten-password-route="{{ route('password.request') }}"
-                             url-return="{{ route('home') }}"
-                             class="auth-form">
-              </b2-login-form>
+              <div class="w-100 particles-above">
+                <a href="https://eams.educationinventory.com/login">
+                  <el-card class="eams-notice text-white">
+                    <h3>Use Legacy EAMS login</h3>
+                  </el-card>
+                </a>
+                <b2-login-form login-route="{{ route('login') }}"
+                               forgotten-password-route="{{ route('password.request') }}"
+                               url-return="{{ route('home') }}"
+                               class="auth-form">
+                </b2-login-form>
+              </div>
             </div>
           </div>
         </div>

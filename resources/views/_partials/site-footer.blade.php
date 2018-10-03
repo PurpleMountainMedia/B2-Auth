@@ -30,7 +30,7 @@
           </form>
         </div>
 
-        <div class="col-lg-4 px-5 text-center border border-bottom-0 border-top-0 border-white">
+        <div class="col-lg-4 px-5 text-center border border-white border-top-0 border-bottom-0">
           <h3 class="text-white mb-5">Want to put our system through it's paces? Enquire below about a free trial and one of our sales team will be able to walk you through its capabilities.</h3>
           {{-- <a href="#" class="btn btn-primary btn-lg">Book Free Trial</a> --}}
           <button type="submit" disabled class="btn btn-primary btn-lg">Book Free Trial</button>
@@ -54,13 +54,13 @@
               <a class="nav-link text-light" href="{{ route('onsite-asset-discovery') }}">Onsite Asset Discovery</a>
             </li>
           </ul>
-        </div>
 
-        <div class="col-lg-8 text-white text-right">
-          <h3>{{__('web.label-help')}}</h3>
+          <div class="text-white mt-3 pl-3">
+            <h3>{{__('web.label-help')}}</h3>
 
-          <a class="text-white" href="tel:08006445766"><i class="far fa-phone mr-2"></i> 0800 644 5766</a></br>
-          <a class="text-white" href="mailto:help@b2systems.co.uk"><i class="far fa-envelope mr-2"></i> help@b2systems.co.uk</a>
+            <a class="text-white" href="tel:08006445766"><i class="far fa-phone mr-2"></i> 0800 644 5766</a></br>
+            <a class="text-white" href="mailto:help@b2systems.co.uk"><i class="far fa-envelope mr-2"></i> help@b2systems.co.uk</a>
+          </div>
 
         </div>
       </div>

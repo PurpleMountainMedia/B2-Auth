@@ -103,6 +103,24 @@ body, html {
     z-index: 10;
 }
 
+.eams-notice {
+    height: 150px;
+    background-image: url('http://b2systems.test/storage/system/eams_legacy.jpg');
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+    position: relative;
+
+    h3 {
+      position: absolute;
+      bottom: -10px;
+      left: 0px;
+      width: 100%;
+      padding: 10px 20px;
+      background-color: $eams;
+    }
+}
+
 .page-auth {
     div#particles-js {
         position: absolute;
